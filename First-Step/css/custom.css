@@ -1276,16 +1276,19 @@ header .navbar-collapse.collapse{
 /*************************************/
 
 footer.footer{
-	padding: 60px 0;
+	background: linear-gradient(to bottom, #ffffff, #d4f8fd, #a9f2fc);
+	padding: 30px 10px;
 	text-align: center;
+	
 }
 
+
 .footer-logo{
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .footer-copyright{
-	max-width: 568px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 

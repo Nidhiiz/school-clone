@@ -1,0 +1,360 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken Theme">
+	
+	<!-- Page Title -->
+	<title>First Step - School & Education Institute HTML Template</title>
+	<!-- Google Fonts css-->
+	<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Roboto:300,400,500,700,900" rel="stylesheet">
+	<!-- Bootstrap css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- Font Awesome icon css-->
+	<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="css/flaticon.css" rel="stylesheet" media="screen">
+	<!-- Swiper's CSS -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<!-- Animated css -->
+	<link href="css/animate.css" rel="stylesheet">
+	<!-- Magnific Popup CSS -->
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<!-- Slick nav css -->
+	<link rel="stylesheet" href="css/slicknav.css">
+	<!-- Main custom css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
+
+   
+  <!-- Font Awesome 5 Free -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+ 
+
+    .section {
+      position: relative;
+      padding: 60px 10%;
+      overflow: hidden;
+    }
+
+    /* Decorative doodles */
+    .decor {
+      position: absolute;
+      z-index: 0;
+    }
+    .decor.star { top: 20px; left: 50px; }
+    .decor.cloud { top: 30px; right: 60px; }
+    .decor.rainbow { bottom: 40px; left: 40px; }
+    .decor.girl { bottom: 10px; left: 10px; }
+    .decor.hearts { bottom: 50px; right: 60px; }
+
+    /* Title */
+    .section h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .section .underline {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .section .underline span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: red;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+
+    /* Intro text */
+    .intro {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* Founder sections */
+    .founder {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .founder img {
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .founder .text {
+      flex: 1;
+    }
+    .founder h3 {
+      color: #e74c3c;
+      margin: 0 0 5px;
+    }
+    .founder h4 {
+      margin: 0 0 15px;
+      font-weight: normal;
+      font-size: 14px;
+      color: #555;
+    }
+    .founder p {
+      margin-bottom: 10px;
+    }
+
+    /* Alternate layout for second founder */
+    .founder.reverse {
+      flex-direction: row-reverse;
+    }
+
+    @media(max-width: 768px) {
+      .founder, .founder.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+      .founder img {
+        margin: 0 auto 20px auto;
+      }
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#main-navbar" data-offset="71">
+	<!-- Tob Bar Section Start -->
+	<div class="top-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="header-social-link">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</div>
+				</div>
+				
+				<div class="col-md-8 text-right">
+					<div class="school-info">
+						<ul>
+							<li><a href="#"><i class="fa fa-envelope"></i> Email : example@domain.com</a></li>
+							<li><a href="#"><i class="fa fa-phone"></i> Call : +28 232 574 1</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Tob Bar Section End -->
+	
+<!-- Header Section Start -->
+	<header class="header">
+		<nav class="navbar navbar-expand-lg navbar-light" id="main-navbar">
+			<div class="container">
+				<!-- Navbar Brand start -->
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" /></a>
+				<!-- Navbar Brand end -->
+				
+				<ul class="navbar-nav ml-auto" id="main-menu">
+					<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+					<li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+					<li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
+					<!-- <li class="nav-item"><a class="nav-link" href="#events">Events</a></li> -->
+					<!-- <li class="nav-item"><a class="nav-link" href="#review">Review</a></li> -->
+					<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+				</ul>
+					
+				<div class="navbar-toggle"></div>
+				<div id="responsive-menu"></div>
+			</div>
+		</nav>	
+	</header>
+	<!-- Header Section End -->
+	
+<!-- Faculty Section starts -->
+	<section class="faculty" id="teachers">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- Section title start -->
+					<div class="section-title">
+						<h2 class="color-orange">Qualified Teachers</h2>
+						<p>Lorem ipsum dolor sit amet, ipsum dolor sit amet</p>
+					</div>
+					<!-- Section title end -->
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<!-- Faculty Single Start -->
+					<div class="faculty-single faculty-orange wow fadeInUp" data-wow-delay="0.3s">
+						<figure>
+							<img src="images/team-1.jpg" />
+						</figure>
+						
+						<div class="faculty-info">
+							<h3>Alison Silva</h3>
+							<p>Music Teacher</p>
+						</div>
+					</div>
+					<!-- Faculty Single End -->
+				</div>
+				
+				<div class="col-lg-3 col-md-6">
+					<!-- Faculty Single Start -->
+					<div class="faculty-single faculty-blue wow fadeInUp" data-wow-delay="0.6s">
+						<figure>
+							<img src="images/team-2.jpg" />
+						</figure>
+						
+						<div class="faculty-info">
+							<h3>Jack Edward</h3>
+							<p>Maths Teacher</p>
+						</div>
+					</div>
+					<!-- Faculty Single End -->
+				</div>
+				
+				<div class="col-lg-3 col-md-6">
+					<!-- Faculty Single Start -->
+					<div class="faculty-single faculty-green wow fadeInUp" data-wow-delay="0.9s">
+						<figure>
+							<img src="images/team-3.jpg" />
+						</figure>
+						
+						<div class="faculty-info">
+							<h3>Terri Mastrang</h3>
+							<p>Science Teacher</p>
+						</div>
+					</div>
+					<!-- Faculty Single End -->
+				</div>
+				
+				<div class="col-lg-3 col-md-6">
+					<!-- Faculty Single Start -->
+					<div class="faculty-single faculty-orange wow fadeInUp" data-wow-delay="1.2s">
+						<figure>
+							<img src="images/team-4.jpg" />
+						</figure>
+						
+						<div class="faculty-info">
+							<h3>Krystal Hickman</h3>
+							<p>Sports Teacher</p>
+						</div>
+					</div>
+					<!-- Faculty Single End -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Faculty Section Ends -->
+
+     <section class="section">
+    <!-- Decorative doodles -->
+    <img src="decor-star.png" class="decor star" alt="">
+    <img src="cloud.png" class="decor cloud" alt="">
+    <img src="decor-rainbow.png" class="decor rainbow" alt="">
+    <img src="decor-girl.png" class="decor girl" alt="">
+    <img src="decor-hearts.png" class="decor hearts" alt="">
+
+    <!-- Title -->
+    <h2>Meet Founders (Husband Wife Duo)</h2>
+    <div class="underline">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Intro text -->
+    <p class="intro">
+      Reshma and Ramakrishna have been at the forefront of early childhood education and development for over 20 years. Their commitment and dedication to providing excellence in education have resulted in Angel Kids becoming a leading standalone preschool brand in Kachiguda, Hyderabad. They have helped shape the minds and futures of countless children, and their impact extends beyond the classroom to after-school activities and preschool teacher training.
+    </p>
+
+    <!-- Founder 1 -->
+    <div class="founder wow fadeInRight" data-wow-delay="0.3s">
+      <img style="border: 8px solid #fff;" src="https://angelkids.in/wp-content/uploads/2023/04/Untitled-design-2023-04-15T093944.971-1-e1682248173173-266x300.png" alt="Mrs. Reshma Shetty" >
+      <div class="text ">
+        <h3>Mrs. Reshma Shetty</h3>
+        <h4>Founder and Principal of Angel Kids Preschool</h4>
+        <p>Reshma Shetty, the Founder and Principal of Angel Kids Preschool, with over two decades of experience, her commitment and dedication to providing excellence in education have resulted in Angel Kids becoming a leading standalone preschool brand in Kachiguda, Hyderabad.</p>
+        <p>She has helped shape the minds and futures of countless children, and is the driving force behind the excellence in education that the school is known for. With a commerce background, Reshma did a Certificate Course in early childhood and care and has attended many workshops to continuously develop her skills.</p>
+        <p>She completed the 10,000 Women Entrepreneurship Program sponsored by Goldman Sachs at ISB and recently did the Advanced Woman Ambassador Program at ISB as well. Reshma is passionate about empowering women entrepreneurs and aims to provide financial independence to women to facilitate a better life for them.</p>
+      </div>
+    </div>
+
+    <!-- Founder 2 -->
+    <div class="founder reverse wow fadeInLeft" data-wow-delay="0.3s">
+      <img src="https://angelkids.in/wp-content/uploads/2023/04/photo_2023-04-15_09-30-10-e1681531283264-1.jpg" alt="Ramakrishna Shetty">
+      <div class="text">
+        <h3>Ramakrishna Shetty</h3>
+        <h4>Co-Founder of Angel Kids Preschool</h4>
+        <p>Ramakrishna Shetty is a seasoned entrepreneur with over two decades of experience in various industries, including hospitality and education. As the founder director of Angel Kids Preschool in Kachiguda, Hyderabad, he has played a key role in shaping the preschool’s vision and strategy.</p>
+        <p>With a degree in Commerce, a post Graduation in Business Management, and a post Diploma in Hotel Management, Ramakrishna brings a unique blend of business acumen and industry expertise to his role. He has a deep understanding of the challenges involved in running a successful business, as well as a passion for education that motivates him to provide the best possible learning experience for children.</p>
+        <p>Under his leadership, Angel Kids Preschool has become a leading name in early childhood education in Hyderabad, with a strong focus on building a strong foundation for the future generation.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Footer Section Starts -->
+	<footer class="footer">
+		<div class="container" >
+			<div class="row">
+				<div class="col-md-12">
+					<!-- Footer logo start -->
+					<div class="footer-logo">
+						<img src="images/logo.png" alt="" />
+					</div>
+					<!-- Footer logo end -->
+					
+					<!-- Footer Copyright start -->
+					<div class="footer-copyright">
+						<p>Copyright &copy; Untitled. All rights reserved. Design By <a href="https://awaikenthemes.com/" target="_blank">Awaiken Theme</a> Images <a href="https://unsplash.com/" target="_blank">Unsplash</a>, <a href="https://pixabay.com/" target="_blank">Pixabay</a>, <a href="http://www.freepik.com" target="_blank">Freepik</a>, Icon <a href="https://www.flaticon.com/" target="_blank">Flaticon</a></p>
+					</div>
+					<!-- Footer Copyright end -->
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section Ends -->
+	
+	<!-- Jquery Library File -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<!-- Bootstrap js file -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Wow js file -->
+	<script src="js/wow.js"></script>
+	<!-- Swiper Carousel js file -->
+	<script src="js/swiper.min.js"></script>
+	<script src="js/SwiperAnimation.min.js"></script>
+	<!-- Magnific Popup core JS file -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<!-- Slick Nav js file -->
+	<script src="js/jquery.slicknav.js"></script>
+	<!-- SmoothScroll -->
+	<script src="js/SmoothScroll.js"></script>
+    <!-- Main Custom js file -->
+	<script src="js/function.js"></script>
+</body>
+</html>
