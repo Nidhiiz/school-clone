@@ -1274,39 +1274,146 @@ header .navbar-collapse.collapse{
 /*************************************/
 /*****      Footer area css      *****/
 /*************************************/
+footer {
+  background: linear-gradient(to bottom, #ffffff, #d4f8fd, #a9f2fc);
+  padding: 40px 20px;
+  display: grid;                       /* ✅ use grid */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 40px;                           /* spacing between columns */
+}
 
-footer.footer{
-	background: linear-gradient(to bottom, #ffffff, #d4f8fd, #a9f2fc);
-	padding: 30px 10px;
-	text-align: center;
-	
+footer .footer-col {
+  min-width: 200px;
+}
+
+footer h3 {
+  color: #ff5722;
+  font-size: 21px;
+  margin-bottom: 15px;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+footer p {
+  margin: 10px 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 1px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ff5722;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 15px;
+  color: white;
+  background: #ff5722;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #1583d8;
+}
+
+/* --- CONTACT COLUMN: make text align with other columns --- */
+.contacts-info { margin-left: 0 !important; padding-left: 0 !important; text-align: left; }
+
+/* each line: create a left gutter for the icon */
+.contacts-info p{
+  position: relative;
+  display: block !important;      /* stop flex from pushing text right */
+  margin: 5px 0;
+  padding-left: 18px !important;  /* gutter width = icon space */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* place icon in the gutter, so text starts at true left edge */
+.contacts-info p i{
+  position: absolute !important;
+  left: 0;
+  top: 0.2em;                     /* vertical tweak */
+  width: 20px;                    /* consistent icon width */
+  text-align: center;
+  margin: 0 !important;
+  flex: none;
+}
+
+/* mobile: revert to inline so it centers nicely */
+@media (max-width: 600px){
+  .contacts-info { text-align: center; }
+  .contacts-info p{ padding-left: 0 !important; }
+  .contacts-info p i{
+    position: static !important;
+    margin-right: 8px !important;
+  }
 }
 
 
-.footer-logo{
-	margin-bottom: 20px;
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  background: #eef2f7;
+  color: #333;
+  grid-column: span 4;   /* ✅ make it span all 4 columns */
 }
 
-.footer-copyright{
-	max-width: 700px;
-	margin: 0 auto;
+.footer-bottom a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.footer-copyright p{
-	color: #707070;
-	line-height: 1.7em;
-	margin: 0;
+.footer-bottom a:hover {
+  color: #ff5722;
 }
 
-.footer-copyright p a{
-	color: #ff5722;
-	text-decoration: underline;
-	transition: all 0.3s;
+/* Responsive */
+@media (max-width: 992px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
 }
 
-.footer-copyright p a:hover{
-	color: #1976d2;
+@media (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    text-align: center;
+  }
+
+  .contacts-info p {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
+
+
 
 /************************************/
 /*****       Media Screens      *****/

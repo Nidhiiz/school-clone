@@ -118,6 +118,67 @@
       background: orange;
       color: white;
     }
+    /* ---------- Responsive Breakpoints ---------- */
+
+/* Tablets (≤992px) */
+@media (max-width: 992px) {
+  .offer {
+    padding: 15px;
+  }
+
+  .welcome {
+    padding: 20px;
+    margin-top: 20px; /* adds space when stacked */
+    height: auto;
+  }
+
+  .welcome h2 {
+    font-size: 20px;
+  }
+}
+
+/* Mobiles (≤768px) */
+@media (max-width: 768px) {
+  .offer-items {
+    grid-template-columns: 1fr; /* stack all offer items */
+  }
+
+  .offer-item {
+    flex-direction: row; /* keep icon left, text right */
+    gap: 10px;
+  }
+
+  .offer-item i {
+    font-size: 20px;
+  }
+
+  .welcome h2 {
+    font-size: 18px;
+  }
+
+  .welcome {
+    padding: 15px;
+  }
+}
+
+/* Small Mobiles (≤480px) */
+@media (max-width: 480px) {
+  .offer h2,
+  .welcome h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .offer-item {
+    flex-direction: column; /* stack icon above text */
+    align-items: center;
+    text-align: center;
+  }
+
+  .offer-item i {
+    margin-bottom: 8px;
+  }
+}
 </style>
 </head>
 <body data-spy="scroll" data-target="#main-navbar" data-offset="71">
@@ -137,7 +198,7 @@
 				<div class="col-md-8 text-right">
 					<div class="school-info">
 						<ul>
-							<li><a href="#"><i class="fa fa-envelope"></i> Email : example@domain.com</a></li>
+							<li><a href="#"><i class="fa fa-envelope"></i> Email : FirstSteps@domain.com</a></li>
 							<li><a href="#"><i class="fa fa-phone"></i> Call : +28 232 574 1</a></li>
 						</ul>
 					</div>
@@ -202,7 +263,7 @@
 					<div class="about-content wow fadeInUp" data-wow-delay="0.6s">
 						<h3>Our Philosophy</h3>
 
-						<p>At Angel Kids, our focus is always on the child. We believe that each child is unique. with
+						<p>At First Steps, our focus is always on the child. We believe that each child is unique. with
 							their own distinct talents, interests, and needs.</p>
 						<p>Therefore, we use innovative techniques, abundant resources, and engaging programs to promote
 							student learning. Our philosophy is to help each child discover how they learn best and to
@@ -294,24 +355,58 @@
 
 	
 	<!-- Footer Section Starts -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<!-- Footer logo start -->
-					<div class="footer-logo">
-						<img src="images/logo.png" alt="" />
-					</div>
-					<!-- Footer logo end -->
-					
-					<!-- Footer Copyright start -->
-					<div class="footer-copyright">
-							<p>Copyright © 2023 First Steps. All rights reserved. ||</p></div>
-					<!-- Footer Copyright end -->
-				</div>
-			</div>
-		</div>
-	</footer>
+	
+    <footer>
+    <!-- Left Column -->
+    <div class="footer-col">
+      <img src="images/logo.png" alt=" Logo" style="max-width:150px;">
+      <p>We are proudly the best Pre-School situated at Kachiguda, Hyderabad!</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Pages -->
+    <div class="footer-col">
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Programme</a></li>
+        <li><a href="#">Preschool Teacher Training</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- More -->
+    <div class="footer-col">
+      <h3>More</h3>
+      <ul>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Admission Enquire</a></li>
+        <li><a href="#">Reviews & Ratings</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col contacts-info" >
+      <h3>Contact</h3>
+      <p style="font-size: 15px;"><i class="fas fa-map-marker-alt"></i>&nbsp; 3-4-16, Kachiguda Hyderabad, Telangana 500027</p>
+      <p style="font-size: 15px;"><i class="fas fa-phone"></i>&nbsp; 93910 02258, 90320 02258</p>
+      <p style="font-size: 15px;"><i class="fas fa-envelope"></i>&nbsp; contact@FirstSteps.in</p>
+     
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    Copyright © 2023 First Steps. All rights reserved. ||
+    Proudly designed and developed by <a href="#">Chaturvedi Digital</a>.
+  </div>
 	<!-- Footer Section Ends -->
 	
 	<!-- Jquery Library File -->
