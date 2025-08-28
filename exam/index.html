@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Instructions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .header img {
+      height: 35px;
+    }
+
+    .header-right {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .instructions {
+      width: 70%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .instructions h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .instructions ul {
+      line-height: 1.6;
+    }
+
+    .sidebar {
+      width: 25%;
+      background: #eaf5ff;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .profile {
+      margin-bottom: 15px;
+    }
+
+    .profile img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .profile h4 {
+      margin: 8px 0 5px;
+      font-size: 16px;
+    }
+
+    .time-box {
+      background: #005bbb;
+      color: #fff;
+      padding: 12px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .footer {
+      text-align: right;
+      margin: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border: none;
+      background: #4e9cff;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #3681e0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="logo.png" alt="Logo">
+    <!-- <div class="header-right">X Close</div> -->
+  </div>
+
+  <div class="container">
+    <!-- Instructions -->
+    <div class="instructions">
+      <h2>Please read instructions carefully</h2>
+      <h4>General Instructions:</h4>
+      <ul>
+        <li>Total duration of the examination is 40 minutes.</li>
+        <li>The countdown timer at the top right will show remaining time.</li>
+        <li>Answered questions = <span style="color:green;">green</span></li>
+        <li>Unanswered questions = <span style="color:red;">red</span></li>
+        <li>Marked for review = <span style="color:blue;">blue</span></li>
+        <li>If answered and marked, it will still be considered for evaluation.</li>
+      </ul>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="profile">
+        <img src="Profile.png" alt="Profile">
+        <h4>Nidhi Ydv</h4>
+      </div>
+      <div class="time-box">Time Left: 40:00</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button onclick="location.href='index2.html'" class="btn">NEXT →</button>
+  </div>
+
+</body>
+</html>

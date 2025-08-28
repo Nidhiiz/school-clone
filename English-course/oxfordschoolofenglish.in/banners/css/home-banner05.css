@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+:root {
+   --primary-color: #ff2712 !important;
+   --secondary-color: #ee3324 !important;
+   --third-color: #ef3d23 !important;
+   --box-color: #fef3ef !important;
+   --gradient-color01: #551d06 !important;
+   --gradient-color02: #f98302 !important;
+   --gradient-color03: #f95304 !important;
+   --light-color: #fafbfc !important;
+   --light-orange-color: #ee3526 !important;
+   --text-color: #0b6e75 !important;
+   --text-black-color: #222222 !important;
+   --text-white-color: #ffffff !important;
+   --text-orange-color: #ee3224 !important;
+   --border-color: #98291e !important;
+   --cross-border-color: #fc2810 !important
+}
+
+.gray-color-span {
+   color: var(--text-color);
+}
+
+.faq-heading {
+   color: var(--text-color) !important;
+}
+
+.red-color-span {
+   color: var(--primary-color);
+}
+
+/* font-family: "Montserrat", serif;
+font-family: "Lato", serif !important; */
+
+.faq-btn {
+   border: 8px solid var(--text-color);
+   background-color: #fff;
+   border-radius: 16px;
+   font-weight: 600;
+   font-size: 30px;
+   line-height: 56px;
+   width: 277px;
+}
+
+@media screen and (min-width: 1280px) {
+   .home-banner05 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 70px 100px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .home-banner05-heading {
+      color: var(--primary-color);
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+
+   .home-banner05-image {
+      width: 100%;
+
+   }
+
+   .home-banner05-text-container {
+      background-color: var(--text-white-color);
+      border-radius: 20px;
+      width: 90%;
+      border: 6px solid var(--primary-color);
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .home-banner05-list-paragraph {
+      color: var(--text-black-color);
+      font-size: 22px;
+      text-align: center;
+      font-weight: bold;
+   }
+}
+
+
+.gray-color-span {
+   color: var(--text-color);
+}
+
+
+
+
+
+@media screen and (max-width: 992px) {
+   .home-banner05 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background-mobile.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .home-banner05-heading {
+      color: var(--primary-color);
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .home-banner05-image {
+      width: 80%;
+      margin-bottom: 20px;
+   }
+
+   .home-banner05-text-container {
+      background-color: var(--text-white-color);
+      border-radius: 20px;
+      width: 100%;
+      border: 6px solid var(--primary-color);
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .home-banner05-list-paragraph {
+      color: var(--text-black-color);
+      font-size: 14px;
+      text-align: center;
+      font-weight: bold;
+   }
+
+   .faq-btn {
+      margin: auto;
+      margin-bottom: 20px;
+   }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+   .home-banner05 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 50px 70px;
+      width: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .home-banner05-heading {
+      color: var(--primary-color);
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+
+   .home-banner05-image {
+      width: 100%;
+
+   }
+
+   .home-banner05-text-container {
+      background-color: var(--text-white-color);
+      border-radius: 15px;
+      width: 95%;
+      border: 6px solid var(--primary-color);
+      padding-left: 12px;
+      padding-right: 12px;
+      height: 130px;
+   }
+
+   .home-banner05-list-paragraph {
+      color: var(--text-black-color);
+      font-size: 16px;
+      text-align: center;
+      font-weight: 500;
+   }
+}
+
+
+
+
+@media screen and (max-width: 567px) {
+   .home-banner05-heading {
+      font-size: 28px;
+   }
+
+   .faq-btn {
+      font-size: 22px;
+      width: 230px;
+   }
+}

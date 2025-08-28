@@ -1,0 +1,159 @@
+.text-container h2, .text-container .h2 {
+  color: var(--secondary-color);
+  font-size: 48px;
+  font-weight: 400 !important;
+  line-height: 70px;
+  margin-bottom: 30px;
+  font-family: "Montserrat", serif;
+  margin-top: 30px;
+}
+.span01 {
+  font-weight: 700;
+}
+@media (min-width: 1441px) {
+    .text-container h2, .text-container .h2 {
+        font-size: 60px;
+      }
+      .text-container {
+        border-left: 60px solid var(--primary-color);
+        padding-left: 96px;
+      }
+      .main-logo {
+        width: 180px;
+      }
+}
+@media screen and (min-width: 992px) {
+    .hero-container {
+        background-color: var(--text-white-color);
+        background-size: cover;
+        padding: 0;
+      }
+      .hero-container .image-container {
+        width: 70%;
+      }
+      .text-container {
+        width: 50%;
+        border-left: 30px solid var(--primary-color);
+        padding-left: 40px;
+        padding-bottom: 40px;
+      }
+      .text-container p {
+        color: var(--text-color);
+        font-size: 20px;
+        font-weight: 600;
+        font-family: "Montserrat", serif;
+      }
+      .check-mark, .group-image010 {
+        margin-right: 5px;
+        margin-top: 0;
+      }
+      .check-mark {
+        width: 30px;
+        height: 25px;
+      }
+      .group-image010 {
+        width: 35px;
+        height: 35px;
+      }
+      .year-container {
+        background-color: transparent;
+        border: 5px solid var(--primary-color);
+        border-radius: 20px;
+        margin-top: 40px;
+        max-width: max-content;
+        min-width: 421px;
+      }
+      .year-container p {
+        color: var(--text-black-color);
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Lato", serif !important;
+      }
+      
+      .inner-image-container {
+        background-color: var(--primary-color);
+        background-size: cover;
+        padding: 40px 0px;
+        width: 90%;
+      }
+      .inner-image-container img {
+        width: 100%;
+        margin-left: -35px;
+        border-radius: 23px;
+      }
+      .group-image {
+        width: 100%;
+        height: 100%;
+      }
+}
+@media screen and (max-width: 1024px) {
+    .text-container h2, .text-container .h2{
+        font-size: 40px;
+        line-height: normal;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .year-container{
+        padding-top:8px !important;
+        margin-top: 0;
+    }
+    .year-container p{
+        margin-bottom:5px;
+    }
+    .text-container{
+        padding-left: 25px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .mobile-hero-container h2 {
+    color: var(--secondary-color);
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    font-family: "Montserrat", serif;
+  }
+  .mobile-hero-container img {
+    width: 100%;
+    margin-top: 10px;
+  }
+  img.check-mark {
+    width: 25px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  .mobile-hero-container p {
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-top: 7px;
+    font-family: "Montserrat", serif;
+  }
+  .mobile-hero-container .group-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .years-background-container {
+    background-color: var(--primary-color);
+  }
+  .mini-container {
+    background-color: var(--text-white-color);
+    border: 3px solid var(--border-color);
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 0px 5px 0px;
+  }
+  .mini-container p {
+    text-align: center;
+    color: var(--text-black-color);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 0px;
+    font-family: "Lato", serif;
+  }
+}

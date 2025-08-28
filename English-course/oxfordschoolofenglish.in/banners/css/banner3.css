@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary-color: #ff2712 !important;
+  --secondary-color: #ee3324 !important;
+  --third-color: #ef3d23 !important;
+  --box-color: #fef3ef !important;
+  --gradient-color01: #551d06 !important;
+  --gradient-color02: #f98302 !important;
+  --gradient-color03: #f95304 !important;
+  --light-color: #fafbfc !important;
+  --light-orange-color: #ee3526 !important;
+  --text-color: #0b6e75 !important;
+  --text-black-color: #222222 !important;
+  --text-white-color: #ffffff !important;
+  --text-orange-color: #ee3224 !important;
+  --border-color: #98291e !important;
+  --cross-border-color: #fc2810 !important
+}
+
+
+/* font-family: "Montserrat", serif;
+font-family: "Lato", serif !important; */
+
+@media screen and (min-width: 1280px) {
+
+  .course-banner03 {
+    background-image: url("../banner-images/background/oxford-online-english-speaking-course-background.webp");
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .course-banner03-heading {
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  s .banner-check-icon-image {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+
+  .banner-group-persons-image {
+    width: 55px;
+    height: 31px;
+    margin-right: 10px;
+  }
+
+  .course-banner03-paragraph01 {
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: bold;
+    width: 750px;
+    font-family: "Lato", serif !important;
+  }
+
+
+  .course-banner03-text-container {
+    background-color: var(--text-white-color);
+    border-radius: 20px;
+    width: 500px;
+    height: 125px;
+    border: 6px solid var(--primary-color);
+  }
+
+  .course-banner03-list-paragraph {
+    color: var(--text-black-color);
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  .course-banner03-list-paragraph01 {
+    color: var(--text-black-color);
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -10px;
+  }
+
+  .course-banner03-image {
+    width: 100%;
+    margin-left: -50px;
+  }
+
+  .row01 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobile-course-banner03-image {
+    display: none;
+  }
+}
+
+
+.grey-color-span01 {
+  color: var(--text-color);
+  font-weight: bold;
+
+}
+
+.course-banner03-heading {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 992px) {
+  .course-banner03 {
+    background-image: url("../banner-images/background/oxford-school-of-english-background-mobile2.webp");
+    background-size: cover;
+    font-family: "Montserrat", serif;
+    padding: 10px 0px;
+  }
+
+  .course-banner03-heading {
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  .course-banner03-image {
+    display: none;
+  }
+
+  .mobile-course-banner03-image {
+    height: auto;
+    width: 100%;
+  }
+
+  .text-box-banner02 {
+    text-align: center;
+  }
+
+  .row01 {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+
+  .banner-check-icon-image {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+
+  .banner-group-persons-image {
+    width: 31px;
+    height: 21px;
+    margin-right: 10px;
+  }
+
+  .course-banner03-paragraph01 {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Lato", serif !important;
+    text-align: center;
+  }
+
+  .course-banner03-mini-container {
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .course-banner03-text-container {
+    background-color: var(--text-white-color);
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px 0px;
+    border: 3px solid var(--border-color);
+  }
+
+  .course-banner03-list-paragraph {
+    color: var(--text-black-color);
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 7px;
+  }
+
+  .course-banner03-list-paragraph01 {
+    color: var(--text-black-color);
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 6px;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  .course-banner03 {
+    background-image: url("../banner-images/background/oxford-school-online-speaking-background.webp");
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+
+  .course-banner03-heading {
+    color: var(--primary-color);
+    font-size: 45px;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .banner-check-icon-image {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+
+  .banner-group-persons-image {
+    width: 45px;
+    height: 25px;
+    margin-right: 10px;
+    margin-top: 7px;
+  }
+
+  .course-banner03-paragraph01 {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    width: 750px;
+    font-family: "Lato", serif !important;
+  }
+
+
+  .course-banner03-text-container {
+    background-color: var(--text-white-color);
+    border-radius: 20px;
+    width: 390px;
+    height: 100px;
+    border: 6px solid var(--primary-color);
+    margin: auto;
+  }
+
+  .course-banner03-list-paragraph {
+    color: var(--text-black-color);
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  .course-banner03-list-paragraph01 {
+    color: var(--text-black-color);
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -10px;
+  }
+
+  .course-banner03-image {
+    width: 100%;
+    margin-left: -90px;
+  }
+
+  .row01 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobile-course-banner03-image {
+    display: none;
+  }
+
+
+  .course-banner03-paragraph01 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .course-banner03-heading {
+    font-size: 50px;
+  }
+}
+
+
+@media screen and (max-width: 1366px) {
+  .course-banner03-heading {
+    font-size: 40px;
+  }
+
+  .course-banner03-image {
+    margin-left: -72px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .seperator {
+    display: none;
+  }
+
+  .split-branch {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .course-banner03-heading {
+    font-size: 28px;
+  }
+
+  .course-banner03-list-paragraph {
+    font-size: 16px;
+  }
+
+  .course-banner03-list-paragraph01 {
+    font-size: 16px;
+  }
+}

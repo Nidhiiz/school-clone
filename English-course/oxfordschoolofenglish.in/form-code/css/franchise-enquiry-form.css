@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--white-color);
+    margin: 0;
+}
+
+:root {
+    --border-color: #BCBCBC;
+    --text-color: #8E8E8E;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #333;
+    --red-color: #FF2712;
+    --Montserrat-family: "Montserrat", sans-serif;
+    --Lato-family: "Lato", sans-serif;
+}
+
+.group-content.select-content-group {
+    position: relative;
+}
+
+.group-content.select-content-group select {
+    appearance: none;
+    padding-right: 30px;
+}
+
+.group-content.select-content-group::after {
+    content: "\f107";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+section.franchise-enquiry-main {
+    padding: 50px 30px;
+}
+
+.franchise-enquiry-main .msg-group-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.franchise-enquiry-main label span {
+    color: red;
+}
+
+.franchise-enquiry-main .form-container {
+    background: #FFFAF8;
+    padding: 20px;
+    border: 1px solid #f05a34;
+    border-radius: 13px;
+    width: 100%;
+    max-width: 1066px;
+    margin: auto;
+    box-shadow: 0 12px 32px rgb(85 85 85 / 20%);
+}
+
+.franchise-enquiry-main form {
+    display: flex;
+    gap: 30px;
+    row-gap: 15px;
+    flex-wrap: wrap;
+}
+
+.franchise-enquiry-main input,
+.franchise-enquiry-main select,
+.franchise-enquiry-main textarea {
+    width: 100%;
+    padding: 11px 20px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--border-color);
+    text-transform: capitalize;
+    font-family: var(--Lato-family);
+}
+
+.franchise-enquiry-main textarea {
+    border-radius: 12px;
+    resize: vertical;
+    min-height: 140px;
+}
+
+.franchise-enquiry-main input:focus,
+.franchise-enquiry-main textarea:focus,
+.franchise-enquiry-main select:focus {
+    outline: none;
+    border-color: transparent !important;
+    box-shadow: 0 0 4px var(--red-color);
+    transition: all linear 0.2s;
+}
+
+.franchise-enquiry-main .full-width {
+    grid-column: span 2;
+}
+
+.franchise-enquiry-main .submit-btn {
+    display: flex;
+    justify-content: center;
+    background-color: var(--red-color);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--Montserrat-family);
+}
+
+.franchise-enquiry-main .msg-content label {
+    font-size: 14px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--border-color);
+    text-transform: capitalize;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.franchise-enquiry-main .group-content {
+    width: 31.3%;
+    position: relative;
+}
+
+.franchise-enquiry-main input:focus+label {
+    display: none;
+}
+
+.franchise-enquiry-main .msg-content {
+    width: 100%;
+    position: relative;
+}
+
+.franchise-enquiry-main .msg-content textarea:focus+label {
+    display: none;
+}
+
+.franchise-enquiry-main label {
+    font-size: 14px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-color);
+    text-transform: capitalize;
+    position: absolute;
+    top: 47%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.franchise-enquiry-main .submit-btn:hover {
+    background-color: #d94a28;
+}
+
+.franchise-enquiry-main input::placeholder,
+.franchise-enquiry-main select,
+.franchise-enquiry-main textarea::placeholder {
+    color: var(--text-color);
+}
+
+.franchise-enquiry-main .main-tittle {
+    font-family: var(--Montserrat-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--red-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+@media (max-width:1199px) {
+    .franchise-enquiry-main .group-content {
+        width: 31%;
+    }
+}
+
+@media (max-width:991px) {
+    .franchise-enquiry-main .group-content {
+        width: 47.7%;
+    }
+}
+
+@media (max-width:767px) {
+    .franchise-enquiry-main .group-content {
+        width: 46%;
+    }
+
+    .franchise-enquiry-main section.employee-form-main {
+        padding: 40px 15px;
+    }
+
+    .franchise-enquiry-main textarea {
+        min-height: 100px;
+    }
+
+    .franchise-enquiry-main .msg-content textarea.required {
+        height: 80px;
+        overflow: auto;
+    }
+
+    .franchise-enquiry-main section.franchise-enquiry-main {
+        padding: 40px 20px;
+    }
+
+    .franchise-enquiry-main .msg-group-content {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width:575px) {
+    .franchise-enquiry-main .group-content {
+        width: 100%;
+    }
+
+    .franchise-enquiry-main form {
+        row-gap: 15px;
+    }
+}
+
+/* .franchise-enquiry-main .group-content.active label {
+    display: none;
+} */
+
+
+.franchise-enquiry-main .hide {
+    opacity: 0;
+    visibility: hidden;
+}

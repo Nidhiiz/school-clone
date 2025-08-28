@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    /*font-family: Arial, sans-serif;*/
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#call-button-1 {
+    /* background-color: #25D366; /* WhatsApp green color */
+    color: #fff;
+    padding: 20px;
+    right: 80px;
+    animation: blink 2s infinite;
+}
+
+#whatsapp-button-1 {
+    /* background-color: #34B7F1; /* Phone blue color */
+    color: #fff;
+    padding: 20px;
+    right: 20px;
+    animation: blink 2s infinite;
+}
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 112px;
+    right: 20px;
+    /* background-color: #25D366; /* Hide WhatsApp green color */
+    color: #fff;
+    border: none;
+    padding: 13px 10px !important;
+    border-radius: 50%;
+    cursor: pointer;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* animation: blink 2s infinite; */
+}
+
+#whatsapp-button:hover, #floating-button:hover {
+    background-color: #128C7E;
+    /* WhatsApp dark green color on hover */
+    animation: none;
+    /* Stop blinking on hover */
+}
+
+#whatsapp-numbers, #locations {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 2;
+}
+
+#whatsapp-button:hover+#whatsapp-numbers, #floating-button:hover+#locations,
+#whatsapp-numbers:hover, #locations:hover {
+    display: block;
+}
+
+.whatsapp-number {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#floating-button {
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+    /*  background-color: #00000D; /* Call Button color */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    animation: blink 2s infinite;
+}
+
+#floating-button:hover {
+    background-color: #128C7E;
+    /* WhatsApp dark green color on hover */
+    animation: none;
+    /* Stop blinking on hover */
+}
+
+#phone-numbers {
+    display: none;
+    position: fixed;
+    /*bottom: 60px;*/
+    /*right: 20px;*/
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 2;
+}
+
+#whatsapp-numbers, #locations, #phone-numbers {
+    bottom: 48px;
+    right: 80px;
+}
+
+#floating-button:hover+#phone-numbers,
+#phone-numbers:hover {
+    display: block;
+}
+
+.phone-number {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.phone-numbers table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.phone-numbers th, .phone-numbers td {
+    padding: 4px 6px !important;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.phone-numbers th {
+    background-color: #DB0808;
+    /* WhatsApp green color */
+    color: #fff;
+}
+
+.fa-xl {
+    font-size: 4em;
+    line-height: .04167em;
+    vertical-align: -.125em;
+}
+
+.w-numbers th {
+    background-color: #25D366;
+    /* WhatsApp green color */
+    color: #fff;
+}
+
+.phone-numbers tbody tr:nth-child(even) {
+    background-color: #fff;
+    /* White background for even rows */
+}
+
+.phone-numbers tbody tr:nth-child(odd) {
+    background-color: #e6f7ff;
+    /* Light blue background for odd rows */
+}
+
+.phone-number {
+    display: block;
+    margin-top: 01px;
+    color: #333;
+    text-decoration: none;
+}
+
+.w-number {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.w-numbers table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.w-numbers th, .w-numbers td {
+    padding: 4px 6px !important;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.w-numbers th {
+    background-color: #25D366;
+    /* WhatsApp green color */
+    color: #fff;
+}
+
+.w-numbers th {
+    background-color: #25D366;
+    /* WhatsApp green color */
+    color: #fff;
+}
+
+.w-numbers tbody tr:nth-child(even) {
+    background-color: #fff;
+    /* white background for even rows */
+}
+
+.w-numbers tbody tr:nth-child(odd) {
+    background-color: #e6f7ff;
+    /* Light blue background for odd rows */
+}
+
+.w-number {
+    display: block;
+    margin-top: 01px;
+    color: #333;
+    text-decoration: none;
+}
+
+
+#call-button:hover+.phone-numbers,
+#whatsapp-button:hover+.phone-numbers,
+#floating-button:hover+.phone-numbers {
+    display: block;
+}
+
+#floating-button {
+    color: #fff;
+    background: #009e85;
+    font-size: 2.2em;
+    bottom: 28px;
+    z-index: 10;
+    padding: 12px;
+    right: 18px;
+}
+
+#locations th {
+    background-color: #408a7e;
+}
+
+@media(max-width:767px) {
+    #whatsapp-numbers, #locations, #phone-numbers {
+        right: 20px;
+        left: 20px;
+        bottom: 41px;
+    }
+
+    .phone-numbers th, .phone-numbers td, .w-numbers th, .w-numbers td {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Add WA floating button CSS */
+.floating {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: justify;
+    font-size: 50px;
+    /*box-shadow: 2px 2px 3px #999;*/
+    z-index: 100;
+}
+
+.fab-icon {
+    margin-top: 16px;
+}
+
+/* Add WA floating button CSS */
+.floatings {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 120px;
+    right: 40px;
+    /*background-color: #25d366;*/
+    color: #fff;
+    border-radius: 100px;
+    text-align: justify;
+    vertical-align: text-bottom;
+    font-size: 30px;
+    /*box-shadow: 3px 3px 3px #999;*/
+    z-index: 100;
+    font-size: 40px;
+}
+
+.fab-icons {
+    margin-top: 16px;
+}
+
+
+
+.floatingss.fa.fa-phone-volume.fa-beat,
+.fa-brands.fa-whatsapp.fa-beat {
+    z-index: 22;
+}
+
+.floatingss.fa.fa-phone-volume.fa-beat {
+    color: #fff !important;
+    font-size: 2em !important;
+    background: #00aee0;
+}
+
+.fa-brands.fa-whatsapp.fa-beat {
+    color: #fff !important;
+    font-size: 2.6em !important;
+    background: #27a725;
+    height: 60px;
+    width: 60px;
+    line-height: 0.7;
+}
+
+@media only screen and (max-width: 767px) {
+    .fa-brands.fa-whatsapp.fa-beat, #floating-button {
+        font-size: 1.9em !important;
+        height: 42px;
+        width: 50%;
+        bottom: 0px !important;
+        right: auto !important;
+        border-radius: 0 !important;
+        left: 0px !important;
+        /* bottom: 157px !important; */
+        /* right: 13px !important; */
+        padding: 11px !important;
+        animation: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 11px;
+    }
+
+    .fa-brands.fa-whatsapp.fa-beat span, #floating-button span {
+        font-size: 16px;
+        font-family: 'Montserrat';
+        font-weight: 500;
+    }
+
+    .floatingss.fa.fa-phone-volume.fa-beat {
+        /*bottom: 230px !important;*/
+        /*right: 14px !important;*/
+        bottom: 167px !important;
+        right: 10px !important;
+        padding: 12px !important;
+        font-size: 1.4em !important;
+    }
+
+    #floating-button {
+        background: #004D40 !important;
+        border-left: 2px solid #fff !important;
+        right: 0px !important;
+        left: auto !important;
+        font-size: 22px !important;
+        /*padding: 10px !important;*/
+    }
+
+    .whtsapp-section .col-md-6.section:last-child {
+        border-top: solid 15px #e27444;
+        width: 100%;
+    }
+
+    .m-border-left-none {
+        border-left: none !important;
+    }
+
+    .whtsapp-section .col-md-6 .h1, .whtsapp-section .col-md-6 .h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .whtsapp-section .col-md-6 .h1, .whtsapp-section .col-md-6 .h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .whtsapp-section .col-md-6.section {
+        padding: 20px 20px 20px;
+
+    }
+}

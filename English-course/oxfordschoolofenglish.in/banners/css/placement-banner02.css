@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+:root {
+   --primary-color: #ff2712 !important;
+   --secondary-color: #ee3324 !important;
+   --third-color: #ef3d23 !important;
+   --box-color: #fef3ef !important;
+   --gradient-color01: #551d06 !important;
+   --gradient-color02: #f98302 !important;
+   --gradient-color03: #f95304 !important;
+   --light-color: #fafbfc !important;
+   --light-orange-color: #ee3526 !important;
+   --text-color: #0b6e75 !important;
+   --text-black-color: #222222 !important;
+   --text-white-color: #ffffff !important;
+   --text-orange-color: #ee3224 !important;
+   --border-color: #98291e !important;
+   --cross-border-color: #fc2810 !important
+}
+
+
+/* font-family: "Montserrat", serif;
+font-family: "Lato", serif !important; */
+
+.gray-color-span {
+   color: var(--text-color);
+}
+
+@media screen and (min-width: 1280px) {
+   .placement-banner02 {
+      background-image: url("../banner-images/background/oxford-school-online-speaking-background.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding-top: 70px;
+      padding-bottom: 70px;
+   }
+
+   .placement-banner02-heading {
+      color: var(--primary-color);
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .placement-banner02-text-box {
+      padding-left: 120px;
+   }
+
+   .oxford-email-container {
+      background-color: var(--text-color);
+      width: 497px;
+      height: 65px;
+      border-radius: 50px;
+      border: 0px;
+      padding: 8px 10px;
+   }
+
+   .email-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+   }
+
+   .oxford-email {
+      color: var(--box-color);
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 5px;
+      cursor: pointer;
+      text-decoration: underline;
+   }
+
+   .placement-banner02-row01 {
+      display: flex;
+      flex-direction: row;
+   }
+
+   .placement-banner02-image {
+      width: 100%;
+   }
+
+
+   .mobile-placement-banner02-image {
+      display: none;
+   }
+
+
+}
+
+
+
+@media screen and (max-width: 992px) {
+   .placement-banner02 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background-mobile2.webp");
+      background-size: cover;
+      font-family: "Montserrat", serif;
+      padding-top: 0px;
+      width: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 10px 0px;
+   }
+
+   .placement-banner02-heading {
+      color: var(--primary-color);
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 145%;
+      text-align: center;
+      margin: 20px 0px;
+   }
+
+   /* .placement-banner02-text-box {
+      padding-left: 20px;
+      padding-right: 20px;
+   } */
+
+   .oxford-email-container {
+      background-color: var(--text-color);
+      width: auto;
+      border-radius: 50px;
+      border: 0px;
+      padding: 10px 25px;
+   }
+
+   .email-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+      margin-top: 3px;
+   }
+
+   .oxford-email {
+      color: var(--box-color);
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 5px;
+      cursor: pointer;
+      text-decoration: underline;
+   }
+
+
+
+   .placement-banner02-image {
+      width: 100%;
+      display: none;
+   }
+
+   .mobile-placement-banner02-image {
+      object-fit: contain;
+      margin-left: auto;
+      padding-left: 20px;
+      width: 90%;
+   }
+
+   .placement-banner02-row01 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+
+}
+
+
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+   .placement-banner02 {
+      background-image: url("../banner-images/background/oxford-school-online-speaking-background.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding-top: 70px;
+      padding-bottom: 70px;
+   }
+
+   .placement-banner02-heading {
+      color: var(--primary-color);
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .placement-banner02-text-box {
+      padding-left: 70px;
+   }
+
+   .oxford-email-container {
+      background-color: var(--text-color);
+      width: 350px;
+      height: 50px;
+      border-radius: 50px;
+      border: 0px;
+      padding: 8px 10px;
+   }
+
+   .email-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+   }
+
+   .oxford-email {
+      color: var(--box-color);
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 5px;
+      cursor: pointer;
+      text-decoration: underline;
+   }
+
+   .placement-banner02-row01 {
+      display: flex;
+      flex-direction: row;
+   }
+
+   .placement-banner02-image {
+      width: 100%;
+   }
+
+
+   .mobile-placement-banner02-image {
+      display: none;
+   }
+
+
+}
+
+@media screen and (max-width: 567px) {
+   .placement-banner02-heading {
+      font-size: 28px;
+   }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+   .oxford-email {
+      font-size: 16px;
+   }
+}

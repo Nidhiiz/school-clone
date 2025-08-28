@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+:root {
+   --primary-color: #ff2712 !important;
+   --secondary-color: #ee3324 !important;
+   --third-color: #ef3d23 !important;
+   --box-color: #fef3ef !important;
+   --gradient-color01: #551d06 !important;
+   --gradient-color02: #f98302 !important;
+   --gradient-color03: #f95304 !important;
+   --light-color: #fafbfc !important;
+   --light-orange-color: #ee3526 !important;
+   --text-color: #0b6e75 !important;
+   --text-black-color: #222222 !important;
+   --text-white-color: #ffffff !important;
+   --text-orange-color: #ee3224 !important;
+   --border-color: #98291e !important;
+   --cross-border-color: #fc2810 !important
+}
+
+
+/* font-family: "Montserrat", serif;
+font-family: "Lato", serif !important; */
+
+
+@media screen and (min-width: 1280px) {
+   .contact-banner04 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 70px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .contact-banner04-heading {
+      color: var(--primary-color);
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .contact-banner04-paragraph {
+      color: var(--text-black-color);
+      font-size: 32px;
+      font-weight: bold;
+   }
+
+   .call-us-button03 {
+      background-color: var(--text-color);
+      width: 272px;
+      height: 70px;
+      border-radius: 50px;
+      border: 0px;
+   }
+
+   .call-img03 {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+
+   }
+
+   .call-now-heading03 {
+      color: var(--text-white-color);
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 8px;
+   }
+
+   .contact-banner04-image {
+      width: 90%;
+
+   }
+
+   .contact-banner04-text-box {
+      padding-left: 60px;
+   }
+
+   .contact-banner04-text-container-box {
+      background-color: var(--text-white-color);
+      border-radius: 16px;
+      border: 3px solid var(--primary-color);
+      margin-top: 20px;
+   }
+
+   .contact-banner04-list01 {
+      color: var(--text-black-color);
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+   }
+}
+
+.black-color-span {
+   color: var(--text-black-color);
+   font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 992px) {
+   .contact-banner04 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background-mobile3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 30px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .contact-banner04-heading {
+      color: var(--primary-color);
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .contact-banner04-paragraph {
+      color: var(--text-black-color);
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+   }
+
+   .call-us-button03 {
+      background-color: var(--text-color);
+      width: 272px;
+      height: 70px;
+      border-radius: 50px;
+      border: 0px;
+   }
+
+   .call-img03 {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+
+   }
+
+   .call-now-heading03 {
+      color: var(--text-white-color);
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 8px;
+   }
+
+   .contact-banner04-image {
+      width: 80%;
+      margin-bottom: 25px;
+   }
+
+   .contact-banner04-row01 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   .contact-banner04-text-container-box {
+      background-color: var(--text-white-color);
+      border-radius: 16px;
+      border: 3px solid var(--primary-color);
+      margin-top: 20px;
+   }
+
+   .contact-banner04-list01 {
+      color: var(--text-black-color);
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+   .contact-banner04 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 70px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .contact-banner04-heading {
+      color: var(--primary-color);
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .contact-banner04-paragraph {
+      color: var(--text-black-color);
+      font-size: 24px;
+      font-weight: bold;
+   }
+
+   .call-us-button03 {
+      background-color: var(--text-color);
+      width: 200px;
+      height: 50px;
+      border-radius: 50px;
+      border: 0px;
+   }
+
+   .call-img03 {
+      width: 35px;
+      height: 35px;
+      margin-right: 15px;
+      margin-top: 3px;
+
+   }
+
+   .call-now-heading03 {
+      color: var(--text-white-color);
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 8px;
+   }
+
+   .contact-banner04-image {
+      width: 100%;
+
+   }
+
+   .contact-banner04-text-box {
+      padding-left: 60px;
+   }
+
+   .contact-banner04-text-container-box {
+      background-color: var(--text-white-color);
+      border-radius: 12px;
+      border: 3px solid var(--primary-color);
+      margin-top: 20px;
+   }
+
+   .contact-banner04-list01 {
+      color: var(--text-black-color);
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+   }
+}
+
+
+
+@media screen and (max-width: 567px) {
+   .contact-banner04-heading {
+      font-size: 28px;
+   }
+
+}

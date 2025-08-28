@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary-color: #ff2712 !important;
+  --secondary-color: #ee3324 !important;
+  --third-color: #ef3d23 !important;
+  --box-color: #fef3ef !important;
+  --gradient-color01: #551d06 !important;
+  --gradient-color02: #f98302 !important;
+  --gradient-color03: #f95304 !important;
+  --light-color: #fafbfc !important;
+  --light-orange-color: #ee3526 !important;
+  --text-color: #0b6e75 !important;
+  --text-black-color: #222222 !important;
+  --text-white-color: #ffffff !important;
+  --text-orange-color: #ee3224 !important;
+  --border-color: #98291e !important;
+  --cross-border-color: #fc2810 !important
+}
+
+.gray-color-span {
+  color: var(--text-color);
+}
+
+
+/* font-family: "Montserrat", serif;
+font-family: "Lato", serif !important; */
+
+@media screen and (min-width: 1280px) {
+  .home-banner04 {
+    background-image: url("../banner-images/background/oxford-school-online-speaking-background.webp");
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .home-banner04-heading {
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 145%;
+  }
+
+  .text-box-home-banner04 {
+    padding-left: 100px;
+
+  }
+
+
+  .home-banner04-text-container {
+    background-color: var(--text-white-color);
+    border-radius: 20px;
+    width: 90%;
+    height: 150px;
+    border: 6px solid var(--primary-color);
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .home-banner04-list-paragraph {
+    color: var(--text-black-color);
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  .home-banner04-image {
+    width: 100%;
+    margin-left: -50px;
+
+  }
+
+  .mobile-home-banner04-image {
+    display: none;
+
+  }
+
+  .home-banner04-text-box {
+    background-color: var(--text-color);
+    width: 90%;
+    height: 80px;
+    border-radius: 50px;
+  }
+
+  .home-banner04-paragraph01 {
+    color: var(--text-white-color);
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .home-banner04-paragraph02 {
+    color: var(--text-white-color);
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+
+}
+
+
+.home-banner04-orange-color-span01 {
+  font-weight: 400;
+
+}
+
+
+@media screen and (max-width: 992px) {
+  .home-banner04 {
+    background-image: url("../banner-images/background/oxford-school-of-english-background-mobile2.webp");
+    background-size: cover;
+    font-family: "Montserrat", serif;
+    padding-top: 10px;
+  }
+
+  .home-banner04-heading {
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 145%;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .home-banner04-image {
+    display: none;
+  }
+
+  .mobile-home-banner04-image {
+    width: 100%;
+  }
+
+
+
+  .row01 {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+
+
+  .home-banner04-text-box {
+    background-color: var(--text-color);
+    width: 90%;
+    height: 90px;
+    border-radius: 15px;
+
+  }
+
+  .home-banner04-paragraph01 {
+    color: var(--text-white-color);
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+
+
+  .home-banner04-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .home-banner04 {
+    background-image: url("../banner-images/background/oxford-school-online-speaking-background.webp");
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .home-banner04-heading {
+    color: var(--primary-color);
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 145%;
+  }
+
+  .text-box-home-banner04 {
+    padding-left: 70px;
+
+  }
+
+
+  .home-banner04-text-container {
+    background-color: var(--text-white-color);
+    border-radius: 20px;
+    width: 90%;
+    height: 130px;
+    border: 6px solid var(--primary-color);
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+
+  .home-banner04-image {
+    width: 100%;
+    margin-left: -50px;
+
+  }
+
+  .mobile-home-banner04-image {
+    display: none;
+
+  }
+
+  .home-banner04-text-box {
+    background-color: var(--text-color);
+    width: 90%;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .home-banner04-paragraph01 {
+    color: var(--text-white-color);
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+}
+
+
+@media screen and (max-width: 567px) {
+  .home-banner04-heading {
+    font-size: 28px;
+  }
+
+}

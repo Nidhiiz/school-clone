@@ -1,0 +1,330 @@
+/* adib common css */
+
+
+:root {
+    --light-red-color: #FC2810;
+    --black-color: #000000;
+    --dark-green-color: #0D271C;
+    --border-gray: #808080;
+    --light-black: #333333;
+    --bg-gray: #858585;
+    --light-green: #C5ECEE;
+    --text-gray: #727272;
+    --light-red: #FFE3E0;
+    --yellow: #FFDD00;
+    --dark-blue: #17146B;
+    --light-gray: #EEEEEE;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2, h3, h4, h6, h6 {
+    font-family: "Montserrat", serif !important;
+}
+
+li, p, button, input, textarea {
+    font-family: "Lato", serif !important;
+}
+
+
+.text-right {
+    text-align: right;
+}
+
+/* .container {
+    padding: 0px !important;
+} */
+
+.adibsection {
+    color: #000000;
+    margin: 30px 0;
+}
+
+.bg-overlay {
+    background-color: var(--theme-green-color);
+}
+
+.bg-banner {
+    background-image: url('../../assets/more-images/34-oxford-contact.webp');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 63px 80px;
+}
+
+.pr-40 {
+    padding-right: 40px;
+}
+
+.pl-40 {
+    padding-left: 40px;
+}
+
+.banner2 {
+    background-image: url('../../assets/more-images/35-four-branches.webp');
+    background-size: 60%;
+}
+
+.relative {
+    position: relative;
+}
+
+.desc-res, .readmore {
+    display: none;
+}
+
+.card-Content {
+    padding: 50px 0px;
+}
+
+.card-scroll::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+    height: 0px;
+}
+
+.card-scroll::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.card2, .card4 {
+    max-width: 850px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card3 .grid, .card4 .grid, .card5 .grid, .card6 .grid, .card7 .grid, .card8 .grid:first-child {
+    gap: 30px;
+}
+
+.txt2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--black-color);
+    margin: 20px 0;
+}
+
+.desc2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.knowBtn {
+    display: none;
+}
+
+.aspect-square {
+    width: 400px;
+    height: 400px;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location span {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text-gray);
+}
+
+.border-text {
+    background-color: var(--white);
+    border: 8px solid var(--primary-color);
+    color: var(--gradient-color01);
+    padding: 7px 14px;
+    text-align: center;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 30px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: -110px;
+    position: relative;
+    z-index: 20;
+}
+
+@media (max-width: 1200px) {
+    .bg-banner {
+        background-image: url('');
+        padding: 20px 40px 40px 40px;
+    }
+
+    .pr-40 {
+        padding-right: 10px;
+    }
+
+    .pl-40 {
+        padding-left: 10px;
+    }
+
+    .btn-stack img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .line-clamp-3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    .line-clamp-3.expanded {
+        -webkit-line-clamp: none;
+        line-clamp: none;
+    }
+
+    .desc-res, .readmore-res {
+        display: -webkit-box;
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .desc2 {
+        font-size: 14px;
+    }
+
+    .txt2 {
+        font-size: 20px;
+    }
+
+    .knowBtn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: var(--white);
+        display: block;
+        border: 0;
+        text-transform: uppercase;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .black-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .knowBtn.red {
+        background-color: var(--primary-color);
+    }
+
+    .knowBtn.yellow {
+        background-color: var(--gradient-color02);
+    }
+
+    .knowBtn.cyan {
+        background-color: var(--theme-green-color);
+    }
+
+    .knowBtn.brown {
+        background-color: var(--border-color);
+    }
+
+    .aspect-square {
+        min-width: 350px;
+        height: 300px;
+        flex: 1;
+    }
+
+    .card6Box.aspect-square {
+        height: 350px;
+    }
+
+    .card3Box, .card4Box, .card7Box {
+        min-width: 300px;
+        flex: 1;
+    }
+
+    .location span {
+        font-size: 12px;
+    }
+
+    .card2 .grid, .card3 .grid, .card4 .grid, .card5 .grid, .card6 .grid, .card7 .grid, .card8 .grid:first-child {
+        gap: 15px;
+    }
+
+    .card3 .grid, .card4 .grid, .card5 .grid, .card6 .grid, .card7 .grid, .card8 .grid:first-child {
+        display: flex;
+        overflow-x: auto;
+        padding: 30px 20px;
+    }
+
+    .card6Box h3, .card7Box h3 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .line-clamp-3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    .option img, .blank-bg img {
+        width: 9px;
+        height: 15px;
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-card6-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0 20px;
+    }
+
+    .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .border-text {
+        width: 90%;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .bg-banner {
+        padding: 20px 20px 30px 20px;
+    }
+
+}

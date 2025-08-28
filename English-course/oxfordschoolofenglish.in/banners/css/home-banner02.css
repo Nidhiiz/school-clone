@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+:root {
+   --primary-color: #ff2712 !important;
+   --secondary-color: #ee3324 !important;
+   --third-color: #ef3d23 !important;
+   --box-color: #fef3ef !important;
+   --gradient-color01: #551d06 !important;
+   --gradient-color02: #f98302 !important;
+   --gradient-color03: #f95304 !important;
+   --light-color: #fafbfc !important;
+   --light-orange-color: #ee3526 !important;
+   --text-color: #0b6e75 !important;
+   --text-black-color: #222222 !important;
+   --text-white-color: #ffffff !important;
+   --text-orange-color: #ee3224 !important;
+   --border-color: #98291e !important;
+   --cross-border-color: #fc2810 !important
+}
+
+
+/* font-family: "Montserrat", serif;
+font-family: "Lato", serif !important; */
+
+
+@media screen and (min-width: 1280px) {
+   .home-banner02 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 70px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .home-banner02-heading {
+      color: var(--primary-color);
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .home-banner02-text-box {
+      padding-left: 60px;
+   }
+
+   .since-1997-container {
+      background-color: var(--text-white-color);
+      border: 2px solid var(--text-color);
+      width: 230px;
+      height: 50px;
+      border-radius: 45px;
+      margin-bottom: 10px;
+   }
+
+   .since-1997-heading {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      padding-top: 5px;
+   }
+
+   .since-1997-container01 {
+      background-color: var(--text-white-color);
+      border: 2px solid var(--text-color);
+      width: 230px;
+      height: 50px;
+      border-radius: 45px;
+      margin-bottom: 10px;
+      margin-left: 120px;
+   }
+
+   .since-1997-container02 {
+      background-color: var(--text-white-color);
+      border: 2px solid var(--text-color);
+      width: 320px;
+      height: 50px;
+      border-radius: 45px;
+      margin-bottom: 10px;
+      margin-left: 240px;
+   }
+
+   .home-banner02-text-box-container {
+      background-color: var(--text-color);
+      width: 600px;
+      height: 60px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+   }
+
+   .home-banner02-text {
+      text-align: center;
+      color: var(--text-white-color);
+      font-size: 28px;
+      font-weight: bold;
+      padding-top: 6px;
+   }
+
+
+   .home-banner02-image {
+      width: 90%;
+
+   }
+}
+
+.gray-color-span {
+   color: var(--text-color);
+}
+
+.since-1997-container:hover, .since-1997-container01:hover, .since-1997-container02:hover {
+   background-color: var(--primary-color);
+   border: 0px;
+   color: var(--text-white-color);
+}
+
+
+
+@media screen and (max-width: 992px) {
+   .home-banner02 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background-mobile3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 30px 15px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+
+   .home-banner02-heading {
+      color: var(--primary-color);
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+
+   .home-banner02-image {
+      width: 80%;
+      margin-bottom: 25px;
+   }
+
+   .mobiie-text-box {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+   .since-1997-container {
+      background-color: var(--text-white-color);
+      border: 2px solid var(--primary-color);
+      padding: 5px 15px;
+      border-radius: 45px;
+      margin-bottom: 10px;
+   }
+
+   .since-1997-heading {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      padding-top: 5px;
+   }
+
+   .home-banner02-text-box-container {
+      background-color: var(--text-color);
+      width: 100%;
+      height: 50px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+   }
+
+   .home-banner02-text {
+      text-align: center;
+      color: var(--text-white-color);
+      font-size: 15px;
+      font-weight: bold;
+      padding-top: 10px;
+   }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+   .home-banner02 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 70px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .home-banner02-heading {
+      color: var(--primary-color);
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 145%;
+   }
+
+   .home-banner02-text-box {
+      padding-left: 60px;
+   }
+
+   .since-1997-container {
+      background-color: var(--text-white-color);
+      border: 2px solid var(--text-color);
+      width: 230px;
+      height: 50px;
+      border-radius: 45px;
+      margin-bottom: 10px;
+   }
+
+   .since-1997-heading {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      padding-top: 5px;
+   }
+
+   .since-1997-container01 {
+      background-color: var(--text-white-color);
+      border: 2px solid var(--text-color);
+      width: 230px;
+      height: 50px;
+      border-radius: 45px;
+      margin-bottom: 10px;
+      margin-left: 80px;
+   }
+
+   .since-1997-container02 {
+      background-color: var(--text-white-color);
+      border: 2px solid var(--text-color);
+      width: 320px;
+      height: 50px;
+      border-radius: 45px;
+      margin-bottom: 10px;
+      margin-left: 160px;
+   }
+
+   .home-banner02-text-box-container {
+      background-color: var(--text-color);
+      width: 400px;
+      height: 48px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+   }
+
+   .home-banner02-text {
+      text-align: center;
+      color: var(--text-white-color);
+      font-size: 20px;
+      font-weight: bold;
+      padding-top: 8px;
+   }
+
+
+   .home-banner02-image {
+      width: 95%;
+
+   }
+}
+
+
+@media screen and (max-width: 567px) {
+   .home-banner02-heading {
+      font-size: 28px;
+   }
+}

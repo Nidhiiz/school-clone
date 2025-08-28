@@ -1,0 +1,214 @@
+.card1 .grid {
+    gap: 25px;
+    row-gap: 7.75rem;
+}
+
+.card1 {
+    margin-bottom: 100px;
+}
+
+.cardBox {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.w-lCard {
+    width: 200px;
+    text-align: center;
+}
+
+.w-lCard p {
+    font-weight: 600;
+    font-size: 80px;
+    color: var(--black-color);
+    margin-top: 10px;
+}
+
+.option {
+    width: 70%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: var(--white);
+    font-size: 16px;
+    padding: 8px 0;
+    font-weight: 600;
+    margin: auto;
+    margin-top: -22px;
+    position: relative;
+}
+
+.option.red, .divider.red, .blank-bg.red {
+    background-color: var(--primary-color);
+}
+
+.option.yellow, .divider.yellow, .blank-bg.yellow {
+    background-color: var(--gradient-color02);
+}
+
+.option.cyan, .divider.cyan, .blank-bg.cyan {
+    background-color: var(--theme-green-color);
+}
+
+.option.brown, .divider.brown, .blank-bg.brown {
+    background-color: var(--border-color);
+}
+
+
+.Vector-icon {
+    position: absolute;
+    left: -12px;
+    top: 0;
+}
+
+.Vector-icon2 {
+    position: absolute;
+    left: -12px;
+    bottom: 0;
+}
+
+
+.blank-bg {
+    width: 70%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 180px;
+    position: absolute;
+    margin: auto;
+    bottom: -22px;
+    left: 30px;
+}
+
+.card-details {
+    padding: 20px;
+    padding-left: 0;
+    flex: 1;
+}
+
+.card-details h3 {
+    font-size: 34px;
+    color: var(--black-color);
+    font-weight: 700;
+}
+
+.card-details p {
+    font-size: 18px;
+    color: var(--black-color);
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.divider {
+    height: 8px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.subtxt {
+    font-size: 25px;
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+.card1icon {
+    margin-top: 25px;
+}
+
+.wixblack, .canvablack {
+    margin-top: 45px;
+}
+
+@media (max-width: 1200px) {
+    .card1 .grid {
+        row-gap: 3.75rem;
+        display: flex;
+        overflow-x: auto;
+        padding: 50px 20px;
+    }
+
+    .card1 {
+        margin-bottom: 50px;
+    }
+
+    .cardBox {
+        width: 500px;
+    }
+
+    .blank-bg {
+        height: 130px;
+        left: 30px;
+    }
+
+    .card-details {
+        padding-bottom: 50px;
+    }
+
+    .card1icon {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardBox {
+        width: 350px;
+    }
+
+    .w-lCard {
+        width: 150px;
+        text-align: center;
+    }
+
+    .w-lCard p {
+        font-size: 56px;
+        margin-top: 10px;
+    }
+
+
+    .Vector-icon, .Vector-icon2 {
+        left: -9px;
+    }
+
+    .option {
+        font-size: 14px;
+        padding: 5px 0;
+        margin-top: -15px;
+    }
+
+    .blank-bg {
+        height: 110px;
+        left: 22px;
+        bottom: -15px;
+    }
+
+    .card-details h3 {
+        font-size: 20px;
+    }
+
+    .card-details p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .divider {
+        margin: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    .subtxt {
+        font-size: 16px;
+    }
+
+    .card1icon {
+        width: 70px;
+    }
+
+    .figmablack {
+        width: 40px;
+    }
+
+    .openaiblack {
+        width: 50px;
+    }
+}

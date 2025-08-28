@@ -1,0 +1,160 @@
+.card2 .grid {
+    gap: 40px;
+}
+
+.card2Box {
+    background-color: var(--white);
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    text-align: center;
+    padding: 30px 50px;
+}
+
+.card2-blank-red {
+    background-color: var(--primary-color);
+    left: 0;
+    margin: auto;
+    right: 0;
+    position: absolute;
+    top: 50px;
+    width: 104px;
+    height: 64px;
+}
+
+.card2-blank-brown {
+    background-color: var(--dark-green-color);
+    left: 0;
+    margin: auto;
+    right: 0;
+    position: absolute;
+    bottom: 50px;
+    width: 104px;
+    height: 64px;
+}
+
+.eclipse-red {
+    position: absolute;
+    left: -20px;
+    top: 50px;
+}
+
+.eclipse-yellow {
+    position: absolute;
+    right: -20px;
+    top: 50px;
+}
+
+.eclipse-cyan {
+    position: absolute;
+    left: -20px;
+    bottom: 50px;
+}
+
+.eclipse-brown {
+    position: absolute;
+    right: -20px;
+    bottom: 50px;
+}
+
+.rectangle {
+    position: absolute;
+    left: -20px;
+    top: 180px;
+}
+
+.rectangle-yellow {
+    position: absolute;
+    right: -15px;
+    top: 180px;
+}
+
+.grayBox {
+    width: 70px;
+    height: 70px;
+    background-color: var(--bg-gray);
+    margin: auto;
+    margin-top: 10px;
+}
+
+.round-bg {
+    margin-bottom: -20px;
+}
+
+.pinicons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -14px;
+}
+
+.canvapin, .wixpin {
+    top: 0px;
+}
+
+@media (max-width: 1200px) {
+    .card2-blank-red, .card2-blank-brown, .rectangle, .rectangle-yellow {
+        display: none;
+    }
+
+    .card2 .grid, .card3 .grid, .card4 .grid, .card5 .grid, .card7 .grid {
+        gap: 15px;
+    }
+
+    .card2 .grid {
+        display: flex;
+        padding: 30px 20px;
+    }
+
+    .card2 .grid, .card2 {
+        max-width: initial;
+        overflow-x: auto;
+        margin: auto;
+    }
+
+    .card2Box .eclipse {
+        width: 50px;
+        height: 110px;
+    }
+
+    .card2 {
+        max-width: initial;
+        margin: auto;
+    }
+
+    .canvmb, .wixmb {
+        margin-bottom: 20px;
+        margin-top: 30px !important;
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .eclipse-red {
+        left: 0px;
+    }
+
+    .eclipse-yellow {
+        left: 0px;
+        top: 50px;
+        transform: rotate(180deg);
+    }
+
+    .eclipse-cyan {
+        left: 0px;
+        top: 50px;
+    }
+
+    .eclipse-brown {
+        left: 0px;
+        top: 50px;
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

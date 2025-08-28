@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+:root {
+   --primary-color: #ff2712 !important;
+   --secondary-color: #ee3324 !important;
+   --third-color: #ef3d23 !important;
+   --box-color: #fef3ef !important;
+   --gradient-color01: #551d06 !important;
+   --gradient-color02: #f98302 !important;
+   --gradient-color03: #f95304 !important;
+   --light-color: #fafbfc !important;
+   --light-orange-color: #ee3526 !important;
+   --text-color: #0b6e75 !important;
+   --text-black-color: #222222 !important;
+   --text-white-color: #ffffff !important;
+   --text-orange-color: #ee3224 !important;
+   --border-color: #98291e !important;
+   --cross-border-color: #fc2810 !important
+}
+
+
+/* font-family: "Montserrat", serif;
+font-family: "Lato", serif !important; */
+
+
+@media screen and (min-width: 1280px) {
+   .cousre-banner06 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 45px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .course-banner06-heading {
+      color: var(--primary-color);
+      font-size: 50px;
+      font-weight: bold;
+      line-height: normal;
+   }
+
+
+   .course-banner06-duration-box {
+      background-color: var(--text-color);
+      width: auto;
+      height: auto;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 40px;
+   }
+
+   .course-banner06-duration-heading {
+      color: var(--box-color);
+      font-family: "Montserrat", serif;
+      font-size: 34px;
+      font-weight: bold;
+      padding-top: 12.5px;
+   }
+
+   .course-banner06-time-box {
+      background-color: var(--box-color);
+      width: auto;
+      height: auto;
+      border-radius: 4px;
+      margin-left: 15px;
+   }
+
+   .course-banner06-time {
+      color: var(--text-black-color);
+      font-size: 35px;
+      font-weight: 600;
+      font-family: "Montserrat", serif;
+      text-align: center;
+      padding: 10px 20px;
+      margin: 0;
+   }
+
+
+
+   .course-banner06-image {
+      width: 90%;
+
+   }
+}
+
+
+.gray-color-span {
+   color: var(--text-color);
+}
+
+
+
+
+@media screen and (min-width: 992px) and (max-width:1280px) {
+   .cousre-banner06 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background3.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 50px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+
+   .course-banner06-heading {
+      color: var(--primary-color);
+      font-size: 35px;
+      font-weight: bold;
+      line-height: normal;
+   }
+
+   .course-banner06-duration-box {
+      background-color: var(--text-color);
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+
+   }
+
+   .course-banner06-duration-heading {
+      color: var(--box-color);
+      font-family: "Montserrat", serif;
+      font-size: 24px;
+      font-weight: bold;
+      padding-top: 12.5px;
+   }
+
+   .course-banner06-time-box {
+      background-color: var(--box-color);
+      width: auto;
+      height: auto;
+      border-radius: 4px;
+      padding: 4px 14px;
+      margin: 0;
+      margin-left: 14px;
+   }
+
+   .course-banner06-time {
+      color: var(--text-black-color);
+      font-size: 24px;
+      font-weight: 600;
+      font-family: "Montserrat", serif;
+      text-align: center;
+      padding-top: 10px;
+   }
+
+   .cousre-banner06 .mobile-alignment-box {
+      display: flex;
+      justify-content: center;
+   }
+
+   .course-banner06-image {
+      width: 90%;
+
+   }
+}
+
+
+
+
+
+@media screen and (max-width: 992px) {
+   .cousre-banner06 {
+      background-image: url("../banner-images/background/oxford-school-of-english-background-mobile.webp");
+      background-size: cover;
+      width: 100%;
+      font-family: "Montserrat", serif;
+      padding: 10px 0px;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-position: center;
+      padding-bottom: 25px;
+      background-repeat: no-repeat;
+   }
+
+   .course-banner06-image-mobile {
+      object-fit: contain;
+      width: 80%;
+      margin: 0 auto;
+   }
+
+   .course-banner06-heading {
+      color: var(--primary-color);
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: normal;
+   }
+
+   .course-banner06-duration-box {
+      background-color: var(--text-color);
+      width: auto;
+      margin: 20px 0px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 25px;
+   }
+
+   .course-banner06-duration-heading {
+      color: var(--box-color);
+      font-family: "Montserrat", serif;
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 7px;
+   }
+
+   .course-banner06-time-box {
+      background-color: var(--box-color);
+      width: auto;
+      height: auto;
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin-left: 14px;
+   }
+
+   .course-banner06-time {
+      color: var(--text-black-color);
+      font-size: 16px;
+      font-weight: 600;
+      font-family: "Montserrat", serif;
+      text-align: center;
+      margin: 0;
+   }
+
+
+   .course-banner06-image {
+      width: 100%;
+      margin-bottom: 25px;
+
+   }
+
+   .mobile-alignment-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+}
+
+@media screen and (max-width: 567px) {}

@@ -1,0 +1,283 @@
+.price-container {
+    background: var(--primary-color);
+
+}
+
+.price-header {
+    color: var(--white);
+    text-align: center;
+    padding: 0 20px;
+    padding-top: 40px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 145%;
+}
+
+
+.price-header span {
+    background: linear-gradient(358.19deg, #88B7FF 19.55%, #88B7FF 59.45%);
+    background-clip: text;
+    color: transparent;
+}
+
+.price-section .nav.nav-pills {
+    gap: 30px;
+}
+
+
+.price-section .tabPrice {
+    background-color: #FFFFFF17 !important;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    padding: 15px 30px;
+    color: var(--white) !important;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 145%;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.price-section .tabPrice.active {
+    background-color: var(--white) !important;
+    color: var(--text-black-color) !important;
+}
+
+.price-tab {
+    margin-top: 100px;
+}
+
+.price-tab .grid {
+    gap: 30px;
+}
+
+.price-card {
+    border-radius: 16px;
+    padding: 30px 20px;
+}
+
+.price-card.cyan {
+    background-color: #F3F3F6;
+    border: 2px solid #0070E0;
+}
+
+.price-card.lBlue {
+    background-color: #CBD8F0;
+}
+
+.price-person {
+    border-radius: 44px;
+    box-shadow: 0px 4px 14px 0px #00000040;
+    padding: 10px 25px;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 155%;
+}
+
+.price-person.cyan {
+    background-color: #C5ECEE;
+}
+
+.price-person.white {
+    background-color: #ffffff;
+}
+
+
+.price-plan {
+    color: var(--dark-blue-color2);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 155%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.price-desc, .price-duration {
+    color: var(--text-black-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 155%;
+}
+
+.price-amount {
+    color: var(--text-black-color);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 155%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.price-btn {
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 145%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.price-btn.outline {
+    background-color: var(--white);
+    border: 3px solid var(--dark-blue-color2);
+    color: var(--dark-blue-color2);
+}
+
+.price-btn.filled {
+    background-color: var(--dark-blue-color2);
+    border: 3px solid var(--dark-blue-color2);
+    color: var(--white);
+}
+
+.price-contact {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: var(--dark-blue-color2);
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 145%;
+    margin-top: 20px;
+}
+
+.check-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.check-list span {
+    color: var(--text-black-color);
+    font-size: 20px;
+}
+
+
+.feature-btn:hover {
+    background-color: #40576d12;
+}
+
+.feature-btn.collapsed .fa-chevron-up, .feature-btn .fa-chevron-down {
+    display: none;
+}
+
+.feature-btn .fa-chevron-up, .feature-btn.collapsed .fa-chevron-down {
+    display: block;
+}
+
+.br-content {
+    display: none;
+}
+
+.plan-info {
+    margin: 100px 0;
+    background-color: #F3F3F6;
+    border-radius: 16px;
+    padding: 50px 70px;
+}
+
+.plan-info .grid {
+    gap: 100px;
+}
+
+.plan-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 155%;
+    color: var(--dark-blue-color2);
+}
+
+.plan-subtext {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 155%;
+    color: var(--text-black-color);
+}
+
+@media (min-width: 992px) {
+    .collapse-lg-show {
+        display: block !important;
+        height: auto !important;
+        visibility: visible;
+    }
+
+    .collapse-lg-show.collapse {
+        display: block !important;
+    }
+
+    .collapse-lg-show.collapse:not(.show) {
+        display: block !important;
+    }
+
+    .br-content {
+        display: block;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .price-mobile {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+
+    .feature-btn {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-black-color) !important;
+        width: 100%;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price-tab {
+        margin-top: 50px;
+    }
+
+    .price-tab .grid {
+        gap: 20px;
+    }
+
+    .price-header {
+        font-size: 28px;
+    }
+
+    .price-section .tabPrice {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+
+    .price-section .nav.nav-pills {
+        gap: 20px;
+    }
+
+    .check-list span {
+        font-size: 18px;
+    }
+
+    .plan-info {
+        padding: 20px;
+        margin: 50px 0;
+    }
+
+    .plan-info .grid {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .plan-title {
+        font-size: 20px;
+    }
+
+    .plan-subtext {
+        font-size: 14px;
+    }
+}
