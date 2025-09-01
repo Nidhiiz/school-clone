@@ -170,6 +170,21 @@
     .main{ grid-template-columns: 1fr; }
     .right{ position:static; }
   }
+  @media (max-width: 768px) {
+  .q-panel {
+    padding-bottom: 20px; /* remove big bottom gap */
+  }
+  .q-footer {
+    position: static;   /* let buttons come after options */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .q-footer .btn {
+    width: 100%;   /* full-width buttons for mobile */
+  }
+}
+
 </style>
 </head>
 <body>
