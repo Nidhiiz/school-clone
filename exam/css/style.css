@@ -1,0 +1,507 @@
+:root {
+  --ixb-blue: #6ABE52;
+  --ixb-white: #ffffff;
+  --ixb-orange: #fec106;
+  --ixb-black: #000000;
+  --ixb-light-gray: #f4f4f4;
+  --ixb-gray: #4e4e4e;
+  --ixb-green: #198754;
+  --ixb-transparent: transparent;
+  --ixb-border-radius: 10px;
+  --ixb-border-radius-50: 50px;
+  --ixb-font-16: 16px;
+  --ixb-text-bold:700;
+  --ixb-display-flex:flex;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.searchBoxExam {
+    background: linear-gradient(180deg, #F4F4F4 0%, #FFF 100%);
+    padding: 3rem 0;
+}
+
+.textBlue {
+    color: #003789;
+}
+
+.inputFormForSearch {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--ixb-light-gray);
+    padding-left: 3rem;
+}
+
+
+.inputFormForSearch::placeholder {
+    color: var(--ixb-light-gray);
+    opacity: 1; /* Firefox */
+  }
+  
+.inputFormForSearch::-ms-input-placeholder { /* Edge 12 -18 */
+    color: var(--ixb-light-gray);;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 19px;
+    left: 18px;
+    width: 20px;
+}
+
+.ourTopExam {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.ourTopExam li{
+  display: inline-block;
+  background-color: var(--ixb-light-gray);
+  padding: 0.2rem 0.6rem 0.2rem 1.4rem;
+  border-radius: 5px;
+  margin: 0.1rem;
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+  line-height: normal;
+}
+
+.ourTopExam li::before{
+    background-image: url(../images/exam_search.svg);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    content: "";
+    left: 8px;
+    top: 7px;
+}
+
+.tabsTrending {
+    background-color:var(--ixb-light-gray);;
+    padding: 50px 0;
+}
+
+.tabsTrending .nav-tabs .nav-link{
+    border-radius: 8px;
+    color:var(--ixb-blue);
+    margin-right: 0.7rem;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-top: 1rem;
+    border: 0;
+}
+
+
+.tabsTrending .nav-tabs .nav-link.active{
+    color: var(--ixb-blue);
+    border-radius: 8px;
+    border: 0;
+}
+
+div#nav-tab {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+}
+
+.trendingBox {
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+    min-width: 310px;
+    background-color: #fff;
+    padding:20px;
+    margin-top: 1rem;
+    margin-right: 1.4rem; 
+}
+
+.trendingBox ul {
+  text-wrap: wrap;
+  padding-left: 16px;
+}
+
+.trendingBox ul li{
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.trendingBox h6 {
+  text-wrap: wrap;
+}
+
+.trendingBox a{
+    border-radius: 10px;
+    border:solid 1px var(--ixb-blue);
+    background: #FFF;
+    color:var(--ixb-blue);
+    display: block;
+    padding: 0.6rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.our_Success_Stories_box .item p{
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.whyChooseixambee {
+  border-bottom:solid 6px #F4F4F4;
+  padding: 2rem;
+}
+
+.overflowSectionScroll {
+  display: flex;
+  white-space: nowrap;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+
+/* width */
+.overflowSectionScroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track */
+.overflowSectionScroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.overflowSectionScroll::-webkit-scrollbar-thumb {
+  background: rgb(157, 157, 157); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.overflowSectionScroll::-webkit-scrollbar-thumb:hover {
+  background: #464646; 
+}
+
+.search-spinner {
+  position: absolute;
+  right: 15px;
+  top: 17px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.download_app {
+  padding:2rem 0;
+}
+
+.nubmerSpeek {
+  background-color: #F4F4F4;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.nub_speak_pol {
+  position: absolute;
+  left: 0;
+  width: 120px;
+  top: 80px;
+}
+
+.nub_speak_pol2 {
+  position: absolute;
+  right: 0;
+  top:400px;
+}
+
+.nub_speak_pol,
+.nub_speak_pol2 {
+  display: none;
+}
+
+.btnReqCallBackHome {
+  border-radius: 10px;
+  background-color: var(--ixb-orange);
+  border: 0;
+  padding: 10px 2rem;
+  color: var(--ixb-black);
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.btnReqCallBackMockTest {
+  border-radius: 10px;
+  background: linear-gradient(90deg, #F68B29 0%, #905118 100%);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(0, 0, 0, 0.07);
+  border: 0;
+  padding: 10px 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.our_Success_Stories {
+  padding: 3rem 0 0;
+}
+
+.our_Success_Stories_box .item{
+  border-radius: 10px;
+  border: 1px solid var(--Blue-Gray-200, #E2E8F0);
+  background: #F4F4F4;
+  margin:0 0 1.5rem;
+  padding: 2rem;
+  min-height: 370px;
+}
+
+.userImgAndNameContainer p{
+  margin-bottom:0;
+  font-weight: 700;
+}
+
+.index-page-carousel .owl-nav {
+  text-align: center;
+}
+
+.our_Success_Stories_box .owl-nav .owl-prev,
+.our_Success_Stories_box .owl-nav .owl-next,
+.index-page-carousel .owl-nav .owl-prev,
+.index-page-carousel .owl-nav .owl-next
+{
+  width: 50px;
+  height: 50px;
+  border: solid 2px var(--ixb-blue) !important;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+.our_Success_Stories_box .owl-nav .owl-prev span,
+.our_Success_Stories_box .owl-nav .owl-next span,
+.index-page-carousel .owl-nav .owl-prev span,
+.index-page-carousel .owl-nav .owl-next span{
+  font-size: 40px;
+  position: relative;
+  color:var(--ixb-blue);
+}
+
+.beepediaAndFeatured {
+  background-color: #F4F4F4;
+  padding: 2rem 0;
+}
+
+.index-banners {
+  padding: 1rem;
+}
+
+.index-banners .item a img{
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: solid 2px #6ABE52;
+}
+
+.beepediaWhiteBox {
+  border-radius: 10px;
+  border: 1px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  padding:1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.beepediaWhiteBox h5 {
+  padding: 0rem 0.5rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.upcomingWhiteBox {
+  background-color: #fff;
+  box-shadow: 0 0px 15px 5px rgba(162, 169, 204, 0.10);
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  min-height: 13rem;
+  display: block;
+}
+
+.upcomingWhiteBox span{
+  display: block;
+  margin-top: 1rem;
+}
+
+.featuredOnMbScroll {
+    white-space: nowrap;
+    overflow: auto;
+    padding-bottom: 1rem;
+    flex-wrap: nowrap;
+}
+
+.featuredOnMbScroll .col {
+  min-width: 250px;
+}
+
+.footerText {
+  padding: 2rem 0;
+}
+
+.blueTextbold {
+  color: var(--ixb-blue);
+  font-weight: 700;
+}
+
+.download-ixambee-app {
+  margin:0 auto;
+}
+
+#suc-otp {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+/* Trending Mock Tests for Upcoming Exams */
+
+.exam_department {
+    flex-direction: column;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 15%);
+    background-color: white;
+    min-height: 155px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: var(--ixb-blue);
+    z-index: 1;
+    position: absolute;
+    top: -95px;
+    display: none;
+    right: -75px;
+    border-radius: 50%;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.trending-animation:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+    background-color: #ddfbd5;
+}
+
+.exam_department p {
+    color: #000;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    z-index: 1;
+    word-break:break-word;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.exam_department p span {
+    font-size: 13px;
+    color: #2b2b2b;
+    margin-top: 8px;
+    display: block;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.search_cross_button {
+    position: absolute;
+    right: 36px;
+    margin-top: -57px;
+    cursor: pointer;
+}
+
+#campaign-banner-append {
+  display: none;
+}
+
+/* end here */
+
+@media(min-width:1024px) {
+  .nub_speak_pol,
+  .nub_speak_pol2 {
+    display: block;
+  }
+  .download-ixambee-app {
+    margin:unset;
+  }
+
+  .ag-courses-item_bg {
+    display: block;
+  }
+
+  div#nav-tab {
+    justify-content: center;
+  }
+
+  .btnReqCallBackHome {
+    display: inline-block;
+    width: 40%;
+  }
+
+  .btnReqCallBackMockTest {
+    display: none;
+  }
+
+}
+
+input#input-drop-down-body::placeholder {
+    color: #9d9d9d;
+}
+
+.trendingUpcomingExams {
+  background: #ffffff;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, #e6fedf 100%);
+}
+
+.green-border-btn {
+    border: solid 2px #6ABE52;
+    background-color: #fff;
+    color: #6ABE52;
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: all ease-in 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.exam_department:hover .green-border-btn {
+      background-color: #0f5132;
+      color: #fff;
+      border: solid 2px #0f5132;
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mock Test – Exam UI</title>
+<style>
+  :root{
+    --bg:#f6f9ff;
+    --card:#ffffff;
+    --shadow:0 2px 12px rgba(0,0,0,.08);
+    --blue:#6aa9ff;
+    --blue-dark:#3378ff;
+    --right-bg:#dff1ff;
+    --green:#42b34a;          /* Answered */
+    --red:#ea4d4d;            /* Not Answered */
+    --purple:#6b4de6;         /* Marked for review */
+    --gray:#c7c7c7;           /* Not visited */
+    --text:#1c1f23;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,Helvetica,sans-serif;
+     background: linear-gradient(135deg, #fceaea, #eaf8f0, #fdfdfd);
+    
+    color:var(--text);
+  }
+   .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .header img {
+      height: 35px;
+    }
+
+    .header-right {
+      font-weight: bold;
+      color: #222;
+    }
+  /* top header with tabs (like screenshot) */
+  .topbar{
+    background:var(--card);
+    box-shadow:var(--shadow);
+    padding:8px 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    position:sticky;
+    top:0;
+    z-index:5;
+  }
+  .tab{
+    background:#cfe3ff;
+    color:#0d3b8d;
+    padding:8px 12px;
+    border-radius:8px;
+    font-weight:600;
+    font-size:14px;
+    border:2px solid #b5d2ff;
+    white-space:nowrap;
+  }
+  .tab.active{ background:var(--blue); color:#fff; border-color:var(--blue-dark); }
+
+  /* main split layout */
+  .main{
+    display:grid;
+    grid-template-columns: 1fr 320px;
+    gap:16px;
+    padding:14px;
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .panel{
+    background:var(--card);
+    border-radius:12px;
+    box-shadow:var(--shadow);
+  }
+
+  /* question area */
+  .q-panel{ padding:16px 18px 110px; position:relative; min-height:420px; }
+  .q-head{
+    font-weight:700; font-size:18px; margin-bottom:10px;
+    border-bottom:1px solid #e9eef8; padding-bottom:10px;
+  }
+  .q-meta{
+    display:flex; gap:16px; align-items:center; font-size:14px; color:#45556d; margin-bottom:12px;
+  }
+  .q-label{ font-weight:700; margin-bottom:6px; }
+  .option{
+    display:flex; gap:10px; align-items:flex-start;
+    padding:10px 12px; border:1px solid #e1e6f2; border-radius:10px; margin:10px 0;
+    cursor:pointer; transition:.2s ease;
+    background:#fff;
+  }
+  .option:hover{ border-color:#bcd0ff; box-shadow:0 2px 8px rgba(64,115,255,.08) }
+  .option input{ margin-top:3px; transform:scale(1.1) }
+  .option.selected{ border-color:var(--blue-dark); box-shadow:0 0 0 3px rgba(51,120,255,.15) }
+  .q-footer{
+    position:absolute; left:0; right:0; bottom:0;
+    background:#f0f6ff; border-top:1px solid #dce8ff;
+    padding:12px; display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start;
+    border-bottom-left-radius:12px; border-bottom-right-radius:12px;
+  }
+  .btn{
+    border:none; border-radius:8px; padding:12px 16px; font-weight:700;
+    cursor:pointer; box-shadow:var(--shadow); font-size:14px;
+  }
+  .btn.solid{ background:var(--blue-dark); color:#fff; }
+  .btn.hollow{ background:#e6f0ff; color:#113a91; }
+  .btn.warn{ background:#0b6bff; color:#fff; }
+  .btn.submit{ background:#0e8a45; color:#fff; margin-left:auto; }
+
+  /* right panel */
+  .right{
+    background:var(--right-bg);
+    padding:14px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    position:sticky; top:62px; height:fit-content;
+  }
+  .profile{
+    display:flex; align-items:center; gap:10px; padding:6px 0 10px;
+  }
+  .avatar{
+    width:40px; height:40px; border-radius:50%; background:#bedfff;
+    display:grid; place-items:center; font-weight:800; color:#264a7b;
+  }
+  .timer{
+    background:#0d4fbf; color:#fff; border-radius:8px; font-weight:800;
+    text-align:center; padding:10px; margin:10px 0 14px;
+  }
+
+  /* palette */
+  .palette{
+    background:rgba(255,255,255,.6);
+    border-radius:10px; padding:12px;
+    border:1px solid #c7e3ff;
+  }
+  .grid{
+    display:grid; grid-template-columns: repeat(5, 1fr); gap:10px;
+  }
+  .pbtn{
+    height:42px; border-radius:8px; border:none; cursor:pointer;
+    font-weight:800; box-shadow:var(--shadow);
+  }
+  .pbtn.current{ outline:3px solid #ff7a30; }
+  .pbtn.ans{ background:var(--green); color:#fff; }
+  .pbtn.na{ background:var(--red); color:#fff; }
+  .pbtn.mark{ background:var(--purple); color:#fff; }
+  .pbtn.nv{ background:#e7ebf2; color:#4c5567; }
+
+  /* legend */
+  .legend{ margin-top:14px; }
+  .legend h4{ margin:6px 0 8px; }
+  .legend .row{ display:flex; align-items:center; gap:8px; margin:6px 0; color:#344055; }
+  .dot{ width:18px; height:18px; border-radius:4px; display:inline-block; }
+  .dot.ans{ background:var(--green); }
+  .dot.na{ background:var(--red); }
+  .dot.mark{ background:var(--purple); }
+  .dot.nv{ background:#e7ebf2; border:1px solid #cfd6e3; }
+
+  /* responsive */
+  @media (max-width: 980px){
+    .main{ grid-template-columns: 1fr; }
+    .right{ position:static; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar with section tabs -->
+<!-- <div class="topbar">
+  <span class="tab">ENGLISH LANGUAGE</span>
+  <span class="tab">GENERAL HINDI</span>
+  <span class="tab">GENERAL AWARENESS</span>
+  <span class="tab active">REASONING APTITUDE</span>
+  <span class="tab">COMPUTER</span>
+  <span class="tab">TEACHING METHODOLOGY</span>
+  <span class="tab">PROFESSIONAL KNOWLEDGE</span>
+</div> -->
+  <div class="header">
+    <img src="images/logo.svg" alt="Logo">
+   
+  </div>
+
+
+<div class="main">
+  <!-- Question panel -->
+  <section class="panel q-panel" id="qPanel">
+    <div class="q-head" id="qTitle">Question No.1</div>
+
+    <div class="q-meta">
+      <!-- <div>View in
+        <select>
+          <option>English</option>
+          <option>हिंदी</option>
+        </select>
+      </div> -->
+      <div>Marks: <b style="color: #0e8a45;">+1</b> <span style="color: var(--red);opacity:.55 ">0</span></div>
+    </div>
+
+    <div class="q-body">
+      <div class="q-label">Question:</div>
+      <p id="qText" style="line-height:1.65;margin:0 0 12px;"></p>
+
+      <div id="optionsWrap"></div>
+    </div>
+
+    <div class="q-footer">
+      <button class="btn hollow" id="btnMark">MARK FOR REVIEW &amp; NEXT</button>
+      <button class="btn hollow" id="btnClear">CLEAR RESPONSE</button>
+      <button class="btn warn"  id="btnSaveNext">SAVE &amp; NEXT</button>
+      <button class="btn submit" id="btnSubmit">SUBMIT TEST</button>
+    </div>
+  </section>
+
+  <!-- Right panel -->
+  <aside class="right">
+    <div class="profile">
+      <div class="avatar">N</div>
+      <div>
+        <div style="font-weight:800;">Student</div>
+        <div style="font-size:12px;color:#4d658a;">Candidate</div>
+      </div>
+    </div>
+
+    <div class="timer" id="timer">Time Left : 02:30:00</div>
+
+    <div class="palette">
+      <div class="grid" id="paletteGrid"></div>
+    </div>
+
+    <div class="legend">
+      <h4>Legend</h4>
+      <div class="row"><span class="dot ans"></span> Answered (<span id="cntAns">0</span>)</div>
+      <div class="row"><span class="dot na"></span> Not Answered (<span id="cntNA">0</span>)</div>
+      <div class="row"><span class="dot mark"></span> Marked (<span id="cntMark">0</span>)</div>
+      <div class="row"><span class="dot nv"></span> Not Visited (<span id="cntNV">10</span>)</div>
+    </div>
+  </aside>
+</div>
+
+<script>
+/* ------------ DATA (10 Questions) ------------- */
+const QUESTIONS = [
+  {q:'In a certain code language if the word PUZZLE is coded as RXEGWR, then what is coded as OUTPUT?', opts:['MROJGI','MROGIJ','MRIOJG','MROIJG']},
+  {q:'Which language runs in a web browser?', opts:['Python','C++','JavaScript','Java']},
+  {q:'What does HTML stand for?', opts:['HyperText Markup Language','Hyper Transfer Makeup Language','High Text Mark Language','Home Tool Markup Language']},
+  {q:'CSS is used for?', opts:['Database','Styling','Server-side scripting','Networking']},
+  {q:'Which tag is used to include JavaScript?', opts:['<javascript>','<script>','<js>','<code>']},
+  {q:'LocalStorage stores data...', opts:['On server','In browser permanently','In RAM only','As cookies only']},
+  {q:'HTTP status 404 means?', opts:['Moved','Forbidden','Not Found','Server Error']},
+  {q:'const x = 5; x = 6; results in?', opts:['6 assigned','Runtime error','Syntax error','Works normally']},
+  {q:'Which is not a JavaScript framework?', opts:['React','Angular','Django','Vue']},
+  {q:'Which symbol is used for comments in CSS?', opts:['//','<!-- -->','/* */','#']}
+];
+
+/* ------------ STATE ------------- */
+const Status = { NV:0, NA:1, ANS:2, MARK:3 }; // NotVisited, NotAnswered, Answered, Marked
+let current = 0;
+const chosen = Array(QUESTIONS.length).fill(null); // selected option index
+const state  = Array(QUESTIONS.length).fill(Status.NV);
+
+/* ------------ ELEMENTS ------------- */
+const qTitle = document.getElementById('qTitle');
+const qText  = document.getElementById('qText');
+const optsWrap = document.getElementById('optionsWrap');
+const grid = document.getElementById('paletteGrid');
+
+/* ------------ RENDER QUESTION ------------- */
+function renderQuestion(idx){
+  const item = QUESTIONS[idx];
+  qTitle.textContent = `Question No.${idx+1}`;
+  qText.textContent = item.q;
+
+  // mark visited if first time
+  if(state[idx] === Status.NV) state[idx] = Status.NA;
+
+  // build options
+  optsWrap.innerHTML = '';
+  item.opts.forEach((opt, i)=>{
+    const row = document.createElement('label');
+    row.className = 'option' + (chosen[idx]===i ? ' selected':'');
+    row.innerHTML = `<input type="radio" name="opt" ${chosen[idx]===i?'checked':''}> ${opt}`;
+    row.addEventListener('click', (e)=>{
+      chosen[idx] = i;
+      state[idx]  = Status.ANS;
+      // set a small delay so radio can check, then refresh visuals
+      setTimeout(()=>{ highlightOptions(); refreshPalette(); }, 0);
+    });
+    optsWrap.appendChild(row);
+  });
+
+  highlightOptions();
+  refreshPalette();
+}
+
+function highlightOptions(){
+  // apply .selected class to chosen one
+  document.querySelectorAll('.option').forEach((el, j)=>{
+    el.classList.toggle('selected', chosen[current]===j);
+  });
+}
+
+/* ------------ PALETTE ------------- */
+function buildPalette(){
+  grid.innerHTML = '';
+  for(let i=0;i<QUESTIONS.length;i++){
+    const b = document.createElement('button');
+    b.className = 'pbtn nv';
+    b.textContent = i+1;
+    b.addEventListener('click', ()=>{
+      current = i;
+      renderQuestion(current);
+      setCurrentOutline();
+    });
+    grid.appendChild(b);
+  }
+  refreshPalette();
+  setCurrentOutline();
+}
+
+function setCurrentOutline(){
+  [...grid.children].forEach((btn, i)=>{
+    btn.classList.toggle('current', i===current);
+  });
+}
+
+function refreshPalette(){
+  let cAns=0,cNA=0,cMark=0,cNV=0;
+  [...grid.children].forEach((btn, i)=>{
+    btn.classList.remove('ans','na','mark','nv');
+    const st = state[i];
+    if(st===Status.ANS){ btn.classList.add('ans'); cAns++; }
+    else if(st===Status.NA){ btn.classList.add('na'); cNA++; }
+    else if(st===Status.MARK){ btn.classList.add('mark'); cMark++; }
+    else { btn.classList.add('nv'); cNV++; }
+  });
+  document.getElementById('cntAns').textContent=cAns;
+  document.getElementById('cntNA').textContent=cNA;
+  document.getElementById('cntMark').textContent=cMark;
+  document.getElementById('cntNV').textContent=cNV;
+}
+
+/* ------------ BUTTON ACTIONS ------------- */
+document.getElementById('btnSaveNext').addEventListener('click', ()=>{
+  // if something chosen => Answered else Not Answered
+  state[current] = (chosen[current]!==null) ? Status.ANS : Status.NA;
+  goNext();
+});
+
+document.getElementById('btnMark').addEventListener('click', ()=>{
+  // mark for review regardless of answer presence (purple)
+  state[current] = Status.MARK;
+  goNext();
+});
+
+document.getElementById('btnClear').addEventListener('click', ()=>{
+  chosen[current]=null;
+  state[current]=Status.NA; // visited but no answer
+  renderQuestion(current);
+});
+
+document.getElementById('btnSubmit').addEventListener('click', ()=>{
+  const ansCount = state.filter(s=>s===Status.ANS).length;
+  const naCount  = state.filter(s=>s===Status.NA).length;
+  const markCount= state.filter(s=>s===Status.MARK).length;
+  const nvCount  = state.filter(s=>s===Status.NV).length;
+  alert(`Submit?\nAnswered: ${ansCount}\nNot Answered: ${naCount}\nMarked: ${markCount}\nNot Visited: ${nvCount}`);
+});
+
+function goNext(){
+  if(current < QUESTIONS.length-1){
+    current++;
+    renderQuestion(current);
+    setCurrentOutline();
+  } else {
+    // end reached: keep on last question
+    renderQuestion(current);
+  }
+}
+
+/* ------------ TIMER  ------------- */
+let remaining = 2*60*60 + 30*60; // 2:30:00 (seconds)
+const tEl = document.getElementById('timer');
+setInterval(()=>{
+  remaining = Math.max(0, remaining-1);
+  const hh = String(Math.floor(remaining/3600)).padStart(2,'0');
+  const mm = String(Math.floor((remaining%3600)/60)).padStart(2,'0');
+  const ss = String(remaining%60).padStart(2,'0');
+  tEl.textContent = `Time Left : ${hh}:${mm}:${ss}`;
+},1000);
+
+/* ------------ INIT ------------- */
+buildPalette();
+renderQuestion(current);
+setCurrentOutline();
+</script>
+</body>
+</html>

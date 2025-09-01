@@ -1,156 +1,1134 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exam Instructions</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .header img {
-      height: 35px;
-    }
-
-    .header-right {
-      font-weight: bold;
-      color: #222;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-    }
-
-    .instructions {
-      width: 70%;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .instructions h2 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    .instructions ul {
-      line-height: 1.6;
-    }
-
-    .sidebar {
-      width: 25%;
-      background: #eaf5ff;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .profile {
-      margin-bottom: 15px;
-    }
-
-    .profile img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-    }
-
-    .profile h4 {
-      margin: 8px 0 5px;
-      font-size: 16px;
-    }
-
-    .time-box {
-      background: #005bbb;
-      color: #fff;
-      padding: 12px;
-      border-radius: 5px;
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    .footer {
-      text-align: right;
-      margin: 20px;
-    }
-
-    .btn {
-      padding: 12px 20px;
-      border: none;
-      background: #4e9cff;
-      color: #fff;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #3681e0;
-    }
-  </style>
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Exam</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/header-nav.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="online test series, online test for bank exam, online mock test, practice mock test series,
+    online practice test, ibps po, ibps clerk, ibps rrb, sbi po, sbi clerk, ssc cgl, rbi exams, free mock test, mock test
+    online, mock test ,practice set">
+    <meta name="description" content="Top Exam Preparation Website and App for Bank, SSC, Railways, Insurance, Teaching, Defence
+    & other Sarkari Exams. Get Daily/Weekly/Monthly Current Affairs, Previous Year Paper PDFs, Quiz, Free Test Series and
+    exam-specific Study Material here.">
+   
+    <meta name="twitter:title" content="ixambee: Best Exam Preparation Platform">
+   <link rel="icon" sizes="32x32" type="image/x-icon" href="images/favicon-32x32.png">
+    <link rel="icon" sizes="16x16" type="image/x-icon" href="images/favicon-16x16.png">
+    <meta name="google-site-verification" content="0iTRkbbGQG1Ur4DRLmzMOYyPqxo60SlB49bGOy7UUx0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script async="" src="https://embed.tawk.to/58eb259df7bbaa72709c55b6/default" charset="UTF-8" crossorigin="*"></script><script async="" src="js/gtm.js"></script><script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <meta name="csrf-token" content="BtiOokZra04aj8QfP1d3AUVM4kCqZZiHxe84PbSr">
+        <link href="css/style.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KLZ5GM9');
+    </script>
 </head>
+
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLZ5GM9" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="header">
-    <img src="logo.png" alt="Logo">
-    <!-- <div class="header-right">X Close</div> -->
-  </div>
+    <!-- <div id="announcementBar" class="text-dark text-center py-2 w-100">
+  <a href="#" cm="" dc="request call back" data-bs-toggle="modal" data-bs-target="#request_call_back" class="m-0 p-0">
+        <p class="m-0 px-5">📢 Too many exams? Don’t know which one suits you best? Book Your Free Expert 👉 call Now!</p>
+  </a>
+  <span class="close-announcementBar"><i class="fas fa-times"></i></span>
+</div> -->
+    
+    <div class="top_header_ticker">
+    <div class="container-fluid">
+        <div class="row">
 
-  <div class="container">
-    <!-- Instructions -->
-    <div class="instructions">
-      <h2>Please read instructions carefully</h2>
-      <h4>General Instructions:</h4>
-      <ul>
-        <li>Total duration of the examination is 40 minutes.</li>
-        <li>The countdown timer at the top right will show remaining time.</li>
-        <li>Answered questions = <span style="color:green;">green</span></li>
-        <li>Unanswered questions = <span style="color:red;">red</span></li>
-        <li>Marked for review = <span style="color:blue;">blue</span></li>
-        <li>If answered and marked, it will still be considered for evaluation.</li>
-      </ul>
-      <h4>Answering a Question</h4>
-      <ul>
-        <li>Procedure for answering multiple-choice type questions:</li>
-      <ol>
+            <div class="col-6 d-flex justify-content-start">
+                <a class="navbar-brand" href="#" alt="ixambee">
+                    <img src="images/logo.svg" alt="ixambee.com" class="this_logo">
+                </a>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                                <div class="headerSearchBar homepage_search">
+    <i class="fas fa-search" id="searchBarToggle" onclick="toggleSearchBar()"></i>
+    <div class="sectionBarOuterBox">
+        <div class="searchBarSection">
+            <i class="fas fa-times closeSearchModalBox"></i>
+            <form action="login.html" method="post" id="linkForm">
+                <input type="hidden" name="_token" value="BtiOokZra04aj8QfP1d3AUVM4kCqZZiHxe84PbSr" autocomplete="off">                <div id="searchBarInputBox">
+                    <input type="text" placeholder="Search Exam / Courses / Mock Test / Beepedia" id="input-drop-down" name="input-drop-down"><br>
+                </div>
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
+            <ul id="suggestions"></ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $("#linkForm").on("keypress", function(event) {
+            if (event.key == "Enter") {
+                event.preventDefault();
+            }
+        })
+        console.log("api started");
+        $("#input-drop-down").attr("autocomplete", "off");
+
+        let debounceTimeout;
+
+        $('#input-drop-down').on('input', function(event) {
+            clearTimeout(debounceTimeout);
+
+            debounceTimeout = setTimeout(function() {
+                var formData = {
+                    param: $('#input-drop-down').val().trim(),
+                    userID: 0,
+                    page_url: ""
+                };
+
+                if ($("#input-drop-down").val().trim() != "") {
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url: "linksuggester",
+                        type: 'POST',
+                        data: formData,
+                        dataType: 'json',
+                        success: function(response) {
+                            $("#suggestions").html("");
+                            for (var key in response) {
+                                $("#suggestions").append(
+                                    "<li onclick='linkClicked(this)'>" +
+                                    response[key]["term"] + "</li>");
+                            }
+                            if (response.length == 0) {
+                                $("#suggestions").append(
+                                    "<li>No result found, try something else</li>"
+                                );
+                            }
+                            $("#suggestions").css("display", "block");
+                            navigation();
+                        },
+                        error: function(xhr, status, error) {
+                            $('#suggestions').html('<p>An error occurred: ' +
+                                error + '</p>');
+                            $("#suggestions").css("display", "block");
+                        }
+
+                    });
+                } else {
+                    $("#suggestions").css("display", "none");
+                    $("#suggestions").html("");
+                }
+            }, 1000);
+        });
+    });
+
+    function linkClicked(element) {
+        let value = $(element).text();
+        document.getElementById("input-drop-down").value = value;
+        document.getElementById("submitButton").click();
+    }
+</script>
+
+<script>
+    function toggleSearchBar() {
+        if (document.getElementById("linkForm").style.display === "block") {
+            document.getElementById("suggestions").style.display = "none";
+        } else {
+            document.getElementById("linkForm").style.display = "block";
+            document.getElementById("input-drop-down").focus();
+        }
+    }
+</script>
+
+<script>
+    let eventHandler;
+
+    function navigation() {
+        if (eventHandler != null) {
+            document.removeEventListener("keydown", eventHandler);
+            console.log("eventHandler removed");
+        }
+
+        a = document.getElementById("suggestions");
+        var li = a.getElementsByTagName("li");
+        var current = -1;
+
+        eventHandler = function(event) {
+            const key = event.key;
+            switch (key) {
+                case "Enter":
+                    event.preventDefault();
+                    li[current].click();
+
+                    break;
+                case "ArrowUp":
+                    if (current != -1) {
+                        li[current].classList.remove("active");
+                    }
+                    if (current - 1 >= 0) {
+                        current = current - 1;
+                    } else {
+                        current = li.length - 1;
+                    }
+                    li[current].classList.add("active");
+                    break;
+                case "ArrowDown":
+                    if (current != -1) {
+                        li[current].classList.remove("active");
+                    }
+                    current = (current + 1) % li.length;
+                    li[current].classList.add("active");
+                    break;
+            }
+        };
+
+        document.addEventListener("keydown", eventHandler);
+    }
+</script>
+
+<!-- toggle class on click -->
+<script>
+    $(document).ready(function() {
+        $('#searchBarToggle').click(function() {
+            $('.sectionBarOuterBox').addClass('open');
+            $('.searchBarSection').addClass('popup-search')
+            $('#suggestions').removeClass('suggestionsHide')
+        });
+
+        $('.closeSearchModalBox').click(function() {
+            $('.sectionBarOuterBox').removeClass('open');
+            $('.searchBarSection').removeClass('popup-search')
+            $('#suggestions').addClass('suggestionsHide')
+        });
+
+        // Remove popup-search class and open class when clicking outside of searchBarSection
+        $(document).mouseup(function(e) {
+            var $searchBarSection = $('.searchBarSection');
+            var $sectionBarOuterBox = $('.sectionBarOuterBox');
+            var $suggestionsHide = $('#suggestions');
+            $("#input-drop-down").val("");
+            if (!$searchBarSection.is(e.target) && $searchBarSection.has(e.target).length === 0) {
+                $searchBarSection.removeClass('popup-search');
+                $sectionBarOuterBox.removeClass('open');
+                $suggestionsHide.addClass('suggestionsHide');
+            }
+        });
+    });
+</script>
+                <button  onclick="location.href='login.html'" type="button" id="auto-button" >Login / Signup</button>
+                            </div>
+
+        </div>
+    </div>
+</div>
+<!-- // end here -->
+
+
+<!--  Loader start -->
+<div class="ixambee-loader" style="display: none;">
+    <div class="lightgreen"></div>
+    <div class="darkgreen"></div>
+</div>
+<!-- Loader end -->
+<nav class="navbar navbar-expand-lg nav-color headerShadow" id="add_menu">
+
+</nav>
+<header class="rbi_grade_b_header" id="rbi_grade_b_header" style=" display:none">
+    <a href="index2.html">
+        <img src="images/logo.svg" alt="ixambee.com" class="this_logo">
+    </a>
+    <div id="header_heading"></div>
+</header>
+
+    <div id="campaign-banner-append">
+
+    </div>
+
+    
+    <main>
+
         
-        <li>To select your answer, click on the button of one of the options.</li>
-      <li>To deselect your chosen answer, click again on the button of the chosen option again or click on the Clear Response button.</li>
-      
-    <li>  To save your answer, you MUST click on the Save Next button.</li>
-  </ol>
-  <li>To mark a question for review, click on the Mark for Review & Next button.</li>
- <li>Note that ONLY questions for which answers are either saved or marked for review after answering, will be considered for evaluation.</li>     
-</ul>
+        
+            
+
+    <section class="container index-banners">
+    <div class="row">
+        <div class="col-sm-12">
+                    <div class="owl-carousel index-page-carousel">
+                        <div class="item">
+                            <a href="index2.html" class="d-none d-sm-block"><img src="images/banner1New.jpg" alt="air-rank-1"></a>
+                            <a href="index2.html" class="d-block  d-sm-none"><img src="images/banner1-mbNew.jpg" alt="air-rank-1"></a>
+                        </div>
+                        <div class="item">
+                            <a href="index2.html" class="d-none d-sm-block"><img src="images/banner2.jpg" alt="buy beekit"></a>
+                            <a href="index2.html" class="d-block  d-sm-none"><img src="images/banner2-mb.jpg" alt="buy beekit"></a>
+                        </div>
+                        <div class="item">
+                            <a href="index2.html" class="d-none d-sm-block"><img src="images/banner3.jpg" alt="Rbi result out"></a>
+                            <a href="index2.html" class="d-block d-sm-none"><img src="images/banner3-mb.jpg" alt="Rbi result out"></a>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</section>    
+    <section class="searchBoxExam">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 position-relative">
+                                    <div class="text-center">
+                        <h1 class="textBlue blueTextbold">Govt. Job Prep, 50% faster.</h1>
+                        <p class="textBlue">By ex-RBI, SIDBI, Bank PO and alumni of IIM, ISB and IIT</p>
+                    </div>
+                
+                <form action="index2.html" method="post" id="linkFormBody" style="position:static;">
+                    <input type="hidden" name="_token" value="BtiOokZra04aj8QfP1d3AUVM4kCqZZiHxe84PbSr" autocomplete="off">                    <div class="mb-3 position-relative">
+                        <img src="images/search_icon.svg" class="searchIcon" alt="">
+                        <input type="text" class="form-control inputFormForSearch" placeholder="Search for Exams, Courses, Mock Tests and much more" id="input-drop-down-body" name="input-drop-down" autocomplete="off">
+                        <div class="spinner-border search-spinner d-none" role="status"><span class="visually-hidden">Loading...</span></div>
+                    </div>
+                    <div>
+                        <span class="search_cross_button d-none ">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </div>
+                    <button class="d-none" type="submit" id="submitButtonBody">Submit</button>
+                </form>
+
+                <ul id="suggestions-body" class="suggestions_dropdown" style="display: none;">
+                </ul>
+                                    <ul class="ourTopExam lato-bold">
+                        <li class="static-search" data-query="sebi course">SEBI</li>
+                        <li class="static-search" data-query="legal course">LEGAL</li>
+                        <li class="static-search" data-query="Agriculture course">Agriculture</li>
+                        <li class="static-search" data-query="RBI course">RBI</li>
+                        <li class="static-search" data-query="NABARD course">NABARD</li>
+                    </ul>
+                            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</section>
+    <section class="tabsTrending trendingUpcomingExams">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                <div class="text-center mb-4">
+                        <h2 class="this_h2">Trending Courses for Upcoming Exams</h2>
+                    </div>
+
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                            <div class="row">
+                                                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html" onclick="track_with_fun('/', 'demo_click_from_home_trending', 'home', 0);">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>NIACL AO Risk Engineer Online Course <br> <span></span></p>
+                                                    <span class="green-border-btn">Explore Free Course</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html" onclick="track_with_fun('/', 'demo_click_from_home_trending', 'home', 0);">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>LIC AAO Legal Online Course <br> <span></span></p>
+                                                    <span class="green-border-btn">Explore Free Course</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html" onclick="track_with_fun('/', 'demo_click_from_home_trending', 'home', 0);">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>IBPS SO AFO Mains Online Course <br> <span></span></p>
+                                                    <span class="green-border-btn">Explore Free Course</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html" onclick="track_with_fun('/', 'demo_click_from_home_trending', 'home', 0);">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>Central Bureau of Investigation APP Online Course <br> <span></span></p>
+                                                    <span class="green-border-btn">Explore Free Course</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html" onclick="track_with_fun('/', 'demo_click_from_home_trending', 'home', 0);">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>LIC AAO Online Course <br> <span></span></p>
+                                                    <span class="green-border-btn">Explore Free Course</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html" onclick="track_with_fun('/', 'demo_click_from_home_trending', 'home', 0);">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>RBI Grade A/B 2025 Comprehensive Online Course <br> <span></span></p>
+                                                    <span class="green-border-btn">Explore Free Course</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="tabsTrending">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                
+
+                    <div class="text-center mb-4">
+                        <h2 class="this_h2">Trending Mock Tests for Upcoming Exams</h2>
+                    </div>
+
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                            <div class="row">
+                                                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>IBPS SO (IT|AFO|HR|Marketing) Pre <br> <span>free Mock Test 2025</span></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>IBPS SO (RA | LO) Pre <br> <span>free Mock Test 2025</span></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>SSC CGL Tier I <br> <span>free Mock Test 2025</span></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>PFRDA Assistant Manager Grade A Phase I Paper 1 <br> <span>free Mock Test 2025</span></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>SBI Clerk (Junior Associate) Prelims <br> <span>free Mock Test 2025</span></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                            <div class="col-6 col-sm-2">
+                                            <a href="index2.html">
+                                                <div class="exam_department trending-animation">
+                                                    <div class="ag-courses-item_bg"></div>
+                                                    <p>LIC Assistant Administrative Officer (AAO) Prelims <br> <span>free Mock Test 2025</span></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                                                    
+                            </div>
+
+                        </div>
+                        
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                            <div class="overflowSectionScroll">
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+
+
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                            <div class="overflowSectionScroll">
+
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+
+
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+
+                                <div class="trendingBox">
+                                    <h6>RBI Grade B Comprehensive Online Course</h6>
+                                    <ul>
+                                        <li>700+ Video lessons</li>
+                                        <li>20 Full Length Practice Tests</li>
+                                        <li>17,000 plus practice Questions</li>
+                                    </ul>
+                                    <a href="">More Details</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="whyChooseixambee">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center mb-3">
+                    <h2>Why Choose <span class="blueTextbold fs-2">ixamBee ?</span></h2>
+                </div>
+
+                <div class="col-sm-4 text-center">
+                    <img src="images/guided_learning.svg" class="img-fluid p-4" alt="">
+                    <h4>Guided Learning</h4>
+                    <p>Through Mentor Programs, Mock Tests and Detailed Performance Analysis</p>
+                </div>
+
+                <div class="col-sm-4 text-center">
+                    <img src="images/free-mock-test.svg" class="img-fluid p-4" alt="">
+                    <h4>Free Mock Tests</h4>
+                    <p>That Contain Questions Similar to the Real Exam and Detailed Answer Explanation with Time Saving
+                        Tips</p>
+                </div>
+
+                <div class="col-sm-4 text-center">
+                    <img src="images/faculty-member.svg" class="img-fluid p-4" alt="">
+                    <h4>Faculty Members</h4>
+                    <p>Who have Cleared Multiple Government Job Exams and have Coached Thousands of Students for their
+                        Section</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  
+
+    <section class="nubmerSpeek">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <img src="images/polygon_img.svg" class="nub_speak_pol" alt="">
+                    <img src="images/polygon_img1.svg" class="nub_speak_pol2" alt="">
+                    <h2>Numbers <span class="blueTextbold fs-2">speak for themselves</span></h2>
+                    <img src="images/speakfor_themselves.svg" width="550" class="img-fluid" alt="Numbers speak for themselves">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="our_Success_Stories">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Our <span class="blueTextbold fs-2">Success stories</span></h2>
+                    <p>What our customers say</p>
+                </div>
+                <div class="col-sm-6 text-end">
+                    <button class="btnReqCallBackHome" data-bs-toggle="modal" data-bs-target="#request_call_back">
+                        Request a CallBack
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="owl-carousel owl-theme our_Success_Stories_box">
+
+                                                    <div class="item">
+                                <p>“Upgraded mock tests, genuine difficulty level as per real test, excellent video lectures for generalists.”</p>
+                                <div class="userImgAndNameContainer">
+                                    <p>Ketan Dhainje </p>
+                                    <small>
+                                        SBI JA AND SBI PO                                    </small>
+                                </div>
+                            </div>
+                                                    <div class="item">
+                                <p>I have referred to ixamBee’s Finance and management 300 questions before the exam as I found the questions were of difficult level. These questions helped me a lot in the exam.”</p>
+                                <div class="userImgAndNameContainer">
+                                    <p>Prakhar Upadhyay</p>
+                                    <small>
+                                                                            </small>
+                                </div>
+                            </div>
+                                                    <div class="item">
+                                <p>“ixamBee’s free test series help me a lot in preparing for Phase I and Phase II. After I got selected in Phase II, ixamBee’s interview guidance session helped me a lot especially CP Sir’s tips and feedback increased my confidence.”</p>
+                                <div class="userImgAndNameContainer">
+                                    <p>Naveen Kumar</p>
+                                    <small>
+                                                                            </small>
+                                </div>
+                            </div>
+                                                    <div class="item">
+                                <p>“Thank you ixambee. I subscribed to their SEBI Course and made the best use of the free mock tests. 
+
+
+
+
+
+
+Their study material is very concise, easy to revise, and up-to-date which helped me in solving many of the securities market questions. I am especially grateful for their personal guidance during interview stage.”</p>
+                                <div class="userImgAndNameContainer">
+                                    <p>Santwana Panda</p>
+                                    <small>
+                                                                            </small>
+                                </div>
+                            </div>
+                                                    <div class="item">
+                                <p>sir/mam your site is very helpful for mock tests thanks for helping us so much..i had a suggestion that if you had your app of ixambee so that it can be used in mobile phones..it could be of great he</p>
+                                <div class="userImgAndNameContainer">
+                                    <p>Samistha</p>
+                                    <small>
+                                                                            </small>
+                                </div>
+                            </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="beepediaAndFeatured">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Your Daily <span class="blueTextbold fs-2">Updates of Beepedia</span></h2>
+                </div>
+
+                                                            <div class="col-sm-4">
+                            <a href="index2.html" class="beepediaWhiteBox">
+                                <img src="images/pdf.svg" alt="pdf">
+                                <h5>Monthly Current Affairs (Beepedia) July 2025</h5>
+                                <img src="images/blackArrowIcon.svg" alt="arrow">
+                            </a>
+                        </div>
+                                                                                <div class="col-sm-4">
+                            <a href="index2.html" class="beepediaWhiteBox">
+                                <img src="images/pdf.svg" alt="pdf">
+                                <h5>Weekly Current Affairs (Beepedia) 16th-22nd August 2025</h5>
+                                <img src="images/blackArrowIcon.svg" alt="arrow">
+                            </a>
+                        </div>
+                                                                                <div class="col-sm-4">
+                            <a href="index2.html" class="beepediaWhiteBox">
+                                <img src="images/pdf.svg" alt="pdf">
+                                <h5>Daily Current Affairs (Beepedia) 30th August 2025</h5>
+                                <img src="images/blackArrowIcon.svg" alt="arrow">
+                            </a>
+                        </div>
+                                    
+            </div>
+        </div>
+
+
+        
+
+    </section>
+
+
+    <section class="beepediaAndFeatured p-0">
+
+        <div class="container">
+            <div class="row">
+
+            <section class="footerText p-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>ixamBee is an online educational platform dedicated to aiding individuals in preparation
+                                for
+                                competitive examinations related to a wide range of job opportunities, including
+                                positions
+                                within the Central Government, Banking sector, State Government, SSC, Railways,
+                                Insurance, and
+                                more. Our team comprises former professionals from esteemed institutions such as RBI,
+                                NABARD,
+                                SIDBI, ex-Bank POs, and several others who have held esteemed and strategic roles within
+                                both
+                                the public and private sectors. With a fervent commitment to providing precise guidance,
+                                we aim
+                                to steer your preparation in the right direction, assisting you in securing your coveted
+                                job
+                                position.</p>
+                            <p>In line with this objective, we craft original, crisp and concise learning content that
+                                spans the
+                                entire spectrum of understanding, from fundamental concepts to the most advanced levels
+                                of
+                                complexity. This content is tailored to the unique requirements of each examination.
+                                Through the
+                                ixamBee Learning Experience (iLX), we offer a streamlined approach to learning that
+                                makes you
+                                Prepare 50% Faster, enhancing your prospects of triumph in competitive examinations.</p>
+                            <p>
+                                Our courses are meticulously designed to aid students in their preparation for a diverse
+                                array
+                                of
+                                examinations, including regulatory body exams like 
+                                <a class="p-0" href="https://ixambee.com/online-course/rbi-grade-b">RBI</a>, 
+                                <a class="p-0" href="https://ixambee.com/online-course/sebi-grade-a-exclusive">SEBI</a>,
+                                <a class="p-0" href="https://ixambee.com/online-course/nabard-grade-a">NABARD</a>, 
+                                <a class="p-0" href="https://ixambee.com/online-course/pfrda">PFRDA</a>,
+                                <a class="p-0" href="https://ixambee.com/online-course/ifsca">IFSCA</a>,
+                                <a class="p-0" href="https://ixambee.com/online-course/irdai-assistant-manager">IRDAI</a>,
+                                <a class="p-0" href="https://ixambee.com/online-course/sidbi-grade-a">SIDBI</a>,
+                                <a class="p-0" href="https://ixambee.com/online-course/national-housing-banking">NHB</a>, as
+                                well as <a class="p-0" href="https://ixambee.com/online-course/ultimate-beebanker">Banking & Insurance(Superpack-PO/Clerk)</a>,
+                                <a class="p-0" href="https://ixambee.com/online-course/ssc-superpack">SSC</a>, railway, teaching
+                                exams, and a broad spectrum of other government
+                                and other examinations.Our approach ensures the most comprehensive and thorough
+                                preparation
+                                possible for these diverse exams.
+                            </p>
+                            <p>ixamBee leverages cutting-edge technological tools that facilitate the establishment of
+                                foundational knowledge optimally. Aspiring students gearing up for a wide range of exams
+                                derive
+                                significant advantages from our comprehensive and extensive online preparatory courses.
+                                Online
+                                exam practice, recognized as highly advantageous, is amplified through the usage of
+                                ixamBee's
+                                expertly crafted mock tests for government exams. These resources provide students with
+                                a
+                                competitive edge, positioning them ahead of their peers in the race for success.</p>
+                            <p>Furthermore, our courses are meticulously tailored to align with individual requirements.
+                                The
+                                entirety of the study material devised for government exam readiness is crafted by a
+                                team of
+                                educational experts who incorporate the most effective methodologies, cutting-edge
+                                analytics,
+                                and advanced techniques.</p>
+                            <p>That’s not all; ixamBee also uses a flipped classroom approach, offering prerecorded
+                                lessons soon
+                                after enrollment. This ensures that users gain access to the complete content right from
+                                the
+                                outset, and they can make use of live classes to address any uncertainties they may have
+                                regarding topics within the given section. Recognizing that excelling in a competitive
+                                exam
+                                heavily relies on practice, we furnish our users with testing opportunities at various
+                                proficiency levels. Moreover, those who become part of our community receive a wealth of
+                                material, including Free Mock Tests, BeePedia's General Awareness content, Budget
+                                Highlights,
+                                and a succinct Summary of Economic Survey, without any extra cost. These resources are
+                                intended
+                                to support aspirants of diverse exams in their preparation endeavours.
+                            </p>
+                            <p>ixamBee takes immense pride in establishing strong connections with its students through
+                                an array
+                                of mediums such as YouTube, Facebook, and Telegram groups. Furthermore, dedicated
+                                sections on
+                                our website, such as Blogs, serve as conduits for providing guidance, clarifying doubts,
+                                and
+                                offering strategic tips for effective preparation.</p>
+                            <p>In short, ixamBee's dynamic approach to competitive exam preparation ensures success in
+                                the most
+                                optimized manner.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </div></div></section></main>
+
+    
+    <footer id="footer">
+    <div class="bottomfooter">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Social Icons -->
+                <div class="col-sm-6 col-md-6 col-lg-3 social-icons">
+                    <a title="Facebook" href="https://www.facebook.com/ixambee/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a title="Twitter" href="https://twitter.com/ixambee" target="_blank">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a title="Youtube" href="https://www.youtube.com/channel/UCwB1sptW5PPeaXnrW5Yb3-A" target="_blank">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                    <a title="Instagram" href="https://www.instagram.com/ixambee/" target="_blank">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-sm-6 col-md-6 col-lg-6 text-center companyDetails">
+                    <h3 id="phone_no" class="">
+                        <a href="tel:+919205524028" style="color: black; padding:0;">+919205524028</a>
+                        Available Mon-Sat (10 AM to 7 PM)
+                    </h3>
+                    <p>
+                        <a href="/cdn-cgi/l/email-protection#abc3cec7c7c4ebc2d3cac6c9cece85c8c4c6" style="color: black; padding:0;"><span class="__cf_email__" data-cfemail="254d4049494a654c5d44484740400b464a48">[email protected]</span></a>
+                    </p>
+                </div>
+
+                <!-- Copyright -->
+                <div class="col-sm-12 col-md-12 col-lg-3 copyright">
+                    <h3>© ATOZLEARN EDUTECH PRIVATE LIMITED All rights reserved.</h3>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="profile">
-        <img src="Profile.png" alt="Profile">
-        <h4>Nidhi Ydv</h4>
-      </div>
-      <div class="time-box">Time Left: 40:00</div>
+</footer>
+
+    
+
+
+
+
+
+    
+    
+
+
+    
+    <script data-cfasync="false" src="js/email-decode.min.js"></script><script>
+        window.IS_PRODUCTION = true;
+        window.PAGE_PATH = "/";
+        window.BASE_URL = "index2.html";
+        const lastSegment = PAGE_PATH.split('/').pop(); // "rbi-grade-b-depr-phase-2"
+        window.LAST_SLUG = lastSegment;
+        window.user_id = "0";
+        window.cm = "";
+        window.dc = "";
+    </script>
+
+            <script type="application/ld+json">
+        {
+            "@context": "https:/schema.org",
+            "@type": "Organization",
+            "name": "ixamBee",
+            "url": "https:/www.ixambee.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:/ik.imagekit.io/ixamBee/Index_page/prepare_fast_logo.webp",
+                "width": 60,
+                "height": 34
+            },
+            "description": "Prepare With Us - IBPS PO, Clerk, RRB, SBI PO, Clerk, SSC CGL, RBI, SEBI, NABARD, and other upcoming govt. exams.",
+            "email": "Hello@ixambee.com",
+            "sameAs": [
+                "https:/www.facebook.com/ixambee/",
+                "https:/twitter.com/ixambee",
+                "https:/t.me/govtjobprep",
+                "https:/in.linkedin.com/company/ixambee",
+                "https:/www.youtube.com/c/ixamBee",
+                "https:/play.google.com/store/apps/details?id=com.ixambee&hl=en_IN&gl=US"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "A-31, Vyapar Marg, Block A, Sector 3",
+                "addressLocality": "Noida",
+                "addressRegion": "Uttar Pradesh",
+                "postalCode": "201301",
+                "addressCountry": "IN"
+            },
+            "founder": [
+                "Sandeep Singh",
+                "Chandraprakash Joshi",
+                "Arunima Sinha"
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https:/schema.org",
+            "@type": "WebSite",
+            "url": "https:/www.ixambee.com/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https:/www.ixambee.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+
+    <div class="modal fade" id="request_call_back" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Close button (top-right) -->
+            <div class="text-end p-2">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Call back form start from here -->
+                <div class="form-group_this_form">
+                    <div class="text-center mb-4">
+                        <h3 style="font-size: 24px;" class="change_title">Please Enter Details</h3>
+                        <img src="images/req-call-back.svg" loading="lazy" width="250" height="186" alt="call-back">
+                    </div>
+
+                    <!-- Name input -->
+                    <div class="form-group input-effect">
+                        <small id="error_name" class="form-text text-danger d-none">Please Enter Name</small>
+                        <input type="text" class="form-control effect-17" id="name" placeholder="Enter your Name" value="">
+                        <small id="emailHelp" class="form-text text-danger d-none">We'll never share your email with anyone else.</small>
+                    </div>
+
+                    <!-- Mobile input -->
+                    <div class="form-group input-effect mt-4">
+                        <small id="error_mobile" class="form-text text-danger d-none">Please enter Correct Mobile
+                            Number</small>
+                        <input type="number" name="mobile" class="form-control effect-17" id="mobile" onkeydown="return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.value.length);" maxlength="10" placeholder="Enter your Mobile Number" value="">
+                        <small id="numberHelp" class="form-text text-danger d-none">We'll never share your email with
+                            anyone else.</small>
+                    </div>
+
+                    <!-- Hidden input -->
+                    <input type="hidden" id="sebiCheckphase1">
+
+                    <!-- Submit button -->
+                    <div class="text-center mt-4">
+                        <button type="button" id="submit_btn_new_new" class="btn btn-primary submit-button">Request a
+                            Call Back</button>
+                    </div>
+                </div>
+                <!-- // call back end here -->
+
+                <!-- Thank you message -->
+                <div class="thankyou-msg text-center d-none">
+                    <h3>Great! Our Exam Experts will contact you soon</h3>
+                    <div class="check-circle mb-4">
+                        <i class="fas fa-check-circle fa-4x text-success"></i>
+                    </div>
+                </div>
+                <!-- // end thank you message -->
+
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 
-  <div class="footer">
-    <button onclick="location.href='index2.html'" class="btn">NEXT →</button>
-  </div>
 
-</body>
-</html>
+    <button class="bck rightToLeft" style="transition-duration: 300ms;"></button>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- <script src="index2.html/v7/js/owl.carousel.min.js"></script> -->
+    <script src="js/navigation.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/theia-sticky-sidebar.min.js"></script>
+    <script>
+        // function updateClock() {
+        //     const now = new Date();
+        //     const deadline = new Date(now.getFullYear(), 6, 31, 23, 59, 59); // Month is 0-indexed (6 = July)
+
+        //     // If past July 31st, set year to next year
+        //     if (now > deadline) {
+        //         $('#liveTimer').text("00:00:00");
+        //         return;
+        //     }
+
+        //     const diff = deadline - now;
+
+        //     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        //     const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        //     const seconds = Math.floor((diff / 1000) % 60);
+        //     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        //     const strTime = 
+        //         (days > 0 ? days + "d " : "") +
+        //         ("0" + hours).slice(-2) + ":" +
+        //         ("0" + minutes).slice(-2) + ":" +
+        //         ("0" + seconds).slice(-2);
+
+        //     $('#liveTimer').text(strTime);
+        // }
+
+        // $(document).ready(function () {
+        //     updateClock(); // initial call
+        //     setInterval(updateClock, 1000); // update every second
+        // });
+    </script>
+
+  
+
+<script src="js/login.js"></script>
+        <script src="js/inner-page.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+        <script>
+            window.PAGE_TYPE = 0;
+
+            $('.our_Success_Stories_box').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+
+            $('.index-page-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            dots:false,
+            autoplay:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+        </script>
+
+    <script src="js/trackAndDecision.js"></script>
+    <script>
+        $(document).on('click', '#startQuizBtn', function() {
+            window.ixambeeTracker.track("quiz_start", {
+                quiz_id: 101
+            });
+        });
+        $(window).on("load", function() {
+            setTimeout(function() {
+                $('script[type="lazyload_int"]').remove();
+            }, 4000); // 4 seconds
+        });
+    </script>
+    <script>
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/58eb259df7bbaa72709c55b6/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+
+
+
+</body></html>
