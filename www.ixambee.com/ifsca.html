@@ -1,0 +1,1842 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFSCA AM Online Course 2025, IFSCA AM Online Coaching - ixamBee</title>
+        <link href="v7/css/bootstrap.min.css?v=7.0.153" rel="stylesheet">
+    <link href="v7/css/header-nav.css?v=7.0.153" rel="stylesheet">
+    <link href="v7/css/common.css?v=7.0.153" rel="stylesheet">
+    <link href="ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="IFSCA AM Online Course, IFSCA AM Course 2025, IFSCA AM Online Coaching">
+    <meta name="description" content="IFSCA AM Online Course 2025: Online Coaching for IFSCA Assistant Manager Video Lessons to enhance conceptual knowledge with Study Notes in PDF practice Questions.">
+    <meta name="p:domain_verify" content="2b302875657fa45c5ccc401f88af95df">
+    <meta property="og:url" content="online-course/ifsca">
+    <meta property="og:title" content="IFSCA AM Online Course 2025, IFSCA AM Online Coaching - ixamBee">
+    <meta property="og:description" content="IFSCA AM Online Course 2025: Online Coaching for IFSCA Assistant Manager Video Lessons to enhance conceptual knowledge with Study Notes in PDF practice Questions.">
+    <meta name="twitter:title" content="IFSCA AM Online Course 2025, IFSCA AM Online Coaching - ixamBee">
+    <meta name="twitter:description" content="IFSCA AM Online Course 2025: Online Coaching for IFSCA Assistant Manager Video Lessons to enhance conceptual knowledge with Study Notes in PDF practice Questions.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="ifsca.html">
+    <link rel="icon" sizes="32x32" type="image/x-icon" href="v7/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" sizes="16x16" type="image/x-icon" href="v7/images/favicon_io/favicon-16x16.png">
+    <meta name="google-site-verification" content="0iTRkbbGQG1Ur4DRLmzMOYyPqxo60SlB49bGOy7UUx0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="npm/axios/dist/axios.min.js"></script>
+    <meta name="csrf-token" content="T1Y6BH1rCq9HE7EEu6pWwaxLV8ZyAIwMRMqICcKn">
+        <link href="v7/css/inner-page.css?v=7.0.153" rel="stylesheet">
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KLZ5GM9');
+    </script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLZ5GM9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div id="announcementBar" class="text-dark text-center py-2 w-100">
+  <a href="#" cm="" dc="request call back" data-bs-toggle="modal" data-bs-target="#request_call_back" class="m-0 p-0">
+        <p class="m-0 px-5">📢 Too many exams? Don’t know which one suits you best? Book Your Free Expert 👉 call Now!</p>
+  </a>
+  <span class="close-announcementBar"><i class="fas fa-times"></i></span>
+</div>
+    
+    <div class="top_header_ticker">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-6 d-flex justify-content-start">
+                <a class="navbar-brand" href="index.htm" alt="ixambee">
+                    <img src="v7/images/logo.svg" alt="ixambee.com" class="this_logo">
+                </a>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                                <div class="headerSearchBar ">
+    <i class="fas fa-search" id="searchBarToggle" onclick="toggleSearchBar()"></i>
+    <div class="sectionBarOuterBox">
+        <div class="searchBarSection">
+            <i class="fas fa-times closeSearchModalBox"></i>
+            <form action="submitlink" method="post" id="linkForm">
+                <input type="hidden" name="_token" value="T1Y6BH1rCq9HE7EEu6pWwaxLV8ZyAIwMRMqICcKn" autocomplete="off">                <div id="searchBarInputBox">
+                    <input type="text" placeholder="Search Exam / Courses / Mock Test / Beepedia" id="input-drop-down" name="input-drop-down"><br>
+                </div>
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
+            <ul id="suggestions"></ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $("#linkForm").on("keypress", function(event) {
+            if (event.key == "Enter") {
+                event.preventDefault();
+            }
+        })
+        console.log("api started");
+        $("#input-drop-down").attr("autocomplete", "off");
+
+        let debounceTimeout;
+
+        $('#input-drop-down').on('input', function(event) {
+            clearTimeout(debounceTimeout);
+
+            debounceTimeout = setTimeout(function() {
+                var formData = {
+                    param: $('#input-drop-down').val().trim(),
+                    userID: 0,
+                    page_url: "online-course/ifsca"
+                };
+
+                if ($("#input-drop-down").val().trim() != "") {
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url: "linksuggester",
+                        type: 'POST',
+                        data: formData,
+                        dataType: 'json',
+                        success: function(response) {
+                            $("#suggestions").html("");
+                            for (var key in response) {
+                                $("#suggestions").append(
+                                    "<li onclick='linkClicked(this)'>" +
+                                    response[key]["term"] + "</li>");
+                            }
+                            if (response.length == 0) {
+                                $("#suggestions").append(
+                                    "<li>No result found, try something else</li>"
+                                );
+                            }
+                            $("#suggestions").css("display", "block");
+                            navigation();
+                        },
+                        error: function(xhr, status, error) {
+                            $('#suggestions').html('<p>An error occurred: ' +
+                                error + '</p>');
+                            $("#suggestions").css("display", "block");
+                        }
+
+                    });
+                } else {
+                    $("#suggestions").css("display", "none");
+                    $("#suggestions").html("");
+                }
+            }, 1000);
+        });
+    });
+
+    function linkClicked(element) {
+        let value = $(element).text();
+        document.getElementById("input-drop-down").value = value;
+        document.getElementById("submitButton").click();
+    }
+</script>
+
+<script>
+    function toggleSearchBar() {
+        if (document.getElementById("linkForm").style.display === "block") {
+            document.getElementById("suggestions").style.display = "none";
+        } else {
+            document.getElementById("linkForm").style.display = "block";
+            document.getElementById("input-drop-down").focus();
+        }
+    }
+</script>
+
+<script>
+    let eventHandler;
+
+    function navigation() {
+        if (eventHandler != null) {
+            document.removeEventListener("keydown", eventHandler);
+            console.log("eventHandler removed");
+        }
+
+        a = document.getElementById("suggestions");
+        var li = a.getElementsByTagName("li");
+        var current = -1;
+
+        eventHandler = function(event) {
+            const key = event.key;
+            switch (key) {
+                case "Enter":
+                    event.preventDefault();
+                    li[current].click();
+
+                    break;
+                case "ArrowUp":
+                    if (current != -1) {
+                        li[current].classList.remove("active");
+                    }
+                    if (current - 1 >= 0) {
+                        current = current - 1;
+                    } else {
+                        current = li.length - 1;
+                    }
+                    li[current].classList.add("active");
+                    break;
+                case "ArrowDown":
+                    if (current != -1) {
+                        li[current].classList.remove("active");
+                    }
+                    current = (current + 1) % li.length;
+                    li[current].classList.add("active");
+                    break;
+            }
+        };
+
+        document.addEventListener("keydown", eventHandler);
+    }
+</script>
+
+<!-- toggle class on click -->
+<script>
+    $(document).ready(function() {
+        $('#searchBarToggle').click(function() {
+            $('.sectionBarOuterBox').addClass('open');
+            $('.searchBarSection').addClass('popup-search')
+            $('#suggestions').removeClass('suggestionsHide')
+        });
+
+        $('.closeSearchModalBox').click(function() {
+            $('.sectionBarOuterBox').removeClass('open');
+            $('.searchBarSection').removeClass('popup-search')
+            $('#suggestions').addClass('suggestionsHide')
+        });
+
+        // Remove popup-search class and open class when clicking outside of searchBarSection
+        $(document).mouseup(function(e) {
+            var $searchBarSection = $('.searchBarSection');
+            var $sectionBarOuterBox = $('.sectionBarOuterBox');
+            var $suggestionsHide = $('#suggestions');
+            $("#input-drop-down").val("");
+            if (!$searchBarSection.is(e.target) && $searchBarSection.has(e.target).length === 0) {
+                $searchBarSection.removeClass('popup-search');
+                $sectionBarOuterBox.removeClass('open');
+                $suggestionsHide.addClass('suggestionsHide');
+            }
+        });
+    });
+</script>
+                <button type="button" id="auto-button" class="btn btn-primary" data-bs-toggle="modal" onclick="location.href='login.html'">Login / Signup</button>
+                            </div>
+
+        </div>
+    </div>
+</div>
+<!-- // end here -->
+
+
+<!--  Loader start -->
+<div class="ixambee-loader" style="display: none;">
+    <div class="lightgreen"></div>
+    <div class="darkgreen"></div>
+</div>
+<!-- Loader end -->
+<nav class="navbar navbar-expand-lg nav-color headerShadow" id="add_menu">
+
+</nav>
+<header class="rbi_grade_b_header" id="rbi_grade_b_header" style=" display:none">
+    <a href="make-my-test.html">
+        <img src="v7/images/logo.svg" alt="ixambee.com" class="this_logo">
+    </a>
+    <div id="header_heading"></div>
+</header>
+
+    <div id="campaign-banner-append">
+
+    </div>
+
+    
+    <main>
+
+        
+        
+        
+    <div class="container">
+
+        <!-- page top section start frm here -->
+        <section class="online-course-banner">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="online_course_banner_detail">
+                        <nav>
+                            <ol class="breadcrumb bg-transparent custom-breadcrumb p-0">
+                                <li class="breadcrumb-item"><a href="index.htm">Home</a></li>
+                                <li class="breadcrumb-item"><a href="all-exam-packages.html">Online Course</a></li>
+                                <li class="breadcrumb-item active">
+                                    IFSCA Assistant Manager Online Course
+                                </li>
+                            </ol>
+                        </nav>
+
+                        <h1 class="main_heading">
+                            IFSCA Assistant Manager Online Course 2025
+                        </h1>
+                        <p>  </p>
+
+                        <div class="rating mentor-rating-review">
+                            <span id="stars" style="font-size: 20px;"><img src="v3/images/star-full.png" alt="starrateone" width="20px" height="20px"><img src="v3/images/star-full.png" alt="starrateone" width="20px" height="20px"><img src="v3/images/star-full.png" alt="starrateone" width="20px" height="20px"><img src="v3/images/star-full.png" alt="starrateone" width="20px" height="20px"><img src="v3/images/star-full.png" alt="starrateone" width="20px" height="20px"></span>
+
+                                                            <span class="total_ratings">
+                                    5 Star
+                                    ( 1 Ratings )
+                                </span>
+                            
+                        </div>
+
+                                                    <div class="mt-2 mb-2">
+                                <i class="fas fa-user-circle"></i>
+                                <b>Faculty</b> -
+                                                                    Susheel Ragade                                        ,
+                                                                                                        Tushar Saha                                        ,
+                                                                                                        Prachi Agarwal                                        ,
+                                                                                                        Dr. Sanjeev Sharma                                                                <span class="orange-theme-color" onclick="scroll_down('faculty');" style="cursor:pointer">
+                                    <b>More...</b>
+                                </span>
+                            </div>
+                        
+                        <p class="m-0"><i class="fas fa-globe"></i> English</p>
+
+
+                        <section class="padding2rem">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                                                            <p class="this_p">The Government of India created the International Financial Services Centres Authority (IFSCA) to promote and oversee international financial services centres in the nation. The IFSCA Recruitment 2025 is now out. So, if you are planning on partaking in this recruitment process, it is time for you to begin your preparation right away. Thankfully, ixamBee is here to save the day. Take a look at what ixamBee offers in its IFSCA Assistant Manager Online Course.</p>
+                                    
+
+
+                                    <div class="d-flex align-items-end justify-content-end gap-2">
+                                        
+                                        <button id="scroll_to_next" class="animate-btn">Continue
+                                            Reading...</button>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // end here -->
+
+        <!-- Course offerings start frpm here -->
+
+        <!-- // end here -->
+        <h3 class="this_h2">IFSCA Assistant Manager Online Course 2025</h3>
+
+    <section class="col-sm-12 col-md-12 col-lg-12">
+
+        <div class="course-purchase-section Regular shadow">
+            <div class="row">
+                <div class="col-sm-12 mb-2">
+                    <h2 class="this_h2 m-0">Course offerings</h2>
+                </div>
+                <hr style="opacity: 0.05;">
+                <div class="col-sm-12 package_description">
+                    <ul>
+
+
+                        <ul class="this_ul">
+<li>Complete Syllabus Coverage</li>
+<li>Extensive practice material available in the form of Chapter Tests, Section Tests</li>
+<li>40 Full-Length Mock Tests</li>
+<li>Descriptive Mock Tests with personalized feedback</li>
+<li>Live Classes</li>
+<li>Mock Interview</li>
+<li>Study Plan</li>
+</ul>
+
+
+                    </ul>
+                </div>
+                <hr style="opacity: 0.05;">
+                <div class="group-button-section d-flex gap-2 buttons-w-100">
+                    <a href="login-81.html" class="animate-btn blue-border d-flex" onclick="fixed_div()">
+                        Check Demo
+                    </a>
+                    <button id="try_me_package" dc="buy package" cm="" class="animate-btn orange-border yellow-fill-btn">Buy
+                        Package Now </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+        <!-- related course start from here -->
+        <section class="col-sm-12 padding2rem">
+        <div class="buy-exam-pack Regular shadow">
+            <h2 class="this_h2 mt-0">Related Course's</h2>
+            <div class="show_all_package">
+                                    <div class="col-sm-6 d-flex col-md-6 col-lg-4 mb-3">
+                        <div class="comboPackage" id="filter_search">
+                            <div class="exam-logo-with-name">
+                                <img src="v5/images/ixambee-logo.jpg" data-src="https://static.ixambee.com/v5/images/exams_logo/39.png" alt="IFSCA Grade A Legal Comprehensive Course">
+                                <h2 class="t1 mb-0">IFSCA Grade A Legal Comprehensive Course</h2>
+                            </div>
+                            <h4 class="text-uppercase">
+                                Featured Package
+                            </h4>
+                            <div class="text-left package_ul">
+                                <ul class="this_ul">
+<li><span class="this_bold">Video Lessons:</span>Short &amp; crisp videos for concepts, covering all important topics for all the subjects. There are approximately 300+ video lessons.</li>
+<li><span class="this_bold">Study Notes</span>:Detailed notes for easy learning and building fundamentals. There are 150+ Study notes for IFSCA Grade A</li>
+<li><span class="this_bold">Practice Questions:</span>Get access to 3500+ Legal Questions for learning reinforcement at various stages.</li>
+<li><span class="this_bold">Concept Checking Questions:</span>To check your learning after each concept in videos</li>
+<li><span class="this_bold">Chapter Tests:</span>To check your understanding of a chapter</li>
+<li><span class="this_bold">Sections Tests</span>:To check your level of preparedness</li>
+<li><span class="this_bold">Mock Tests:</span>Get 5 MTs for phase 2, paper 1 and 10 MTs for phase 2 paper 2.</li>
+<li><span class="this_bold">Descriptive English:</span>Get access to video lessons and study notes on writing skills, sample essays with suggested topics, and Descriptive English Mock Tests with individual Performance Feedback.</li>
+<li><span class="this_bold">Online Live Classes:</span>Study at your own pace and time and get your doubts clarified by the experts through these live sessions. These experts have cleared regulatory body exams like RBI Grade B, Bank PO, and other competitive exams.</li>
+<li><span class="this_bold">Interview Guidance:</span>This course includes Guidance for the Interview Rounds as well.</li>
+</ul>
+                                <div class="see-more-details"></div>
+                            </div>
+
+                            <div class="discountBox packageBox text-center mt-4">
+                                <div class="priceBox_web mb-3">
+                                                                            <h2 class="textDarkBlue h1">
+                                            Rs.
+                                                                                            3950
+                                                                                    </h2>
+                                                                        <div class="mrp-cut-price">
+                                        <span class="textLightGray text-through">₹
+                                                                                            8777
+                                                                                    </span>
+                                    </div>
+                                                                            <span class="price-off-all">55% off</span>
+                                                                    </div>
+
+                                <a href="login-82.html" class="animate-btn custom-button-border fixed_div">Check Demo
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                <a href="login-83.html?source_type=web" class="animate-btn custom-button-border yellow-fill-btn border-0">Buy Package Now
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-sm-6 d-flex col-md-6 col-lg-4 mb-3">
+                        <div class="comboPackage" id="filter_search">
+                            <div class="exam-logo-with-name">
+                                <img src="v5/images/ixambee-logo.jpg" data-src="https://static.ixambee.com/v5/images/exams_logo/39.png" alt="IFSCA Grade A Interview Online Course">
+                                <h2 class="t1 mb-0">IFSCA Grade A Interview Online Course</h2>
+                            </div>
+                            <h4 class="text-uppercase">
+                                Featured Package
+                            </h4>
+                            <div class="text-left package_ul">
+                                <ul>
+<li>1-0-1 Mock interview with expert panel</li>
+<li>Detailed feedback on mock interview performance and how to enhance it for your actual interview</li>
+<li>2-3 live sessions including 1 with IFSCA personnel</li>
+<li>Facility to resolve any query, 1-0-1</li>
+<li>Videos on interview preparation areas like what all to prepare, how to prepare, how to dress, HR aspects, etc.</li>
+<li>Content on latest news, key points of IFSCA annual report</li>
+</ul>
+                                <div class="see-more-details"></div>
+                            </div>
+
+                            <div class="discountBox packageBox text-center mt-4">
+                                <div class="priceBox_web mb-3">
+                                                                            <h2 class="textDarkBlue h1">
+                                            Rs.
+                                                                                            2500
+                                                                                    </h2>
+                                                                        <div class="mrp-cut-price">
+                                        <span class="textLightGray text-through">₹
+                                                                                            4500
+                                                                                    </span>
+                                    </div>
+                                                                            <span class="price-off-all">54% off</span>
+                                                                    </div>
+
+                                <a href="login-84.html" class="animate-btn custom-button-border fixed_div">Check Demo
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                <a href="login-85.html?source_type=web" class="animate-btn custom-button-border yellow-fill-btn border-0">Buy Package Now
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-sm-6 d-flex col-md-6 col-lg-4 mb-3">
+                        <div class="comboPackage" id="filter_search">
+                            <div class="exam-logo-with-name">
+                                <img src="v5/images/ixambee-logo.jpg" data-src="https://static.ixambee.com/v5/images/exams_logo/39.png" alt="IFSCA Assistant Manager Comprehensive Course">
+                                <h2 class="t1 mb-0">IFSCA Assistant Manager Comprehensive Course</h2>
+                            </div>
+                            <h4 class="text-uppercase">
+                                Featured Package
+                            </h4>
+                            <div class="text-left package_ul">
+                                <ul class="this_ul">
+<li>Complete Syllabus Coverage</li>
+<li>Extensive practice material available in the form of Chapter Tests, Section Tests</li>
+<li>40 Full-Length Mock Tests</li>
+<li>Descriptive Mock Tests with personalized feedback</li>
+<li>Live Classes</li>
+<li>Mock Interview</li>
+<li>Study Plan</li>
+</ul>
+                                <div class="see-more-details"></div>
+                            </div>
+
+                            <div class="discountBox packageBox text-center mt-4">
+                                <div class="priceBox_web mb-3">
+                                                                            <h2 class="textDarkBlue h1">
+                                            Rs.
+                                                                                            3950
+                                                                                    </h2>
+                                                                        <div class="mrp-cut-price">
+                                        <span class="textLightGray text-through">₹
+                                                                                            8777
+                                                                                    </span>
+                                    </div>
+                                                                            <span class="price-off-all">55% off</span>
+                                                                    </div>
+
+                                <a href="login-81.html" class="animate-btn custom-button-border fixed_div">Check Demo
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                <a href="login-86.html?source_type=web" class="animate-btn custom-button-border yellow-fill-btn border-0">Buy Package Now
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    </section>
+        <!-- // end here  -->
+
+        <!-- content section start from here -->
+        <section class="col-sm-12 mt-4" id="about" cd="1">
+                            <div class="show-more-content">
+<h2 class="this_h2">IFSCA Assistant Manager Online Course</h2>
+<h3 class="this_h3">Important Features of IFSCA Assistant Manager Online Course</h3>
+<ul class="this_ul">
+<li>Study materials that are relevant and crisp: Aspirants often struggle to study from detailed notes, books and other materials. However, through our crisp notes, you will be able to have a quick revision and learn without any hassle of collecting material from various data. Apart from that, our study materials are completely based on the latest exam patterns and question trends. You will not find any outdated questions in our study material.&nbsp;</li>
+<li>Expertly designed course with well-planned lessons: Our IFSCA Assistant Manager course is completely and thoughtfully created by our experts who have years of experience in mentoring in this field. our faculty and question team synchronizes with the question trends and then curates the content of this course.&nbsp;</li>
+<li>Mentorship that is dedicated to your success: We aim to dedicatedly train you not only for the sake of cracking exams but also to become an IFSCA Assistant Manager. We love to become an essential part in&nbsp; the journey of your success.&nbsp;</li>
+<li>For clarification of doubts, live classes are held: We, at ixamBee do not only cater to the completion of the whole syllabus but also prepare you confidently for the <a href="exams/ifsca-assistant-manager.html">IFSCA Assistant Manager exam</a>. Therefore, we have initiated the feature of live classes that will help you connect directly with our expert faculty to ask and clear any doubts.&nbsp;</li>
+</ul>
+<h3 class="this_h3">IFSCA Assistant Manager Online Course consists of</h3>
+<ul class="this_ul">
+<li>Complete syllabus coverage through a mix of crisp videos and downloadable study notes</li>
+<li>Extensive practice material available in the form of Chapter Tests, Section Tests</li>
+<li>40 Mock Tests for Phase I and Phase 2&nbsp;</li>
+<li>Exact exam like format of Mock tests</li>
+<li><span data-teams="true">5<span style="font-size: inherit;"> Descriptive MTs with Personalized Evaluation</span></span></li>
+<li>Live Classes for Phase by Expert Faculty</li>
+<li>Hand holding during Interview Preparation through expert guidance</li>
+<li>Mock Interview</li>
+<li>Study Plan</li>
+</ul>
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-12 p-0">
+<div><picture><source media="(min-width: 1200px)" srcset="miscellaneous-images/ifsca_grade_a_2024_selections.png"> <source media="(min-width: 568px)" srcset="miscellaneous-images/ifsca_grade_a_2024_selections.png"> <source media="(max-width: 567px)" srcset="miscellaneous-images/ifsca_grade_a_2024_selections.png"> <img class="this_img" src="miscellaneous-images/ifsca_grade_a_2024_selections.png" alt="IFSCA Grade A Selection 2024"></picture></div>
+</div>
+</div>
+</div>
+<h3 class="this_h3">Why Choose IFSCA Assistant Manager Online Course from ixamBee?</h3>
+<ul class="this_ul">
+<li>The online IFSCA Assistant Manager Online course from ixamBee is available at any time and from any place. You will also benefit from the course's organized schedule while you make your preparation.</li>
+<li>You will acquire in-depth knowledge on the subject as well as practical experience from knowledgeable faculty members.</li>
+<li>You will also be given complete study materials so you can continue your studies in a setting that is comfortable for you.</li>
+<li>The portal is unique and user-friendly, and it has everything you need to earn your desired score.</li>
+<li>Live workshops with the relevant faculty member to address all of your questions.</li>
+<li>All Descriptive mock tests will be checked within 72 Hours from today and within 24 hours starting one week before the exam.</li>
+</ul>
+<h3 class="this_h3">Benefits of taking IFSCA Assistant Manager Coaching Online</h3>
+<p class="this_p">Please take a look at the benefits of taking the IFSCA Assistant Manager&nbsp; Online Course with ixamBee.</p>
+<ul class="this_ul">
+<li><span class="this_bold">Organized Learning</span></li>
+</ul>
+<p class="this_p">You can take advantage of organized and methodological learning when you sign up for a quality IFSCA online coaching. You will have enough time to finish your entire IFSCA Grade A syllabus thanks to the classes, timetables, and separated coursework. You will also have time for review.</p>
+<ul class="this_ul">
+<li><span class="this_bold">Why Study Alone?</span></li>
+</ul>
+<p class="this_p">You can study with your friends by using IFSCA Grade A online coaching from ixamBee. Group study is usually preferable to solitary or independent study. When you study alongside your classmates, you can observe how they are preparing as well as get your questions answered in class and other places.</p>
+<ul class="this_ul">
+<li><span class="this_bold">Easy-Peasy</span></li>
+</ul>
+<p class="this_p">Our complete IFSCA Assistant Manager course module is available online, which offers all users a great deal of ease. If you are a working professional, the IFSCA online coaching classes will be extremely beneficial to you. You can study from the convenience of your home in either case. In addition to attending live sessions, you are free to view your course materials whenever you choose.</p>
+<h3 class="this_h3">How to Buy IFSCA Grade A 2025 Online Classes on ixamBee?</h3>
+<p class="this_p">If you are a registered user of this website, then it is fine and if not, you are supposed to register yourself on this website to initial the course enrollment process. Once you are done with that, then come back to this page. You can find all the information about the IFSCA Grade A Online Course on the far right side of the course website. To ensure the quality of the course, you can watch out the demo video by clicking on the button present on the right side of this page. Furthermore, to clear any doubt regarding the course,e you can click on 'request a call back' button present on the right side. At last, once you are confirmed and made a decision to buy this course. All you have to do is, click on the '<a title="But Now " href="login-86.html?redirect_to=online-course/ifsca">Buy Now</a>' tab on the page to make a payment for the IFSCA Grade A Online Course. A free demo is also provided to you if required, or you can click on the 'Buy Now' tab directly to make the payment. You can write to us at&nbsp;<a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="7e161b1212113e17061f133c1b1b501d1113">[email&#160;protected]</a> if you need any clarification or help.</p>
+<div class="show-button-container"><button class="show-all-content">Read More</button></div>
+</div>
+                    </section>
+        <!-- // end here -->
+
+        <!-- faculty section start from here -->
+        <section class="faculty mt-4" id="faculty" cd="2">
+    <h2 class="this_h2 m-0">
+        IFSCA Assistant Manager Online Course 2025        Faculty and Course
+        Coordinator
+    </h2>
+
+    <div class="ixambee-fac-flex">
+        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                    <div class="facilty-details Regular shadow">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="faculty-img-container">
+                                    <img fetchpriority="low" src="v3/images/faculty_author/20211125_121114_200x200.jpg" loading="lazy" class="faculty-img" alt="Susheel Ragade ESI, FM &amp; GA Expert, Ex-Manager RBI">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <a class="p-0" href="faculty-profile/susheel_ragade.html">
+                                    <div class="faculty-name">
+                                        <p>Susheel Ragade</p>
+                                        <small class="text-dark">ESI, FM &amp; GA Expert, Ex-Manager RBI</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                    <div class="facilty-details Regular shadow">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="faculty-img-container">
+                                    <img fetchpriority="low" src="v3/images/faculty_author/fgg%20%281%29.jpg" loading="lazy" class="faculty-img" alt="Tushar Saha ESI &amp; GA Expert">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <a class="p-0" href="faculty-profile/tushar_saha.html">
+                                    <div class="faculty-name">
+                                        <p>Tushar Saha</p>
+                                        <small class="text-dark">ESI &amp; GA Expert</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                    <div class="facilty-details Regular shadow">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="faculty-img-container">
+                                    <img fetchpriority="low" src="v3/images/faculty_author/Prachi_pic_-2_200x200.jpg" loading="lazy" class="faculty-img" alt="Prachi Agarwal Finance Expert, Ex-Manager CARE Rating">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <a class="p-0" href="faculty-profile/Prachi-Aggarwal.html">
+                                    <div class="faculty-name">
+                                        <p>Prachi Agarwal</p>
+                                        <small class="text-dark">Finance Expert, Ex-Manager CARE Rating</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+                    <div class="facilty-details Regular shadow">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="faculty-img-container">
+                                    <img fetchpriority="low" src="v3/images/faculty_author/dr.sanjeev_sharma.jpg" loading="lazy" class="faculty-img" alt="Dr. Sanjeev Sharma English Expert, Ex-CGM RBI, Ex-ED NHB">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <a class="p-0" href="faculty-profile/dr._sanjeev_sharma.html">
+                                    <div class="faculty-name">
+                                        <p>Dr. Sanjeev Sharma</p>
+                                        <small class="text-dark">English Expert, Ex-CGM RBI, Ex-ED NHB</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</section>
+        <!-- // end here -->
+        <section class="padding2rem" id="syllabus" cd="3">
+        <h2 class="mt-0 this_h2">
+            IFSCA Assistant Manager Online Course 2025            Study Materials Information
+        </h2>
+
+        <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading0">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                            Reasoning Aptitude
+                        </button>
+                    </h2>
+                    <div id="collapse0" class="accordion-collapse collapse show" aria-labelledby="heading0" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Commonsense Reasoning</li>
+                                                                    <li>Coding Decoding</li>
+                                                                    <li>Coded Inequalities</li>
+                                                                    <li>Syllogism</li>
+                                                                    <li>Seating Arrangement</li>
+                                                                    <li>Puzzles</li>
+                                                                    <li>Coded Blood Relationship</li>
+                                                                    <li>Input Output</li>
+                                                                    <li>Direction and Distance</li>
+                                                                    <li>Data  Sufficiency</li>
+                                                                    <li>Ranking</li>
+                                                                    <li>Analytical Reasoning</li>
+                                                                    <li>Section Test Reasoning</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            Quantitative Aptitude
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>No. System</li>
+                                                                    <li>Percentage</li>
+                                                                    <li>Profit and loss</li>
+                                                                    <li>Ratio and proportion</li>
+                                                                    <li>Partnership</li>
+                                                                    <li>Average</li>
+                                                                    <li>Alligation</li>
+                                                                    <li>Simple and compound interest</li>
+                                                                    <li>Time and distance</li>
+                                                                    <li>Trains</li>
+                                                                    <li>Pipes and cisterns</li>
+                                                                    <li>Permutation and combination</li>
+                                                                    <li>Probability</li>
+                                                                    <li>Quadratic equation</li>
+                                                                    <li>Series</li>
+                                                                    <li>Mensuration</li>
+                                                                    <li>DI</li>
+                                                                    <li>Age</li>
+                                                                    <li>HCF and LCM</li>
+                                                                    <li>Simplification</li>
+                                                                    <li>Approximation</li>
+                                                                    <li>Time and work</li>
+                                                                    <li>Short Cut Tricks</li>
+                                                                    <li>Section Test Quant</li>
+                                                                    <li>Caselet DI</li>
+                                                                    <li>Venn diagram</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            English Language
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="heading2" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Tense</li>
+                                                                    <li>Parts of Speech</li>
+                                                                    <li>Direct Indirect Speech</li>
+                                                                    <li>Active passive voice</li>
+                                                                    <li>Articles and Determiners</li>
+                                                                    <li>Cloze Passage</li>
+                                                                    <li>Fillers</li>
+                                                                    <li>Reading Comprehension</li>
+                                                                    <li>Sentence Rearrangement / Parajumbles</li>
+                                                                    <li>Spotting Errors</li>
+                                                                    <li>Idioms and Phrases</li>
+                                                                    <li>Sentence Improvement</li>
+                                                                    <li>Coherent paragraph</li>
+                                                                    <li>Vocabulary</li>
+                                                                    <li>Section Test English Language</li>
+                                                                    <li>Sentence Connectors</li>
+                                                                    <li>Match the column</li>
+                                                                    <li>Subject Verb Agreement</li>
+                                                                    <li>Word Swapping / Replacement</li>
+                                                                    <li>Word Usage</li>
+                                                                    <li>Phrasal Verbs</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            General Awareness
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="heading3" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Economy, Banking &amp; Finance (EBF) - Concepts</li>
+                                                                    <li>Static GA</li>
+                                                                    <li>Budget and Economic Survey</li>
+                                                                    <li>Important Reports and Indices</li>
+                                                                    <li>Government Schemes</li>
+                                                                    <li>Weekly Quiz – GA and EBF</li>
+                                                                    <li>Beepedia</li>
+                                                                    <li>Economy, Banking &amp; Finance (EBF) - Current Affairs</li>
+                                                                    <li>PIB Current Affairs</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            Economic and Sustainable Development
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse " aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Growth and Sustainable development</li>
+                                                                    <li>Inclusion and Demographic</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            Finance
+                        </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse " aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Financial Institutions</li>
+                                                                    <li>Basics of Derivatives</li>
+                                                                    <li>Financial Markets</li>
+                                                                    <li>Money Market</li>
+                                                                    <li>Capital Market</li>
+                                                                    <li>Financial Inclusion</li>
+                                                                    <li>Alternate Sources of Finance</li>
+                                                                    <li>Bonds and Bond Market</li>
+                                                                    <li>Mutual Funds</li>
+                                                                    <li>RBI and SEBI Circulars</li>
+                                                                    <li>Financial System</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            Management
+                        </button>
+                    </h2>
+                    <div id="collapse6" class="accordion-collapse collapse " aria-labelledby="heading6" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>The Management Basics</li>
+                                                                    <li>Leadership Concept</li>
+                                                                    <li>Human Resource Development</li>
+                                                                    <li>Motivation</li>
+                                                                    <li>Communication</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            Indian and Global Economy
+                        </button>
+                    </h2>
+                    <div id="collapse7" class="accordion-collapse collapse " aria-labelledby="heading7" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Monetary Policy</li>
+                                                                    <li>Money and Inflation</li>
+                                                                    <li>Fiscal Policy</li>
+                                                                    <li>Balance of Payments</li>
+                                                                    <li>Indian Economy</li>
+                                                                    <li>Output &amp; Employment and IS-LM</li>
+                                                                    <li>Foreign Exchange Markets</li>
+                                                                    <li>Demand &amp; Supply and Market Structures</li>
+                                                                    <li>Non Banking financial institutions</li>
+                                                                    <li>Global Economy</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                            Descriptive English
+                        </button>
+                    </h2>
+                    <div id="collapse8" class="accordion-collapse collapse " aria-labelledby="heading8" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Precis Writing</li>
+                                                                    <li>Essay Writing</li>
+                                                                    <li>Reading Comprehension in English Writing</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                            Banking and Capital Market
+                        </button>
+                    </h2>
+                    <div id="collapse9" class="accordion-collapse collapse " aria-labelledby="heading9" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Financial Markets</li>
+                                                                    <li>Financial System</li>
+                                                                    <li>General Topics in Finance</li>
+                                                                    <li>Banking</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                            Bullion Exchange
+                        </button>
+                    </h2>
+                    <div id="collapse10" class="accordion-collapse collapse " aria-labelledby="heading10" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Bullion Exchange</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading11">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                            Test
+                        </button>
+                    </h2>
+                    <div id="collapse11" class="accordion-collapse collapse " aria-labelledby="heading11" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Test</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading12">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                            Global Financial Centres
+                        </button>
+                    </h2>
+                    <div id="collapse12" class="accordion-collapse collapse " aria-labelledby="heading12" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Global Financial Centres</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading13">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                            Union Budget and Economic Survey
+                        </button>
+                    </h2>
+                    <div id="collapse13" class="accordion-collapse collapse " aria-labelledby="heading13" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Union Budget and Economic Survey</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading14">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                            Insurance and Pension Sector
+                        </button>
+                    </h2>
+                    <div id="collapse14" class="accordion-collapse collapse " aria-labelledby="heading14" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Insurance Awareness</li>
+                                                                    <li>Pension</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading15">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                            Commerce and Accounts
+                        </button>
+                    </h2>
+                    <div id="collapse15" class="accordion-collapse collapse " aria-labelledby="heading15" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Accounting Standards</li>
+                                                                    <li>Accounting for Share capital Transactions</li>
+                                                                    <li>Other financial concepts</li>
+                                                                    <li>Accounting as financial info system</li>
+                                                                    <li>Financial Statements, Cash flow, fund flow - preparation and analysis</li>
+                                                                    <li>Taxation Related</li>
+                                                                    <li>Section test Accounts</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading16">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                            Costing
+                        </button>
+                    </h2>
+                    <div id="collapse16" class="accordion-collapse collapse " aria-labelledby="heading16" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Methods of costing</li>
+                                                                    <li>Basics of Cost control and analysis</li>
+                                                                    <li>Lean systems</li>
+                                                                    <li>Overview of Costing</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading17">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                            Five Year Plan
+                        </button>
+                    </h2>
+                    <div id="collapse17" class="accordion-collapse collapse " aria-labelledby="heading17" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>Five Year Plan</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading18">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                            IFSCA
+                        </button>
+                    </h2>
+                    <div id="collapse18" class="accordion-collapse collapse " aria-labelledby="heading18" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="this_ul pb-0">
+                                                                    <li>IFSCA GIFT City</li>
+                                                                    <li>IFSCA Act</li>
+                                                                    <li>IFSCA Circulars</li>
+                                                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                    </div>
+    </section>
+
+        <!-- Recommended course start from here -->
+        <section class="courses_for_you_section padding2rem">
+        <h2 class="this_h2 mt-0">Recommended Courses for you</h2>
+        <div class="courses_for_you_free">
+            <ul>
+                                    <li>
+                        <div class="continue-wrap check_course_detail">
+                            <div class="course-name-icon">
+                                <img src="v5/images/exams_logo/428.png" loading="lazy" alt="IFSCA Assistant Manager Demo Course" onerror="this.onerror=null;this.src='https://static.ixambee.com/v5/images/ixambee-logo.jpg';">
+                                <h3 class="ps-3">IFSCA Assistant Manager Demo Course</h3>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="btn-group custom-group-btn m-3 mt-0">
+                                <a href="login-81.html" class="animate-btn blue-border w-100 text-center" id="demo_act_id0">
+                                    Start Free Trial
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                                    <li>
+                        <div class="continue-wrap check_course_detail">
+                            <div class="course-name-icon">
+                                <img src="v5/images/exams_logo/428.png" loading="lazy" alt="IFSCA Grade A Comprehensive Legal Demo Course" onerror="this.onerror=null;this.src='https://static.ixambee.com/v5/images/ixambee-logo.jpg';">
+                                <h3 class="ps-3">IFSCA Grade A Comprehensive Legal Demo Course</h3>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="btn-group custom-group-btn m-3 mt-0">
+                                <a href="login-82.html" class="animate-btn blue-border w-100 text-center" id="demo_act_id1">
+                                    Start Free Trial
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                            </ul>
+        </div>
+    </section>
+        <!-- // end -->
+
+
+        <!-- FAQ start from here -->
+        <section class="padding2rem" id="faq" cd="5">
+
+        <h2 class="mb-3 this_h2">IFSCA Assistant Manager Online Course 2025 Course FAQs</h2>
+
+        <div class="accordion" id="rbiGradeBAccordion">
+                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading0">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                                <p>Which is the best platform for IFSCA Grade A Online coaching?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse0" class="accordion-collapse collapse" aria-labelledby="heading0" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>The finest website for IFSCA online coaching is ixamBee. Experts with years of experience built our online IFSCA Assistant Manager course. To stay current with the IFSCA Assistant Manager syllabus and exam format, our courses are frequently amended. Additionally, in order to provide candidates with the greatest online IFSCA Assistant Manager instruction, student feedback is also taken into account.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <p>Faculties of ixamBee teach the IFSCA Grade A classes?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>Yes, relevant faculty members will participate in the online IFSCA Assistant Manager Officer programs. To view the faculty members teaching this course, scroll up to the "Faculty" section.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <p>Devices I would need to access the IFSCA Grade A Online Coaching?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>You only need a computer/laptop and a good internet connection to participate in your classes.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <p>Can I take a free trial of the IFSCA Grade A online Course?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>Yes, of course! You can watch a free demo for the IFSCA Grade A Online Course before you actually go on to buy the course package.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <p>What is the validity of purchasing the IFSCA Grade A online coaching?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>When you buy the IFSCA online course, you will be able to pick the duration of the course depending upon the package that you go for.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <p>Will I get study material along with the IFSCA Grade A Online Course?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>Yes. If you enroll yourself in the IFSCA Grade A Online Course, you will receive 300+ study notes in PDF format for easy learning and quick revision along with other benefits.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                <p>Can I pay in installments for the IFSCA Grade A course?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>Sorry, you cannot.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                <p>Can I pay in cash for IFSCA Grade A online coaching?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>Unfortunately, we do not offer online coaching for IFSCA Grade A in cash.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                <p>Will I get the mock test with IFSCA Grade A online coaching?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>Yes, if you enroll in the IFSCA Grade A Online Course, you will have access to a number of mock tests. Additionally, you can access free IFSCA Grade A mock exams on our website.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                <p>In how many languages is the IFSCA Grade A course available?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>The IFSCA Grade A Online Course will be taught in English, however, you are welcome to ask questions in any language you feel comfortable in during the online live classes.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                <p>Which subject should I start with, to prepare for IFSCA Grade A?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>Now is the ideal moment to start putting things together. You cannot afford to ignore any subject because the exam is so crucial. Although every candidate will have a distinct preparation plan. While some people like to work on their weak areas first and then strengthen their strong ones, others prefer the opposite. All of these aspirants' needs are met by ixamBee's IFSCA Grade A Online Course, where you may also acquire a tailored study schedule from knowledgeable experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                                                                <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading11">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                <p>For how many days can I access the demo of the IFSCA Grade A online course?</p>
+                            </button>
+                        </h2>
+                        <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#rbiGradeBAccordion">
+                            <div class="accordion-body">
+                                <p>You get 48 hours after activation to access the IFSCA Grade A Online Course demo. Before that, you should be able to determine if you want to continue with the online course or not.</p>
+                            </div>
+                        </div>
+                    </div>
+                            
+
+        </div>
+    </section>
+        <!-- //end here -->
+
+        <!--fixed on top tabs -->
+        <ul class="what-you-want-tabs fixme" id="sticky_header_top_page">
+            <li class="tab-link current sticky_header_sub_top_page" id="sticky_header_sub_top_page1" data-tab="tab-1">
+                <span onclick="scroll_down('about');">About</span>
+            </li>
+            <li class="tab-link sticky_header_sub_top_page" id="sticky_header_sub_top_page2" data-tab="tab-2"><span onclick="scroll_down('faculty');">Faculty</span></li>
+            <li class="tab-link sticky_header_sub_top_page" id="sticky_header_sub_top_page3" data-tab="tab-3"><span onclick="scroll_down('syllabus');">Syllabus</span></li>
+            <li class="tab-link sticky_header_sub_top_page" id="sticky_header_sub_top_page5" data-tab="tab-5"><span onclick="scroll_down('faq');">FAQs</span></li>
+            <!-- <li class="tab-link sticky_header_sub_top_page"><a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        href="online-course/rbi-grade-b-phase-2">RBI Grade B Phase II </a></li> -->
+        </ul>
+        <!-- // end here -->
+
+        <!-- reqcall back button -->
+        <div class="req-callback-btn-back">
+            <div class="req-call-bg-pluse"></div>
+            <button cm="" dc="request call back" data-bs-toggle="modal" data-bs-target="#request_call_back"><i class="fas fa-phone-alt"></i>Request a
+                Call Back</button>
+        </div>
+        <!-- // end -->
+    </div>
+    </main>
+
+    
+    <footer id="footer">
+    <div class="bottomfooter">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Social Icons -->
+                <div class="col-sm-6 col-md-6 col-lg-3 social-icons">
+                    <a title="Facebook" href="https://www.facebook.com/ixambee/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a title="Twitter" href="https://twitter.com/ixambee" target="_blank">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a title="Youtube" href="https://www.youtube.com/channel/UCwB1sptW5PPeaXnrW5Yb3-A" target="_blank">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                    <a title="Instagram" href="https://www.instagram.com/ixambee/" target="_blank">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-sm-6 col-md-6 col-lg-6 text-center companyDetails">
+                    <h3 id="phone_no" class="">
+                        <a href="tel:+919205524028" style="color: black; padding:0;">+919205524028</a>
+                        Available Mon-Sat (10 AM to 7 PM)
+                    </h3>
+                    <p>
+                        <a href="cdn-cgi/l/email-protection.html#1d75787171725d74657c707f7878337e7270" style="color: black; padding:0;"><span class="__cf_email__" data-cfemail="325a575e5e5d725b4a535f5057571c515d5f">[email&#160;protected]</span></a>
+                    </p>
+                </div>
+
+                <!-- Copyright -->
+                <div class="col-sm-12 col-md-12 col-lg-3 copyright">
+                    <h3>© ATOZLEARN EDUTECH PRIVATE LIMITED All rights reserved.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+    
+
+
+
+
+
+    
+    
+
+
+    
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        window.IS_PRODUCTION = true;
+        window.PAGE_PATH = "online-course/ifsca";
+        window.BASE_URL = "https://www.ixambee.com";
+        const lastSegment = PAGE_PATH.split('/').pop(); // "rbi-grade-b-depr-phase-2"
+        window.LAST_SLUG = lastSegment;
+        window.user_id = "0";
+        window.cm = "";
+        window.dc = "";
+    </script>
+
+            <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ixamBee",
+            "url": "",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ik.imagekit.io/ixamBee/Index_page/prepare_fast_logo.webp",
+                "width": 60,
+                "height": 34
+            },
+            "description": "Prepare With Us - IBPS PO, Clerk, RRB, SBI PO, Clerk, SSC CGL, RBI, SEBI, NABARD, and other upcoming govt. exams.",
+            "email": "Hello@ixambee.com",
+            "sameAs": [
+                "https://www.facebook.com/ixambee/",
+                "https://twitter.com/ixambee",
+                "https://t.me/govtjobprep",
+                "https://in.linkedin.com/company/ixambee",
+                "https://www.youtube.com/c/ixamBee",
+                "https://play.google.com/store/apps/details?id=com.ixambee&hl=en_IN&gl=US"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "A-31, Vyapar Marg, Block A, Sector 3",
+                "addressLocality": "Noida",
+                "addressRegion": "Uttar Pradesh",
+                "postalCode": "201301",
+                "addressCountry": "IN"
+            },
+            "founder": [
+                "Sandeep Singh",
+                "Chandraprakash Joshi",
+                "Arunima Sinha"
+            ]
+            }
+
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+
+
+            <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+                  {
+            "@type": "Question",
+            "name": "Which is the best platform for IFSCA Grade A Online coaching?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The finest website for IFSCA online coaching is ixamBee. Experts with years of experience built our online IFSCA Assistant Manager course. To stay current with the IFSCA Assistant Manager syllabus and exam format, our courses are frequently amended. Additionally, in order to provide candidates with the greatest online IFSCA Assistant Manager instruction, student feedback is also taken into account."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Faculties of ixamBee teach the IFSCA Grade A classes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, relevant faculty members will participate in the online IFSCA Assistant Manager Officer programs. To view the faculty members teaching this course, scroll up to the \"Faculty\" section."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Devices I would need to access the IFSCA Grade A Online Coaching?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You only need a computer\/laptop and a good internet connection to participate in your classes."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Can I take a free trial of the IFSCA Grade A online Course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, of course! You can watch a free demo for the IFSCA Grade A Online Course before you actually go on to buy the course package."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "What is the validity of purchasing the IFSCA Grade A online coaching?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When you buy the IFSCA online course, you will be able to pick the duration of the course depending upon the package that you go for."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Will I get study material along with the IFSCA Grade A Online Course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you enroll yourself in the IFSCA Grade A Online Course, you will receive 300+ study notes in PDF format for easy learning and quick revision along with other benefits."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Can I pay in installments for the IFSCA Grade A course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sorry, you cannot."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Can I pay in cash for IFSCA Grade A online coaching?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unfortunately, we do not offer online coaching for IFSCA Grade A in cash."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Will I get the mock test with IFSCA Grade A online coaching?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, if you enroll in the IFSCA Grade A Online Course, you will have access to a number of mock tests. Additionally, you can access free IFSCA Grade A mock exams on our website."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "In how many languages is the IFSCA Grade A course available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The IFSCA Grade A Online Course will be taught in English, however, you are welcome to ask questions in any language you feel comfortable in during the online live classes."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "Which subject should I start with, to prepare for IFSCA Grade A?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Now is the ideal moment to start putting things together. You cannot afford to ignore any subject because the exam is so crucial. Although every candidate will have a distinct preparation plan. While some people like to work on their weak areas first and then strengthen their strong ones, others prefer the opposite. All of these aspirants' needs are met by ixamBee's IFSCA Grade A Online Course, where you may also acquire a tailored study schedule from knowledgeable experts."
+            }
+          },                  {
+            "@type": "Question",
+            "name": "For how many days can I access the demo of the IFSCA Grade A online course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You get 48 hours after activation to access the IFSCA Grade A Online Course demo. Before that, you should be able to determine if you want to continue with the online course or not."
+            }
+          }              ]
+    }
+    </script>
+    
+    <!-- <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "RBI Grade B DEPR Phase 2 Online Course",
+      "description": "RBI Grade B DEPR Phase 2 Online Course",
+      "image": "images/newLogo/ibee-default.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "ixamBee"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 1      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "offerCount": 1,
+        "url": "online-course/rbi-grade-b-depr-phase-2",
+        "priceCurrency": "INR",
+        "lowPrice": "4277",
+        "highPrice": "7777",
+        "priceValidUntil": "19-06-2025",
+        "itemCondition": "terms_and_conditions",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": ""
+        }
+      }
+    }
+  </script> -->
+
+
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "IFSCA Assistant Manager Online Course 2025",
+      "description": "IFSCA AM Online Course 2025: Online Coaching for IFSCA Assistant Manager Video Lessons to enhance conceptual knowledge with Study Notes in PDF practice Questions.",
+      "image": "images/newLogo/ibee-default.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "ixamBee"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 1      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "offerCount": 1,
+        "url": "online-course/ifsca",
+        "priceCurrency": "INR",
+        "lowPrice": "3950",
+        "highPrice": "14777",
+        "priceValidUntil": "02-09-2025",
+        "itemCondition": "terms_and_conditions",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": ""
+        }
+      }
+    }
+  </script>
+    
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.ixambee.com"
+            },
+            {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Online Courses",
+            "item": "online-courses"
+            },
+            {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IFSCA Assistant Manager Online Course 2025",
+            "item": "online-course/ifsca"
+            }
+        ]
+        }
+</script>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "IFSCA Assistant Manager Online Course 2025",
+      "description": "IFSCA AM Online Course 2025: Online Coaching for IFSCA Assistant Manager Video Lessons to enhance conceptual knowledge with Study Notes in PDF practice Questions.",
+      "provider": {
+        "@type": "Organization",
+        "name": "ixamBee",
+        "url": ""
+      },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "P1Y",
+      "startDate": "1 Jan 2025",
+      "endDate": "1 Jan 2026"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0000",
+      "category": "Education",
+      "priceCurrency": "rupees",
+      "availability": "https://schema.org/InStock"
+    }
+    }
+</script>
+
+
+
+    <div class="modal fade" id="request_call_back" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Close button (top-right) -->
+            <div class="text-end p-2">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Call back form start from here -->
+                <div class="form-group_this_form">
+                    <div class="text-center mb-4">
+                        <h3 style="font-size: 24px;" class="change_title">Please Enter Details</h3>
+                        <img src="v5/assets/images/req-call-back.svg" loading="lazy" width="250" height="186" alt="call-back">
+                    </div>
+
+                    <!-- Name input -->
+                    <div class="form-group input-effect">
+                        <small id="error_name" class="form-text text-danger d-none">Please Enter Name</small>
+                        <input type="text" class="form-control effect-17" id="name" placeholder="Enter your Name" value="">
+                        <small id="emailHelp" class="form-text text-danger d-none">We'll never share your email with anyone else.</small>
+                    </div>
+
+                    <!-- Mobile input -->
+                    <div class="form-group input-effect mt-4">
+                        <small id="error_mobile" class="form-text text-danger d-none">Please enter Correct Mobile
+                            Number</small>
+                        <input type="number" name="mobile" class="form-control effect-17" id="mobile" onkeydown="return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.value.length);" maxlength="10" placeholder="Enter your Mobile Number" value="">
+                        <small id="numberHelp" class="form-text text-danger d-none">We'll never share your email with
+                            anyone else.</small>
+                    </div>
+
+                    <!-- Hidden input -->
+                    <input type="hidden" id="sebiCheckphase1">
+
+                    <!-- Submit button -->
+                    <div class="text-center mt-4">
+                        <button type="button" id="submit_btn_new_new" class="btn btn-primary submit-button">Request a
+                            Call Back</button>
+                    </div>
+                </div>
+                <!-- // call back end here -->
+
+                <!-- Thank you message -->
+                <div class="thankyou-msg text-center d-none">
+                    <h3>Great! Our Exam Experts will contact you soon</h3>
+                    <div class="check-circle mb-4">
+                        <i class="fas fa-check-circle fa-4x text-success"></i>
+                    </div>
+                </div>
+                <!-- // end thank you message -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <button class="bck rightToLeft" style="transition-duration: 300ms;"></button>
+
+    <script src="v7/js/jquery.min.js"></script>
+    <script src="v7/js/bootstrap.min.js"></script>
+    <script src="v7/js/popper.min.js"></script>
+    <!-- <script src="v7/js/owl.carousel.min.js"></script> -->
+    <script src="v7/js/navigation.js?v=7.0.153"></script>
+    <script src="v7/js/common.js?v=7.0.153"></script>
+    <script src="v3/js/theia-sticky-sidebar.min.js"></script>
+    <script>
+        // function updateClock() {
+        //     const now = new Date();
+        //     const deadline = new Date(now.getFullYear(), 6, 31, 23, 59, 59); // Month is 0-indexed (6 = July)
+
+        //     // If past July 31st, set year to next year
+        //     if (now > deadline) {
+        //         $('#liveTimer').text("00:00:00");
+        //         return;
+        //     }
+
+        //     const diff = deadline - now;
+
+        //     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        //     const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        //     const seconds = Math.floor((diff / 1000) % 60);
+        //     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        //     const strTime = 
+        //         (days > 0 ? days + "d " : "") +
+        //         ("0" + hours).slice(-2) + ":" +
+        //         ("0" + minutes).slice(-2) + ":" +
+        //         ("0" + seconds).slice(-2);
+
+        //     $('#liveTimer').text(strTime);
+        // }
+
+        // $(document).ready(function () {
+        //     updateClock(); // initial call
+        //     setInterval(updateClock, 1000); // update every second
+        // });
+    </script>
+
+    <div class="modal" id="enterUser" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- STEP 1: enter mobile/email -->
+            <div class="active" id="step-enter">
+                <div class="modal-header p-0">
+                    <div class="text-center w-100 login-modal-header">
+                        <p>Sign up now</p>
+                        <span>let ixamBee guide you through every stage of your exam preparation!</span>
+                    </div>
+                </div>
+                <div class="modal-body mt-2">
+                    <input id="js-value" type="text" placeholder="Mobile or Email" class="form-control p-3">
+                    <small class="text-danger" id="err-value"></small>
+                </div>
+
+            </div>
+            <div class="login-step active" id="step-enter">
+                <div class="modal-footer border-0 pt-0">
+                    <button id="btn-send-otp" class="w-100 login-btn mb-2">Continue</button>
+                </div>
+            </div>
+            <!-- STEP 2: signup alternate -->
+            <div class="login-step" id="step-alternate">
+                <input id="js-name" type="text" placeholder="Your Name" class="form-control mb-2 p-3">
+                <small class="text-danger" id="err-name"></small>
+                <input id="js-alternate" type="text" placeholder="" class="form-control mb-2 p-3">
+                <small class="text-success" id="suc-alt"></small>
+                <small class="text-danger" id="err-alt"></small>
+
+                <button id="btn-send-otp-signup" class="w-100 login-btn mt-3">Send OTP</button>
+
+            </div>
+            <div class="login-step" id="step-select">
+                <div class="modal-body">
+                    <p class="text-warning">
+                        Your account has multiple linked identities. Please select one to keep; the rest will be removed.
+                    </p>
+                    <div id="js-identities" class="mb-3"></div>
+                    <small class="text-danger" id="err-identity"></small>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button id="btn-confirm-identity" class="w-100 login-btn">Confirm</button>
+                </div>
+            </div>
+            <!-- STEP 3: verify OTP -->
+            <div class="modal-body login-step pt-1" id="step-otp">
+                <input id="js-otp" type="text" placeholder="Please Enter OTP" class="form-control p-3 mb-3">
+                <small class="text-danger" id="err-otp"></small>
+                <small class="text-success" id="suc-otp"></small>
+                <button id="btn-verify-otp" class="w-100 login-btn mt-4">Verify & Continue</button>
+            </div>
+
+            <!-- STEP 4: done -->
+            <div class="login-step text-center" id="step-done">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="v7/js/login.js?v=7.0.153"></script>
+        <script src="v7/js/inner-page-1.js"></script>
+    <script>
+        window.PAGE_TYPE = 1;
+        $("#try_me_package").off("click").on("click", function() {
+            var dv = $(this).attr("dc");
+            var page_url = window.PAGE_PATH;
+            var cm = "";
+            var page_type = 1;
+            track_with_fun(page_url, dv, cm, page_type);
+            var c = 531;
+            console.log("package_id " + c);
+            e = "".concat("cart/", c, "?redirect_to=");
+            // Redirect to the constructed URL
+            window.location = e;
+
+        });
+
+        $(document).ready(function() {
+            // Hide initially
+            $('.what-you-want-tabs.fixme').hide();
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 700) {
+                    $('.what-you-want-tabs.fixme').fadeIn();
+                } else {
+                    $('.what-you-want-tabs.fixme').fadeOut();
+                }
+            });
+        });
+    </script>
+
+    <script src="v7/js/trackAndDecision.js?v=7.0.153"></script>
+    <script>
+        $(document).on('click', '#startQuizBtn', function() {
+            window.ixambeeTracker.track("quiz_start", {
+                quiz_id: 101
+            });
+        });
+        $(window).on("load", function() {
+            setTimeout(function() {
+                $('script[type="lazyload_int"]').remove();
+            }, 4000); // 4 seconds
+        });
+    </script>
+    <script>
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/58eb259df7bbaa72709c55b6/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+</body>
+
+</html>

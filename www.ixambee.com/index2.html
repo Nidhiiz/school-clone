@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Exam Instructions — Responsive</title>
+<style>
+  :root{
+    --bg: linear-gradient(135deg,#fceaea,#eaf8f0,#fdfdfd);
+    --card:#fff;
+    --accent:#007bff;
+    --right-bg:#eaf5ff;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%; margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:var(--bg); color:#111}
+
+  /* header */
+  .header{
+    background:var(--card);
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  }
+  .header img{height:40px; display:block; margin:0 auto;}
+
+  /* centered layout wrapper */
+  .container {
+    max-width: var(--maxw);
+    margin: 18px auto;
+    padding: 0 16px;                 /* small page padding */
+    display: grid;
+    gap: 18px;
+    /* desktop: two columns (instructions, sidebar) */
+    grid-template-columns: 1fr 320px;
+    grid-template-areas: "instructions sidebar";
+    align-items: start;
+  }
+
+  /* cards */
+  .instructions {
+    grid-area: instructions;
+    background:var(--card);
+    padding: 26px 26px 32px;
+    border-radius: 12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    overflow: visible;
+  }
+  .instructions h2{ font-size:28px; margin:0 0 14px }
+  .instructions h4{ margin:18px 0 8px }
+  .instructions ul, .instructions ol { line-height:1.6; margin:8px 0 12px 1.05rem; padding:0 }
+
+  .sidebar {
+    grid-area: sidebar;
+    background: var(--right-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    text-align:center;
+  }
+  .profile img{
+    width:86px; height:86px; border-radius:50%; object-fit:cover;
+    display:block; margin:6px auto 8px;
+    background: #cfcfcf;
+  }
+  .profile h4{ margin:6px 0 8px; font-weight:700 }
+  .time-box{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    padding:12px 14px;
+    border-radius:8px;
+    font-weight:700;
+    margin-top:8px;
+  }
+
+  /* footer with NEXT on desktop aligned right */
+  .footer {
+    max-width: var(--maxw);
+    margin: 0 auto 28px;
+    padding: 0 16px;
+    text-align: right;
+  }
+  .btn {
+    display:inline-block;
+    padding:12px 18px;
+    background: #4e9cff;
+    color:#fff;
+    border:0;
+    border-radius:8px;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 6px 16px rgba(0,0,0,0.08);
+  }
+
+  /* Small screens: stack and place sidebar ON TOP, text next, then footer button full width */
+  @media (max-width: 768px){
+    .container{
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "sidebar"
+        "instructions";
+      padding: 0 8px;
+      gap: 12px;
+    }
+
+    /* make sidebar full width and visually prominent */
+    .sidebar{
+      width:100%;
+      text-align:center;
+      padding:18px;
+      border-radius:12px;
+    }
+
+    .instructions{
+      width:100%;
+      padding:18px;
+      border-radius:12px;
+    }
+
+    /* remove extra white gap inside list text and use full width */
+    .instructions ul, .instructions ol {
+      margin-left: 0.85rem;   /* small left indent */
+      margin-right: 0;
+    }
+
+    /* footer: keep button full width on mobile and appear under instructions (it is after container) */
+    .footer { text-align: center; padding: 12px 8px; }
+    .btn{ width:100%; max-width:480px; display:inline-block }
+  }
+
+  /* extra tweaks for very small screens */
+  @media (max-width:420px){
+    .instructions h2 { font-size:22px; }
+    .header img{ height:32px }
+    .time-box{ padding:10px 12px; font-size:14px }
+  }
+</style>
+</head>
+<body>
+
+  <header class="header">
+    <!-- put your logo path -->
+    <img src="v7/images/logo.svg" alt="logo" />
+  </header>
+
+  <main class="container">
+    <!-- Sidebar (on desktop shows right; on mobile it will be first row) -->
+    <aside class="sidebar" aria-label="Student info">
+      <div class="profile">
+        <img src="images/Profile.png" alt="profile" />
+        <h4>Student Name</h4>
+      </div>
+      <div class="time-box" id="timeBox">Time Left: 40:00</div>
+    </aside>
+
+    <!-- Instructions -->
+    <section class="instructions" aria-label="Instructions">
+      <h2>Please read instructions carefully</h2>
+
+      <h4>General Instructions:</h4>
+      <ul>
+        <li>Total duration of the examination is 40 minutes.</li>
+        <li>The countdown timer at the top right will show remaining time.</li>
+        <li>Answered questions = <span style="color:green;">green</span></li>
+        <li>Unanswered questions = <span style="color:red;">red</span></li>
+        <li>Marked for review = <span style="color:blue;">blue</span></li>
+        <li>If answered and marked, it will still be considered for evaluation.</li>
+      </ul>
+
+      <h4>Answering a Question</h4>
+      <ul>
+        <li>Procedure for answering multiple-choice type questions:</li>
+        <ol>
+          <li>To select your answer, click on the button of one of the options.</li>
+          <li>To deselect your chosen answer, click again on the same option or use Clear Response.</li>
+          <li>To save your answer, you MUST click on the Save &amp; Next button.</li>
+        </ol>
+        <li>To mark a question for review, click on the Mark for Review &amp; Next button.</li>
+        <li>ONLY answers saved or marked for review will be considered for evaluation.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- this button remains under the stacked content on mobile -->
+    <button class="btn" onclick="location.href='index3.html'">NEXT →</button>
+    <br><br>
+  </footer>
+
+</body>
+</html>

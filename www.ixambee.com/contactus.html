@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - www.ixambee.com</title>
+        <link href="v7/css/bootstrap.min.css?v=7.0.153" rel="stylesheet">
+    <link href="v7/css/header-nav.css?v=7.0.153" rel="stylesheet">
+    <link href="v7/css/common.css?v=7.0.153" rel="stylesheet">
+    <link href="ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="contact us, ixambee, Team, faculty, enhanced learning software, preparation tools, online learning">
+    <meta name="description" content="We are here to help you at all phases in your exam preparation. Feel free to Contact Us.">
+    <meta name="p:domain_verify" content="2b302875657fa45c5ccc401f88af95df">
+    <meta property="og:url" content="contactus">
+    <meta property="og:title" content="Contact Us - www.ixambee.com">
+    <meta property="og:description" content="We are here to help you at all phases in your exam preparation. Feel free to Contact Us.">
+    <meta name="twitter:title" content="Contact Us - www.ixambee.com">
+    <meta name="twitter:description" content="We are here to help you at all phases in your exam preparation. Feel free to Contact Us.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="contactus.html">
+    <link rel="icon" sizes="32x32" type="image/x-icon" href="v7/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" sizes="16x16" type="image/x-icon" href="v7/images/favicon_io/favicon-16x16.png">
+    <meta name="google-site-verification" content="0iTRkbbGQG1Ur4DRLmzMOYyPqxo60SlB49bGOy7UUx0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="npm/axios/dist/axios.min.js"></script>
+    <meta name="csrf-token" content="T1Y6BH1rCq9HE7EEu6pWwaxLV8ZyAIwMRMqICcKn">
+    <link href="v7/css/inner-page.css?v=7.0.153" rel="stylesheet">
+<style>body{background: #fcfcfc;}</style>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KLZ5GM9');
+    </script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLZ5GM9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div id="announcementBar" class="text-dark text-center py-2 w-100">
+  <a href="#" cm="" dc="request call back" data-bs-toggle="modal" data-bs-target="#request_call_back" class="m-0 p-0">
+        <p class="m-0 px-5">📢 Too many exams? Don’t know which one suits you best? Book Your Free Expert 👉 call Now!</p>
+  </a>
+  <span class="close-announcementBar"><i class="fas fa-times"></i></span>
+</div>
+    
+    <div class="top_header_ticker">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-6 d-flex justify-content-start">
+                <a class="navbar-brand" href="index.htm" alt="ixambee">
+                    <img src="v7/images/logo.svg" alt="ixambee.com" class="this_logo">
+                </a>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                                <div class="headerSearchBar ">
+    <i class="fas fa-search" id="searchBarToggle" onclick="toggleSearchBar()"></i>
+    <div class="sectionBarOuterBox">
+        <div class="searchBarSection">
+            <i class="fas fa-times closeSearchModalBox"></i>
+            <form action="submitlink" method="post" id="linkForm">
+                <input type="hidden" name="_token" value="T1Y6BH1rCq9HE7EEu6pWwaxLV8ZyAIwMRMqICcKn" autocomplete="off">                <div id="searchBarInputBox">
+                    <input type="text" placeholder="Search Exam / Courses / Mock Test / Beepedia" id="input-drop-down" name="input-drop-down"><br>
+                </div>
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
+            <ul id="suggestions"></ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $("#linkForm").on("keypress", function(event) {
+            if (event.key == "Enter") {
+                event.preventDefault();
+            }
+        })
+        console.log("api started");
+        $("#input-drop-down").attr("autocomplete", "off");
+
+        let debounceTimeout;
+
+        $('#input-drop-down').on('input', function(event) {
+            clearTimeout(debounceTimeout);
+
+            debounceTimeout = setTimeout(function() {
+                var formData = {
+                    param: $('#input-drop-down').val().trim(),
+                    userID: 0,
+                    page_url: "contactus"
+                };
+
+                if ($("#input-drop-down").val().trim() != "") {
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url: "linksuggester",
+                        type: 'POST',
+                        data: formData,
+                        dataType: 'json',
+                        success: function(response) {
+                            $("#suggestions").html("");
+                            for (var key in response) {
+                                $("#suggestions").append(
+                                    "<li onclick='linkClicked(this)'>" +
+                                    response[key]["term"] + "</li>");
+                            }
+                            if (response.length == 0) {
+                                $("#suggestions").append(
+                                    "<li>No result found, try something else</li>"
+                                );
+                            }
+                            $("#suggestions").css("display", "block");
+                            navigation();
+                        },
+                        error: function(xhr, status, error) {
+                            $('#suggestions').html('<p>An error occurred: ' +
+                                error + '</p>');
+                            $("#suggestions").css("display", "block");
+                        }
+
+                    });
+                } else {
+                    $("#suggestions").css("display", "none");
+                    $("#suggestions").html("");
+                }
+            }, 1000);
+        });
+    });
+
+    function linkClicked(element) {
+        let value = $(element).text();
+        document.getElementById("input-drop-down").value = value;
+        document.getElementById("submitButton").click();
+    }
+</script>
+
+<script>
+    function toggleSearchBar() {
+        if (document.getElementById("linkForm").style.display === "block") {
+            document.getElementById("suggestions").style.display = "none";
+        } else {
+            document.getElementById("linkForm").style.display = "block";
+            document.getElementById("input-drop-down").focus();
+        }
+    }
+</script>
+
+<script>
+    let eventHandler;
+
+    function navigation() {
+        if (eventHandler != null) {
+            document.removeEventListener("keydown", eventHandler);
+            console.log("eventHandler removed");
+        }
+
+        a = document.getElementById("suggestions");
+        var li = a.getElementsByTagName("li");
+        var current = -1;
+
+        eventHandler = function(event) {
+            const key = event.key;
+            switch (key) {
+                case "Enter":
+                    event.preventDefault();
+                    li[current].click();
+
+                    break;
+                case "ArrowUp":
+                    if (current != -1) {
+                        li[current].classList.remove("active");
+                    }
+                    if (current - 1 >= 0) {
+                        current = current - 1;
+                    } else {
+                        current = li.length - 1;
+                    }
+                    li[current].classList.add("active");
+                    break;
+                case "ArrowDown":
+                    if (current != -1) {
+                        li[current].classList.remove("active");
+                    }
+                    current = (current + 1) % li.length;
+                    li[current].classList.add("active");
+                    break;
+            }
+        };
+
+        document.addEventListener("keydown", eventHandler);
+    }
+</script>
+
+<!-- toggle class on click -->
+<script>
+    $(document).ready(function() {
+        $('#searchBarToggle').click(function() {
+            $('.sectionBarOuterBox').addClass('open');
+            $('.searchBarSection').addClass('popup-search')
+            $('#suggestions').removeClass('suggestionsHide')
+        });
+
+        $('.closeSearchModalBox').click(function() {
+            $('.sectionBarOuterBox').removeClass('open');
+            $('.searchBarSection').removeClass('popup-search')
+            $('#suggestions').addClass('suggestionsHide')
+        });
+
+        // Remove popup-search class and open class when clicking outside of searchBarSection
+        $(document).mouseup(function(e) {
+            var $searchBarSection = $('.searchBarSection');
+            var $sectionBarOuterBox = $('.sectionBarOuterBox');
+            var $suggestionsHide = $('#suggestions');
+            $("#input-drop-down").val("");
+            if (!$searchBarSection.is(e.target) && $searchBarSection.has(e.target).length === 0) {
+                $searchBarSection.removeClass('popup-search');
+                $sectionBarOuterBox.removeClass('open');
+                $suggestionsHide.addClass('suggestionsHide');
+            }
+        });
+    });
+</script>
+                <button type="button" id="auto-button" class="btn btn-primary" data-bs-toggle="modal" onclick="location.href='login.html'">Login / Signup</button>
+                            </div>
+
+        </div>
+    </div>
+</div>
+<!-- // end here -->
+
+
+<!--  Loader start -->
+<div class="ixambee-loader" style="display: none;">
+    <div class="lightgreen"></div>
+    <div class="darkgreen"></div>
+</div>
+<!-- Loader end -->
+<nav class="navbar navbar-expand-lg nav-color headerShadow" id="add_menu">
+
+</nav>
+<header class="rbi_grade_b_header" id="rbi_grade_b_header" style=" display:none">
+    <a href="make-my-test.html">
+        <img src="v7/images/logo.svg" alt="ixambee.com" class="this_logo">
+    </a>
+    <div id="header_heading"></div>
+</header>
+
+    <div id="campaign-banner-append">
+
+    </div>
+
+    
+    <main>
+
+        
+        
+        <div class="container">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="online-course-banner">
+                        <nav>
+                            <ol class="breadcrumb bg-transparent custom-breadcrumb p-0">
+                                <li class="breadcrumb-item"><a href="index.htm">Home</a></li>
+                                <li class="breadcrumb-item active">Contact Us</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <h1 class="main_heading">
+                                    Contact Us
+                        </h1>
+
+                    <!--Follow us code-->
+                    <div class="social_links">
+                        <a class="facebook" target="_blank" href="https://www.facebook.com/ixambee/" title="Facebook"><i class="fab fa-facebook active_follow"></i></a>
+                        <a class="youtube" target="_blank" href="https://www.youtube.com/c/ixamBee" title="Youtube"><i class="fab fa-youtube active_follow"></i></a>
+                        <a class="instagram" target="_blank" href="https://www.instagram.com/ixambee/" title="Instagram"><i class="fab fa-instagram active_follow"></i></a>
+                        <a class="twitter" target="_blank" href="https://twitter.com/ixambee" title="Twitter"><i class="fab fa-twitter active_follow"></i></a>
+                        <a class="telegram" target="_blank" href="https://t.me/govtjobprep" title="Telegram"><i class="fab fa-telegram-plane active_follow"></i></a>
+                    </div>
+                    <!-- follow end -->
+
+                </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-sm-12">
+                
+                <p class="this_p">
+                    It is our endeavour to provide you with the best exam preparation facility. We are here to help you at all phases in your exam preparation. Please write in to us:
+                </p>
+                <ul class="this_ul">
+                    <li>If you have any doubts in any of the concepts</li>
+                    <li>If you want any more concepts to be covered</li>
+                    <li>Any questions regarding our products</li>
+                    <li>Any feedback /suggestions</li>
+
+                </ul>
+
+
+
+                <h2 class="this_h2">Get in Touch</h2>
+                                           
+          
+                    
+
+                <div class="mb-5">
+
+                    <!-- Contact form start -->
+                    <div class="contact-form-v4 col-sm-12 col-md-8">
+                        
+                        <form id="contact-form" method="post" action="contactus">
+
+                            <h4 class="p-0 mb-3">Send us your details and we will write back/call back within 24 hours.</h4>
+
+                            <input class="form-control mb-2" type="hidden" name="_token" value="T1Y6BH1rCq9HE7EEu6pWwaxLV8ZyAIwMRMqICcKn">
+                            <input class="form-control mb-2" type="text" name="name" placeholder="Name" required="">
+                          
+                            <input class="form-control mb-2" type="text" name="email" placeholder="Email" required="">
+                        
+                            <input class="form-control mb-2" type="text" name="phone" placeholder="Phone" required="" onkeydown="return event.keyCode !== 69 &amp;&amp; event.keyCode !== 189 &amp;&amp; event.keyCode !==190 " oninput="javascript: if (this.value.length &gt; this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10">
+                           
+                            <div class="text-end">
+                                <input class="submitBtnContact blue-border text-center animate-btn px-5" type="submit">
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                    <!-- Contact form End -->
+
+                    <div>
+
+                       
+                        <ul class="this_ul mt-4">
+                            <li>A-31, Vyapar Marg, Block A, Sector 3, Noida, Uttar Pradesh 201301</li>
+                            <li style="color:#2b2b2b;"> <b>Grievance Officer </b> - C. Suvarna <a href="cdn-cgi/l/email-protection.html#d8b0bdb4a8b5bd98b1a0b9b5babdbdf6bbb7b5" style="color:#6ABE52; padding:0; text-decoration:underline;"><span class="__cf_email__" data-cfemail="b1d9d4ddc1dcd4f1d8c9d0dcd3d4d49fd2dedc">[email&#160;protected]</span></a></li>
+                            <li><i class="fas fa-phone-volume"></i> <b>Call: +91-9205524028:</b> Available from Mon-Sat(10 AM to 7 PM)</li>
+                            <li><i class="fab fa-whatsapp"></i> <b>Whatsapp:</b> +91-9205524028</li>
+                            <li><i class="fas fa-at"></i> <b>Support Mail:</b> <a href="cdn-cgi/l/email-protection.html#a2cac7cececde2cbdac3cfe0c7c78cc1cdcf" style="color:#6ABE52; padding:0; text-decoration:underline;"><span class="__cf_email__" data-cfemail="226a474e4e4d624b5a434f4047470c414d4f">[email&#160;protected]</span></a>
+                                <br>
+                            </li>
+                            <li><b>Reach us through our social handles:</b>
+                                <div class="reach-us-widget flashy_heading" style="display: inline-block;">
+                                    <a target="_blank" href="https://www.facebook.com/ixambee/" title="Facebook"><i class="fab fa-facebook active_follow"></i></a>
+                                    <a target="_blank" href="https://www.youtube.com/c/ixamBee" title="Youtube"><i class="fab fa-youtube active_follow"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/ixambee/" title="Instagram"><i class="fab fa-instagram active_follow"></i></a>
+                                    <a target="_blank" href="https://twitter.com/ixambee" title="Twitter"><i class="fab fa-twitter active_follow"></i></a>
+                                    <a target="_blank" href="https://t.me/govtjobprep" title="Telegram"><i class="fab fa-telegram-plane active_follow"></i></a>
+                                </div>
+
+                            </li>
+                            <p class="this_p m-top-10">We are eager to hear from you.</p>
+                            <!-- <p class="bulk"><br><br><br><br></p> -->
+                        </ul>
+                        <p></p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </main>
+
+    
+    <footer id="footer">
+    <div class="bottomfooter">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Social Icons -->
+                <div class="col-sm-6 col-md-6 col-lg-3 social-icons">
+                    <a title="Facebook" href="https://www.facebook.com/ixambee/" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a title="Twitter" href="https://twitter.com/ixambee" target="_blank">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a title="Youtube" href="https://www.youtube.com/channel/UCwB1sptW5PPeaXnrW5Yb3-A" target="_blank">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                    <a title="Instagram" href="https://www.instagram.com/ixambee/" target="_blank">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-sm-6 col-md-6 col-lg-6 text-center companyDetails">
+                    <h3 id="phone_no" class="">
+                        <a href="tel:+919205524028" style="color: black; padding:0;">+919205524028</a>
+                        Available Mon-Sat (10 AM to 7 PM)
+                    </h3>
+                    <p>
+                        <a href="cdn-cgi/l/email-protection.html#6a020f0606052a03120b07080f0f44090507" style="color: black; padding:0;"><span class="__cf_email__" data-cfemail="38505d54545778514059555a5d5d165b5755">[email&#160;protected]</span></a>
+                    </p>
+                </div>
+
+                <!-- Copyright -->
+                <div class="col-sm-12 col-md-12 col-lg-3 copyright">
+                    <h3>© ATOZLEARN EDUTECH PRIVATE LIMITED All rights reserved.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+    
+
+
+
+
+
+    
+    
+
+
+    
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        window.IS_PRODUCTION = true;
+        window.PAGE_PATH = "contactus";
+        window.BASE_URL = "https://www.ixambee.com";
+        const lastSegment = PAGE_PATH.split('/').pop(); // "rbi-grade-b-depr-phase-2"
+        window.LAST_SLUG = lastSegment;
+        window.user_id = "0";
+        window.cm = "";
+        window.dc = "";
+    </script>
+
+        
+
+    <div class="modal fade" id="request_call_back" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Close button (top-right) -->
+            <div class="text-end p-2">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Call back form start from here -->
+                <div class="form-group_this_form">
+                    <div class="text-center mb-4">
+                        <h3 style="font-size: 24px;" class="change_title">Please Enter Details</h3>
+                        <img src="v5/assets/images/req-call-back.svg" loading="lazy" width="250" height="186" alt="call-back">
+                    </div>
+
+                    <!-- Name input -->
+                    <div class="form-group input-effect">
+                        <small id="error_name" class="form-text text-danger d-none">Please Enter Name</small>
+                        <input type="text" class="form-control effect-17" id="name" placeholder="Enter your Name" value="">
+                        <small id="emailHelp" class="form-text text-danger d-none">We'll never share your email with anyone else.</small>
+                    </div>
+
+                    <!-- Mobile input -->
+                    <div class="form-group input-effect mt-4">
+                        <small id="error_mobile" class="form-text text-danger d-none">Please enter Correct Mobile
+                            Number</small>
+                        <input type="number" name="mobile" class="form-control effect-17" id="mobile" onkeydown="return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.value.length);" maxlength="10" placeholder="Enter your Mobile Number" value="">
+                        <small id="numberHelp" class="form-text text-danger d-none">We'll never share your email with
+                            anyone else.</small>
+                    </div>
+
+                    <!-- Hidden input -->
+                    <input type="hidden" id="sebiCheckphase1">
+
+                    <!-- Submit button -->
+                    <div class="text-center mt-4">
+                        <button type="button" id="submit_btn_new_new" class="btn btn-primary submit-button">Request a
+                            Call Back</button>
+                    </div>
+                </div>
+                <!-- // call back end here -->
+
+                <!-- Thank you message -->
+                <div class="thankyou-msg text-center d-none">
+                    <h3>Great! Our Exam Experts will contact you soon</h3>
+                    <div class="check-circle mb-4">
+                        <i class="fas fa-check-circle fa-4x text-success"></i>
+                    </div>
+                </div>
+                <!-- // end thank you message -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <button class="bck rightToLeft" style="transition-duration: 300ms;"></button>
+
+    <script src="v7/js/jquery.min.js"></script>
+    <script src="v7/js/bootstrap.min.js"></script>
+    <script src="v7/js/popper.min.js"></script>
+    <!-- <script src="v7/js/owl.carousel.min.js"></script> -->
+    <script src="v7/js/navigation.js?v=7.0.153"></script>
+    <script src="v7/js/common.js?v=7.0.153"></script>
+    <script src="v3/js/theia-sticky-sidebar.min.js"></script>
+    <script>
+        // function updateClock() {
+        //     const now = new Date();
+        //     const deadline = new Date(now.getFullYear(), 6, 31, 23, 59, 59); // Month is 0-indexed (6 = July)
+
+        //     // If past July 31st, set year to next year
+        //     if (now > deadline) {
+        //         $('#liveTimer').text("00:00:00");
+        //         return;
+        //     }
+
+        //     const diff = deadline - now;
+
+        //     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        //     const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        //     const seconds = Math.floor((diff / 1000) % 60);
+        //     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        //     const strTime = 
+        //         (days > 0 ? days + "d " : "") +
+        //         ("0" + hours).slice(-2) + ":" +
+        //         ("0" + minutes).slice(-2) + ":" +
+        //         ("0" + seconds).slice(-2);
+
+        //     $('#liveTimer').text(strTime);
+        // }
+
+        // $(document).ready(function () {
+        //     updateClock(); // initial call
+        //     setInterval(updateClock, 1000); // update every second
+        // });
+    </script>
+
+    <div class="modal" id="enterUser" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- STEP 1: enter mobile/email -->
+            <div class="active" id="step-enter">
+                <div class="modal-header p-0">
+                    <div class="text-center w-100 login-modal-header">
+                        <p>Sign up now</p>
+                        <span>let ixamBee guide you through every stage of your exam preparation!</span>
+                    </div>
+                </div>
+                <div class="modal-body mt-2">
+                    <input id="js-value" type="text" placeholder="Mobile or Email" class="form-control p-3">
+                    <small class="text-danger" id="err-value"></small>
+                </div>
+
+            </div>
+            <div class="login-step active" id="step-enter">
+                <div class="modal-footer border-0 pt-0">
+                    <button id="btn-send-otp" class="w-100 login-btn mb-2">Continue</button>
+                </div>
+            </div>
+            <!-- STEP 2: signup alternate -->
+            <div class="login-step" id="step-alternate">
+                <input id="js-name" type="text" placeholder="Your Name" class="form-control mb-2 p-3">
+                <small class="text-danger" id="err-name"></small>
+                <input id="js-alternate" type="text" placeholder="" class="form-control mb-2 p-3">
+                <small class="text-success" id="suc-alt"></small>
+                <small class="text-danger" id="err-alt"></small>
+
+                <button id="btn-send-otp-signup" class="w-100 login-btn mt-3">Send OTP</button>
+
+            </div>
+            <div class="login-step" id="step-select">
+                <div class="modal-body">
+                    <p class="text-warning">
+                        Your account has multiple linked identities. Please select one to keep; the rest will be removed.
+                    </p>
+                    <div id="js-identities" class="mb-3"></div>
+                    <small class="text-danger" id="err-identity"></small>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button id="btn-confirm-identity" class="w-100 login-btn">Confirm</button>
+                </div>
+            </div>
+            <!-- STEP 3: verify OTP -->
+            <div class="modal-body login-step pt-1" id="step-otp">
+                <input id="js-otp" type="text" placeholder="Please Enter OTP" class="form-control p-3 mb-3">
+                <small class="text-danger" id="err-otp"></small>
+                <small class="text-success" id="suc-otp"></small>
+                <button id="btn-verify-otp" class="w-100 login-btn mt-4">Verify & Continue</button>
+            </div>
+
+            <!-- STEP 4: done -->
+            <div class="login-step text-center" id="step-done">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="v7/js/login.js?v=7.0.153"></script>
+    
+    <script src="v7/js/trackAndDecision.js?v=7.0.153"></script>
+    <script>
+        $(document).on('click', '#startQuizBtn', function() {
+            window.ixambeeTracker.track("quiz_start", {
+                quiz_id: 101
+            });
+        });
+        $(window).on("load", function() {
+            setTimeout(function() {
+                $('script[type="lazyload_int"]').remove();
+            }, 4000); // 4 seconds
+        });
+    </script>
+    <script>
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/58eb259df7bbaa72709c55b6/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+</body>
+
+</html>

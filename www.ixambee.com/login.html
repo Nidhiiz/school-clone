@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    /* Background */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fceaea, #eaf8f0, #fdfdfd);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Card */
+    .card {
+      background: #fff;
+      width: 360px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 10px;
+    }
+    .logo span {
+      color: #f9b403;
+    }
+    .tagline {
+      font-size: 14px;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    /* Title */
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* Input */
+    .input-box {
+      width: 80%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .input-box:focus {
+      border-color: #f9b403;
+      box-shadow: 0 0 5px rgba(249, 180, 3, 0.5);
+    }
+
+    /* Error Message */
+    .error {
+      font-size: 13px;
+      color: red;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    /* Button */
+    .btn {
+      width: 90%;
+      padding: 12px;
+      background: #f9b403;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #e0a602;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- Logo -->
+    <div class="logo">Exam <span>Prep</span></div>
+    <div class="tagline">Prepare 50% Faster</div>
+
+    <!-- Title -->
+    <h2>Get Started with Exam Prep</h2>
+    <p>Start learning 50% faster. Register now</p>
+
+    <!-- Input -->
+    <form>
+      <input type="email" placeholder="Enter your email" class="input-box" >
+      <!-- <div class="error">Server error</div> -->
+    </form>
+     <button onclick="location.href='index2.html'" class="btn">NEXT →</button>
+  </div>
+
+</body>
+</html>
