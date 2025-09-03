@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
+   
     <meta charset="UTF-8">
-    <title>ixambee: Best Exam Preparation Site, Mock Test, Study Material, Online Course, Free Videos</title>
+    <title> Best Exam </title>
         <link href="v7/css/bootstrap.min.css?v=7.0.153" rel="stylesheet">
     <link href="v7/css/header-nav.css?v=7.0.153" rel="stylesheet">
     <link href="v7/css/common.css?v=7.0.153" rel="stylesheet">
@@ -48,6 +49,16 @@
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-KLZ5GM9');
     </script>
+    <style>
+        /* Show dropdown on hover for large screens */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* removes the gap so it looks smooth */
+  }
+}
+
+    </style>
 </head>
 
 <body>
@@ -60,195 +71,7 @@
   <span class="close-announcementBar"><i class="fas fa-times"></i></span>
 </div>
     
-    <div class="top_header_ticker">
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-6 d-flex justify-content-start">
-                <a class="navbar-brand" href="index.htm" alt="ixambee">
-                    <img src="v7/images/logo.svg" alt="ixambee.com" class="this_logo">
-                </a>
-            </div>
-            <div class="col-6 d-flex align-items-center justify-content-end">
-                                <div class="headerSearchBar homepage_search">
-    <i class="fas fa-search" id="searchBarToggle" onclick="toggleSearchBar()"></i>
-    <div class="sectionBarOuterBox">
-        <div class="searchBarSection">
-            <i class="fas fa-times closeSearchModalBox"></i>
-            <form action="submitlink" method="post" id="linkForm">
-                <input type="hidden" name="_token" value="T1Y6BH1rCq9HE7EEu6pWwaxLV8ZyAIwMRMqICcKn" autocomplete="off">                <div id="searchBarInputBox">
-                    <input type="text" placeholder="Search Exam / Courses / Mock Test / Beepedia" id="input-drop-down" name="input-drop-down"><br>
-                </div>
-                <button type="submit" id="submitButton">Submit</button>
-            </form>
-            <ul id="suggestions"></ul>
-        </div>
-    </div>
-</div>
-
-
-
-
-<script>
-    $(document).ready(function() {
-        $("#linkForm").on("keypress", function(event) {
-            if (event.key == "Enter") {
-                event.preventDefault();
-            }
-        })
-        console.log("api started");
-        $("#input-drop-down").attr("autocomplete", "off");
-
-        let debounceTimeout;
-
-        $('#input-drop-down').on('input', function(event) {
-            clearTimeout(debounceTimeout);
-
-            debounceTimeout = setTimeout(function() {
-                var formData = {
-                    param: $('#input-drop-down').val().trim(),
-                    userID: 0,
-                    page_url: "https://www.ixambee.com"
-                };
-
-                if ($("#input-drop-down").val().trim() != "") {
-                    $.ajax({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                        url: "linksuggester",
-                        type: 'POST',
-                        data: formData,
-                        dataType: 'json',
-                        success: function(response) {
-                            $("#suggestions").html("");
-                            for (var key in response) {
-                                $("#suggestions").append(
-                                    "<li onclick='linkClicked(this)'>" +
-                                    response[key]["term"] + "</li>");
-                            }
-                            if (response.length == 0) {
-                                $("#suggestions").append(
-                                    "<li>No result found, try something else</li>"
-                                );
-                            }
-                            $("#suggestions").css("display", "block");
-                            navigation();
-                        },
-                        error: function(xhr, status, error) {
-                            $('#suggestions').html('<p>An error occurred: ' +
-                                error + '</p>');
-                            $("#suggestions").css("display", "block");
-                        }
-
-                    });
-                } else {
-                    $("#suggestions").css("display", "none");
-                    $("#suggestions").html("");
-                }
-            }, 1000);
-        });
-    });
-
-    function linkClicked(element) {
-        let value = $(element).text();
-        document.getElementById("input-drop-down").value = value;
-        document.getElementById("submitButton").click();
-    }
-</script>
-
-<script>
-    function toggleSearchBar() {
-        if (document.getElementById("linkForm").style.display === "block") {
-            document.getElementById("suggestions").style.display = "none";
-        } else {
-            document.getElementById("linkForm").style.display = "block";
-            document.getElementById("input-drop-down").focus();
-        }
-    }
-</script>
-
-<script>
-    let eventHandler;
-
-    function navigation() {
-        if (eventHandler != null) {
-            document.removeEventListener("keydown", eventHandler);
-            console.log("eventHandler removed");
-        }
-
-        a = document.getElementById("suggestions");
-        var li = a.getElementsByTagName("li");
-        var current = -1;
-
-        eventHandler = function(event) {
-            const key = event.key;
-            switch (key) {
-                case "Enter":
-                    event.preventDefault();
-                    li[current].click();
-
-                    break;
-                case "ArrowUp":
-                    if (current != -1) {
-                        li[current].classList.remove("active");
-                    }
-                    if (current - 1 >= 0) {
-                        current = current - 1;
-                    } else {
-                        current = li.length - 1;
-                    }
-                    li[current].classList.add("active");
-                    break;
-                case "ArrowDown":
-                    if (current != -1) {
-                        li[current].classList.remove("active");
-                    }
-                    current = (current + 1) % li.length;
-                    li[current].classList.add("active");
-                    break;
-            }
-        };
-
-        document.addEventListener("keydown", eventHandler);
-    }
-</script>
-
-<!-- toggle class on click -->
-<script>
-    $(document).ready(function() {
-        $('#searchBarToggle').click(function() {
-            $('.sectionBarOuterBox').addClass('open');
-            $('.searchBarSection').addClass('popup-search')
-            $('#suggestions').removeClass('suggestionsHide')
-        });
-
-        $('.closeSearchModalBox').click(function() {
-            $('.sectionBarOuterBox').removeClass('open');
-            $('.searchBarSection').removeClass('popup-search')
-            $('#suggestions').addClass('suggestionsHide')
-        });
-
-        // Remove popup-search class and open class when clicking outside of searchBarSection
-        $(document).mouseup(function(e) {
-            var $searchBarSection = $('.searchBarSection');
-            var $sectionBarOuterBox = $('.sectionBarOuterBox');
-            var $suggestionsHide = $('#suggestions');
-            $("#input-drop-down").val("");
-            if (!$searchBarSection.is(e.target) && $searchBarSection.has(e.target).length === 0) {
-                $searchBarSection.removeClass('popup-search');
-                $sectionBarOuterBox.removeClass('open');
-                $suggestionsHide.addClass('suggestionsHide');
-            }
-        });
-    });
-</script>
-                <button type="button" id="auto-button" class="btn btn-primary" data-bs-toggle="modal"  onclick="location.href='login.html'">Login / Signup</button>
-                            </div>
-
-        </div>
-    </div>
-</div>
+    
 <!-- // end here -->
 
 
@@ -258,14 +81,71 @@
     <div class="darkgreen"></div>
 </div>
 <!-- Loader end -->
-<nav class="navbar navbar-expand-lg nav-color headerShadow" id="add_menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom headerShadow" id="add_menu">
+  <div class="container-fluid">
+    <!-- Logo -->
 
-</nav>
-<header class="rbi_grade_b_header" id="rbi_grade_b_header" style=" display:none">
-    <a href="make-my-test.html">
-        <img src="v7/images/logo.svg" alt="ixambee.com" class="this_logo">
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+         <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="v7/images/logo.svg" alt="ixambee.com" class="this_logo" style="height:45px;">
     </a>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="previousDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Previous Year Paper
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="previousDropdown">
+            <li><a class="dropdown-item" href="ibps-so-it-afo-hr-marketing-pre.html">RBI Papers</a></li>
+            <li><a class="dropdown-item" href="ibps-so-it-afo-hr-marketing-pre.html">SEBI Papers</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="examDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Exams
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="examDropdown">
+            <li><a class="dropdown-item" href="ibps-so-it-afo-hr-marketing-pre.html">RBI</a></li>
+            <li><a class="dropdown-item" href="ibps-so-it-afo-hr-marketing-pre.html">NABARD</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="courseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Online Course
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="courseDropdown">
+            <li><a class="dropdown-item" href="ifsca.html">Banking</a></li>
+            <li><a class="dropdown-item" href="ifsca.html">SSC</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown"><a class="nav-link " href="ibps-so-it-afo-hr-marketing-pre.html">Free Mock Test</a></li>
+        <li class="nav-item dropdown"><a class="nav-link " href="ifsca.html">General Awareness</a></li>
+        <li class="nav-item dropdown"><a class="nav-link " href="ibps-so-it-afo-hr-marketing-pre.html">Daily Practice</a></li>
+        <li class="nav-item"><a class="nav-link" href="ifsca.html">All Courses</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#">Private Jobs</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+        <button type="button" id="auto-button" class="btn btn-primary" data-bs-toggle="modal"  onclick="location.href='login.html'">Login / Signup</button>
+                           
+    </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="rbi_grade_b_header" >
+    
     <div id="header_heading"></div>
+    
 </header>
 
     <div id="campaign-banner-append">
@@ -992,8 +872,8 @@ Their study material is very concise, easy to revise, and up-to-date which helpe
     <button class="bck rightToLeft" style="transition-duration: 300ms;"></button>
 
     <script src="v7/js/jquery.min.js"></script>
-    <script src="v7/js/bootstrap.min.js"></script>
-    <script src="v7/js/popper.min.js"></script>
+    <!-- <script src="v7/js/bootstrap.min.js"></script> -->
+    <!-- <script src="v7/js/popper.min.js"></script> -->
     <!-- <script src="v7/js/owl.carousel.min.js"></script> -->
     <script src="v7/js/navigation.js?v=7.0.153"></script>
     <script src="v7/js/common.js?v=7.0.153"></script>
@@ -1160,6 +1040,8 @@ Their study material is very concise, easy to revise, and up-to-date which helpe
         s0.parentNode.insertBefore(s1,s0);
         })();
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
